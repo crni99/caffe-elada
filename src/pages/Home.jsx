@@ -1,0 +1,133 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import MainTitle from '../components/MainTitle';
+import InstagramEmbed from '../components/InstagramEmbed';
+import { faInstagramSquare, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faClock } from '@fortawesome/free-solid-svg-icons';
+
+export default function HomePage() {
+
+    const { t } = useTranslation();
+
+    return (
+        <>
+            <MainTitle title={t('Home')} />
+
+            <div className='w-100 home-main-container d-flex justify-content-center align-items-center'>
+                <img src="/assets/images/EladaLogoV2.svg"
+                    className="w-100 rounded home-main-logo-image"
+                    alt="Elada Logo"
+                    data-aos="zoom-in" data-aos-duration="2000"
+                />
+            </div>
+
+            <div className="container d-flex justify-content-center align-items-center min-vh-66 home-section-container"
+                data-aos="fade-up" data-aos-duration="2000">
+                <div className="row">
+                    <div className="row-wrapper col-md-6 home-text">
+                        <h3 className="home-section-title text-center">
+                            <Trans i18nKey="HomePage.sectionTitle"></Trans>
+                        </h3>
+                        <p className='mt4'>
+                            <Trans i18nKey="HomePage.sectionText1"></Trans>
+                        </p>
+                        <p className='mt-4'>
+                            <Trans i18nKey="HomePage.sectionText2"></Trans>
+                        </p>
+                        <p className='mt-4'>
+                            <Trans i18nKey="HomePage.sectionText3"></Trans>
+                        </p>
+                    </div>
+                    <div className="col-md-6">
+                        <img src="/assets/images/elada-3.jpg"
+                            className="w-100 rounded mb-4 home-main-image"
+                            alt={t('HomePage.sectionImageAlt1')} />
+                    </div>
+                </div>
+            </div>
+
+            <div className="full-width-image position-relative home-full-width-menu-wrapper min-vh-75"
+                data-aos="zoom-in" data-aos-duration="2000">
+                <img src="/assets/images/elada-1.jpg" loading="lazy"
+                    className="w-50 h-100 object-fit-cover" alt={t('HomePage.sectionImageAlt2')}
+                />
+                <img src="/assets/images/elada-4.jpg" loading="lazy"
+                    className="w-50 h-100 object-fit-cover" alt={t('HomePage.sectionImageAlt3')}
+                />
+            </div>
+
+            <div className="container d-flex justify-content-center align-items-center min-vh-66 mt-5"
+                data-aos="fade-up" data-aos-duration="2000" id="gallery">
+                <div className='row'>
+                    <div className="col-md-4 mb-5 mt-3">
+                        <InstagramEmbed url="https://www.instagram.com/p/DGOjDuxof7W/" />
+                    </div>
+                    <div className="col-md-4 mb-5 mt-3">
+                        <InstagramEmbed url="https://www.instagram.com/p/DGLHXtyo9UZ/" />
+                    </div>
+                    <div className="col-md-4 mb-5 mt-3">
+                        <InstagramEmbed url="https://www.instagram.com/p/DF6FNw1I1pZ/" />
+                    </div>
+                    <div className="col-md-4">
+                        <InstagramEmbed url="https://www.instagram.com/p/DErue7Po2OR/" />
+                    </div>
+                    <div className="col-md-4">
+                        <InstagramEmbed url="https://www.instagram.com/p/DFU-X30IoGp/" />
+                    </div>
+                    <div className="col-md-4">
+                        <InstagramEmbed url="https://www.instagram.com/p/DDr7Ga9IhQM/" />
+                    </div>
+                </div>
+            </div>
+
+            <div className="container d-flex justify-content-center align-items-center container-full-view min-vh-75 contact-container"
+                data-aos="fade-up" data-aos-duration="2000"
+                id='contact'>
+                <div className="row w-100 row-wrapper">
+                    <div className="col-md-4 mt-3 mb-4">
+                        <h3 className='text-uppercase fw-bold mb-4'>{t('ContactPage.subTitle')}</h3>
+                        <div className=''>
+                            <p className="mt-5">
+                                <FontAwesomeIcon icon={faClock} size="xl" className="mx-2 custom-icon" title="Time" />
+                                08:00 - 00:00
+                            </p>
+                            <p className="mt-5">
+                                <a href="tel:+381641215566" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faPhone} size="xl" className="mx-2 custom-icon" title="Phone" />
+                                    {t('ContactPage.Phone')}
+                                </a>
+                            </p>
+                            <p className="mt-5">
+                                <a href="https://www.facebook.com/profile.php?id=61565711781481" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faFacebookSquare} size="xl" className="mx-2 custom-icon" title="Facebook" />
+                                    {t('ContactPage.Facebook')}
+                                </a>
+                            </p>
+                            <p className="mt-5">
+                                <a href="https://www.instagram.com/caffe_elada/" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faInstagramSquare} size="xl" className="mx-2 custom-icon" title="Instagram" />
+                                    {t('ContactPage.Instagram')}
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col-md-8 d-flex justify-content-end mt-3">
+                        <iframe
+                            src={t('ContactPage.GoogleMap')}
+                            width="100%"
+                            height="500"
+                            className='contact-map'
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title='Google Map'>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+        </>
+    );
+}

@@ -1,0 +1,24 @@
+{
+    "Home": "Početna",
+    "Gallery": "Galerija",
+    "HomePage": {
+        "sectionTitle": "Dobrodošli u <strong>Caffe Elada</strong>",
+        "sectionText1": "Otvoreni 24. oktobra 2024. godine, <strong>Caffe Elada</strong> je stvoren sa željom da pruži prijatan kutak za sve ljubitelje kafe, opuštanja i društvenih trenutaka.",
+        "sectionText2": "Smestili smo se u samom srcu Ljiga, a naš cilj je da svaki posetilac pronađe nešto posebno u našem ambijentu – bilo da uživate u mirnoj šolji kafe, ukusnoj čokoladi ili prijatnoj atmosferi koju stvaramo svakodnevno.",
+        "sectionText3": "U <strong>Caffe Eladi</strong>, svakodnevno se trudimo da kreiramo nezaboravne trenutke, bilo kroz specijalne događaje, ili kroz bogatu ponudu pića pripremljenih sa pažnjom i ljubavlju. Pridružite nam se i otkrijte zašto Caffe Elada brzo postaje omiljeno mesto u Ljigu."
+    },
+    "Contact": "Kontakt",
+    "ContactPage": {
+        "GoogleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5717.8362699355075!2d20.231763355382416!3d44.22934381497805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759e325a57f1005%3A0xcb8bd57d12fdb7b1!2sElada%20Ljig!5e0!3m2!1ssr!2srs!4v1743068402409!5m2!1ssr!2srs",
+        "subTitle": "Informacije",
+        "Phone": "Pozovite nas +381 64 121 5566",
+        "Mail": "Imate pitanje? Pišite nam.",
+        "Facebook": "Pogledajte Facebook stranicu.",
+        "Instagram": "Zapratite nas na Instagramu."
+    },
+    "NotFoundPage": {
+        "title": "Stranica Nije Pronađena",
+        "subTitle": "Ups! Stranica koju tražite ne postoji.",
+        "returnToHomeButton": "Vratite se na početnu stranicu"
+    }
+}

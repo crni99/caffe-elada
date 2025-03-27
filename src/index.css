@@ -1,0 +1,938 @@
+:root {
+  --white: #f0f0f0;
+  --black: #0f0f0f;
+  --blue: #171F3F !important;
+  --dark-blue: #2594cb;
+  --orange: #fb4405;
+}
+
+body {
+  margin: 0;
+  font-family: 'Times New Roman', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background-color: var(--dark-blue);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: 'Playfair Display' !important;
+}
+
+strong,
+b {
+  color: var(--dark-blue);
+}
+
+.main-title {
+  color: var(--dark-blue);
+  border-color: var(--white);
+  background-color: var(--white);
+  position: absolute;
+  left: -9999px;
+}
+
+.row-wrapper {
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  color: var(--black);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+a {
+  color: var(--blue);
+}
+
+footer a {
+  color: var(--blue);
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: var(--dark-blue);
+}
+
+footer a:hover,
+footer a:focus,
+footer a:active {
+  color: var(--dark-blue);
+}
+
+.bg-primary {
+  background-color: var(--blue) !important;
+}
+
+.navbar-brand span {
+  color: var(--dark-blue);
+}
+
+.nav-link {
+  color: var(--dark-blue);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: var(--white) !important;
+  background-color: var(--dark-blue) !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item:active {
+  color: var(--white);
+  background-color: var(--dark-blue);
+}
+
+.min-vh-90 {
+  min-height: 90dvh;
+}
+
+.min-vh-75 {
+  min-height: 75dvh;
+}
+
+.min-vh-66 {
+  min-height: 66dvh;
+}
+
+.custom-icon {
+  color: var(--black);
+}
+
+.mt-4 {
+  margin-top: 2rem !important;
+}
+
+.home-section-title {
+  color: var(--dark-blue);
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Extra Extra Small (Old Mobile) */
+@media (max-width: 400px) {
+  .menu-image {
+    max-height: 200px !important;
+  }
+
+  .image-menu-placeholder {
+    min-height: 200px;
+  }
+
+  .menu-text {
+    margin-top: 2rem !important;
+    margin-bottom: -1rem !important;
+    margin-left: 0rem;
+  }
+
+  .contact-map {
+    height: 300px;
+  }
+
+  .col-md-6 {
+    width: 100%;
+  }
+
+  .home-text {
+    margin-bottom: 0rem !important;
+  }
+
+  .full-width-image {
+    height: 250px !important;
+  }
+
+  .home-full-width-menu .h5 {
+    font-size: 0.8rem !important;
+  }
+
+  .home-full-width-menu h2 {
+    font-size: 1.2rem !important;
+    margin-top: 1.3rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .home-full-width-menu .btn {
+    font-size: 0.8rem !important;
+    padding: 0.6rem !important;
+  }
+
+  .dropdown-item-link {
+    margin-left: 1rem !important;
+  }
+
+  .dropdown-menu {
+    background-color: unset !important;
+    border: unset !important;
+  }
+
+  .home-main-container {
+    height: 200px !important;
+  }
+
+  .home-main-image {
+    width: 90% !important;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-section-container {
+    margin-top: 3rem;
+  }
+
+  .contact-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* Extra Small (Mobile) */
+@media (min-width: 400px) and (max-width: 575.98px) {
+  .menu-image {
+    max-height: 280px !important;
+  }
+
+  .image-menu-placeholder {
+    min-height: 280px;
+  }
+
+  .menu-text {
+    margin-top: 2rem !important;
+    margin-bottom: -1rem !important;
+    margin-left: 0rem;
+  }
+
+  .zoom-in-move-down-hover:hover {
+    transform: none !important;
+  }
+
+  .zoom-in-move-left-hover {
+    transform: none !important;
+  }
+
+  .zoom-in-move-right-hover {
+    transform: none !important;
+  }
+
+  .carousel-control-prev {
+    margin-left: -1rem !important;
+  }
+
+  .carousel-control-next {
+    margin-right: -1rem !important;
+  }
+
+  .min-vh-90 {
+    min-height: 100dvh;
+  }
+
+  .carousel-control-next-icon:after {
+    font-size: 3rem !important;
+  }
+
+  .carousel-control-prev-icon:after {
+    font-size: 3rem !important;
+  }
+
+  .contact-map {
+    height: 350px;
+  }
+
+  .contact-image {
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 95%;
+  }
+
+  .playroom-text {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .col-md-6 {
+    width: 100%;
+  }
+
+  .playroom-bundle-image {
+    max-width: 100% !important;
+  }
+
+  .carousel-playroom {
+    transform: translateX(0%) !important;
+  }
+
+  .playroom-text-bundle {
+    margin-bottom: 0rem !important;
+  }
+
+  .playroom-main-image-2 {
+    margin-bottom: 1rem !important;
+  }
+
+  .display-4 {
+    font-size: calc(1.2rem + 2.7vw) !important;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .home-text {
+    margin-bottom: 0rem !important;
+  }
+
+  .full-width-image {
+    height: 300px !important;
+  }
+
+  .home-full-width-menu .h5 {
+    font-size: 0.8rem !important;
+  }
+
+  .home-full-width-menu h2 {
+    font-size: 1.5rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .home-full-width-menu .btn {
+    font-size: 0.8rem !important;
+    padding: 0.7rem !important;
+  }
+
+  .playroom-main-image-wrapper {
+    margin-top: 2rem !important;
+  }
+
+  .full-width-images-playroom-wrapper {
+    margin-top: 4rem !important;
+  }
+
+  .playroom-carousel-wrapper {
+    margin-top: 3rem !important
+  }
+
+  .home-reserve-title {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .alert-wrapper {
+    width: 85% !important;
+  }
+
+  .playroom-birthday-title {
+    font-size: 1.1rem !important;
+  }
+
+  .dropdown-item-link {
+    margin-left: 1rem !important;
+  }
+
+  .dropdown-menu {
+    background-color: unset !important;
+    border: unset !important;
+  }
+
+  .modal-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .carousel-indicators {
+    transform: translateX(0%) !important;
+  }
+
+  .card-title {
+    font-size: 1.3rem !important;
+  }
+
+  .card-text {
+    font-size: 0.9rem !important;
+  }
+
+  .card-button {
+    font-size: 0.9rem !important;
+  }
+
+  .home-main-container {
+    height: 200px !important;
+  }
+
+  .home-main-image {
+    width: 90% !important;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-section-container {
+    margin-top: 3rem;
+  }
+
+  .contact-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* Small Screens (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .menu-image {
+    max-height: 400px !important;
+  }
+
+  .image-menu-placeholder {
+    min-height: 400px;
+  }
+
+  .menu-text {
+    margin-top: 2rem !important;
+    margin-left: 0rem;
+  }
+
+  .zoom-in-move-down-hover:hover {
+    transform: none !important;
+  }
+
+  .zoom-in-move-left-hover {
+    transform: none !important;
+  }
+
+  .zoom-in-move-right-hover {
+    transform: none !important;
+  }
+
+  .carousel {
+    margin-bottom: 0rem !important;
+  }
+
+  .carousel-control-prev {
+    margin-left: -2rem !important;
+  }
+
+  .carousel-control-next {
+    margin-right: -2rem !important;
+  }
+
+  .carousel-control-next-icon:after {
+    font-size: 3.5rem !important;
+  }
+
+  .carousel-control-prev-icon:after {
+    font-size: 3.5rem !important;
+  }
+
+  .contact-map {
+    height: 400px;
+  }
+
+  .contact-image {
+    max-width: 95% !important;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .playroom-text {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .col-md-6 {
+    width: 100%;
+  }
+
+  .playroom-bundle-image {
+    max-width: 100% !important;
+  }
+
+  .carousel-playroom {
+    transform: translateX(0%) !important;
+  }
+
+  .playroom-text-bundle {
+    margin-bottom: 0rem !important;
+  }
+
+  .playroom-main-image-2 {
+    margin-bottom: 1rem !important;
+  }
+
+  .display-4 {
+    font-size: calc(1.2rem + 2.7vw) !important;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .home-text {
+    margin-bottom: 0rem !important;
+  }
+
+  .full-width-image {
+    height: 400px !important;
+  }
+
+  .home-full-width-menu .h5 {
+    font-size: 1rem !important;
+  }
+
+  .home-full-width-menu h2 {
+    font-size: 2rem !important;
+  }
+
+  .home-full-width-menu .btn {
+    font-size: 1rem !important;
+    padding: 0.7rem !important;
+  }
+
+  .home-reserve-table-images {
+    margin-top: 0rem !important;
+  }
+
+  .home-menu-playroom-1 {
+    margin-top: -3rem !important;
+  }
+
+  .home-menu-playroom-2 {
+    margin-top: -3rem !important;
+  }
+
+  .playroom-main-image-wrapper {
+    margin-top: 3.5rem !important;
+  }
+
+  .full-width-images-playroom-wrapper {
+    margin-top: 5rem !important;
+  }
+
+  .playroom-carousel-wrapper {
+    margin-top: 6rem !important
+  }
+
+  .alert-wrapper {
+    width: 75% !important;
+  }
+
+  .playroom-birthday-title {
+    font-size: 1.3rem !important;
+  }
+
+  .dropdown-item-link {
+    margin-left: 1rem !important;
+  }
+
+  .dropdown-menu {
+    background-color: unset !important;
+    border: unset !important;
+  }
+
+  .carousel-indicators {
+    transform: translateX(0%) !important;
+  }
+
+  .home-main-image {
+    width: 100% !important;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-section-container {
+    margin-top: 3rem;
+  }
+
+  .contact-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* Medium Screens (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carousel-control-prev {
+    margin-left: -2.5rem !important;
+  }
+
+  .carousel-control-next {
+    margin-right: -2.5rem !important;
+  }
+
+  .carousel-control-next-icon:after {
+    font-size: 3.5rem !important;
+  }
+
+  .carousel-control-prev-icon:after {
+    font-size: 3.5rem !important;
+  }
+
+  .menu-image {
+    max-height: 350px !important;
+  }
+
+  .image-menu-placeholder {
+    min-height: 350px;
+  }
+
+  .menu-text {
+    margin-left: -1.5rem;
+  }
+
+  .zoom-in-move-down-hover:hover {
+    transform: none !important;
+  }
+
+  .zoom-in-move-left-hover {
+    transform: none !important;
+  }
+
+  .zoom-in-move-right-hover {
+    transform: none !important;
+  }
+
+  .contact-image {
+    max-width: 100% !important;
+  }
+
+  .row-direction {
+    flex-direction: column !important;
+  }
+
+  .playroom-text {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .col-md-6 {
+    width: 100%;
+  }
+
+  .playroom-bundle-image {
+    max-width: 95% !important;
+  }
+
+  .carousel-playroom {
+    transform: translateX(3%) !important;
+  }
+
+  .playroom-text-bundle {
+    margin-bottom: 0rem !important;
+  }
+
+  .playroom-main-image-2 {
+    margin-bottom: 1rem !important;
+  }
+
+  .home-text {
+    margin-bottom: 0rem !important;
+  }
+
+  .full-width-image {
+    height: 400px !important;
+  }
+
+  .home-reserve-table-images {
+    margin-top: 5rem !important;
+  }
+
+  .home-menu-playroom-1 {
+    margin-top: -2rem !important;
+  }
+
+  .playroom-main-image-wrapper {
+    margin-top: 3.5rem !important;
+  }
+
+  .full-width-images-playroom-wrapper {
+    margin-bottom: 5rem !important;
+  }
+
+  .playroom-carousel-wrapper {
+    margin-top: 5rem !important
+  }
+
+  .alert-wrapper {
+    width: 60% !important;
+  }
+
+  .dropdown-item-link {
+    margin-left: 1rem !important;
+  }
+
+  .dropdown-menu {
+    background-color: unset !important;
+    border: unset !important;
+  }
+
+  .carousel-indicators {
+    transform: translateX(-3.5%) !important;
+  }
+
+  .home-main-image {
+    width: 100% !important;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-section-container {
+    margin-top: 3rem;
+  }
+
+}
+
+/* Large Screens (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .carousel-control-prev {
+    margin-left: -3rem !important;
+  }
+
+  .carousel-control-next {
+    margin-right: -3rem !important;
+  }
+
+  .carousel-control-next-icon:after {
+    font-size: 3.5rem !important;
+  }
+
+  .carousel-control-prev-icon:after {
+    font-size: 3.5rem !important;
+  }
+
+  .menu-text {
+    margin-left: -2rem;
+  }
+
+  .zoom-in-move-down-hover:hover {
+    transform: none !important;
+  }
+
+  .row-direction {
+    flex-direction: column !important;
+  }
+
+  .playroom-text {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .col-md-6 {
+    width: 100%;
+  }
+
+  .playroom-text-bundle {
+    margin-bottom: 0rem !important;
+  }
+
+  .playroom-bundle-image {
+    max-width: 90% !important;
+  }
+
+  .carousel-playroom {
+    transform: translateX(5%) !important;
+  }
+
+  .playroom-main-image-2 {
+    margin-bottom: 1rem !important;
+  }
+
+  .playroom-main-image-wrapper {
+    margin-top: 2.5rem !important;
+  }
+
+  .full-width-images-playroom-wrapper {
+    margin-top: 3.5rem !important;
+  }
+
+  .home-text {
+    margin-bottom: 0rem !important;
+  }
+
+  .home-menu-playroom-1 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .home-menu-playroom-2 {
+    margin-bottom: 3rem !important;
+  }
+
+  .carousel-indicators {
+    transform: translateX(-7%) !important;
+  }
+
+  .image-menu-placeholder {
+    min-height: 500px;
+  }
+
+  .home-main-image {
+    width: 90% !important;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-section-container {
+    margin-top: 3rem;
+  }
+}
+
+/* Extra Large Screens (≥1200px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+  .carousel-control-prev {
+    margin-left: -3rem !important;
+  }
+
+  .carousel-control-next {
+    margin-right: -3rem !important;
+  }
+
+  .zoom-in-move-down-hover:hover {
+    transform: scale(1.1) translateY(20%) !important;
+  }
+
+  .playroom-text {
+    font-size: 1.1rem !important;
+  }
+
+  .playroom-text-bundle {
+    margin-bottom: 1rem !important;
+  }
+
+  .image-menu-placeholder {
+    min-height: 500px;
+  }
+
+}
+
+/* Extra Extra Large Screens (≥1400px) */
+@media (min-width: 1400px) {
+  .image-menu-placeholder {
+    min-height: 500px;
+  }
+}
+
+/* Turn Off Hover, Focus, and Active Effects For Touchscreen Devices */
+@media (hover: none) and (pointer: coarse) {
+
+  /* Prevent any hover effect or transform if touch devices are used */
+  .zoom-in-hover,
+  .zoom-in-move-right-hover,
+  .zoom-in-move-left-hover,
+  .zoom-in-move-down-hover,
+
+  .zoom-in-hover:hover,
+  .zoom-in-move-right-hover:hover,
+  .zoom-in-move-left-hover:hover,
+  .zoom-in-move-down-hover:hover,
+  .custom-button:hover,
+  .custom-button-inverted:hover,
+  a:hover,
+  footer a:hover,
+  .nav-link:hover,
+  .dropdown-item:hover,
+  .accordion-button:hover,
+
+  /* Disable focus for touchscreen devices */
+  .zoom-in-hover:focus,
+  .zoom-in-move-right-hover:focus,
+  .zoom-in-move-left-hover:focus,
+  .zoom-in-move-down-hover:focus,
+  .custom-button:focus,
+  .custom-button-inverted:focus,
+  a:focus,
+  footer a:focus,
+  .nav-link:focus,
+  .dropdown-item:focus,
+  .accordion-button:focus,
+
+  /* Disable focus-visible for touchscreen devices */
+  .zoom-in-hover:focus-visible,
+  .zoom-in-move-right-hover:focus-visible,
+  .zoom-in-move-left-hover:focus-visible,
+  .zoom-in-move-down-hover:focus-visible,
+
+  /* Disable active state for touchscreen devices */
+  .zoom-in-hover:active,
+  .zoom-in-move-right-hover:active,
+  .zoom-in-move-left-hover:active,
+  .zoom-in-move-down-hover:active,
+  .custom-button:active,
+  .custom-button-inverted:active,
+  a:active,
+  footer a:active,
+  .nav-link:active,
+  .dropdown-item:active,
+  .accordion-button:active {
+    transform: none !important;
+    color: inherit !important;
+    background-color: inherit !important;
+  }
+}
+
+.home-text {
+  font-size: 1.25rem;
+  font-family: 'Playfair Display' !important;
+}
+
+.full-width-image {
+  margin-top: 3rem;
+  height: 500px;
+  overflow: hidden;
+}
+
+.full-width-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-main-logo-image {
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown-menu {
+  --bs-dropdown-min-width: auto !important;
+}
+
+.home-main-container {
+  margin-top: -1rem;
+  height: 250px;
+  background-color: var(--white);
+}
+
+.mb-6 {
+  margin-bottom: 3.5rem !important;
+}
+
+.rounded {
+  border-radius: 1rem !important;
+}
+
+.home-main-image {
+  margin-bottom: 0rem !important;
+  display: block;
+}
+
+.contact-map {
+  margin-bottom: 1rem;
+}

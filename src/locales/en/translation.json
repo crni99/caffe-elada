@@ -1,0 +1,24 @@
+{
+    "Home": "Home",
+    "Gallery": "Gallery",
+    "HomePage": {
+        "sectionTitle": "Welcome to <strong>Caffe Elada</strong>",
+        "sectionText1": "Opened on October 24, 2024, <strong>Caffe Elada</strong> was created with the desire to provide a cozy corner for all coffee lovers, relaxation, and social moments.",
+        "sectionText2": "We are located in the heart of Ljig, and our goal is for every visitor to find something special in our atmosphere – whether you enjoy a peaceful cup of coffee, delicious chocolate, or the pleasant atmosphere we create every day.",
+        "sectionText3": "At <strong>Caffe Elada</strong>, we strive daily to create unforgettable moments, whether through special events or a rich selection of drinks prepared with care and love. Join us and discover why Caffe Elada is quickly becoming the favorite spot in Ljig."
+    },
+    "Contact": "Contact",
+    "ContactPage": {
+        "GoogleMap": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5717.836271390565!2d20.2317634!3d44.2293438!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759e325a57f1005%3A0xcb8bd57d12fdb7b1!2sElada%20Ljig!5e0!3m2!1sen!2srs!4v1743068510445!5m2!1sen!2srs",
+        "subTitle": "Information",
+        "Phone": "Call us +381 64 121 5566",
+        "Mail": "Got a question? Write to us.",
+        "Facebook": "Check out our Facebook page.",
+        "Instagram": "Follow us on Instagram."
+    },
+    "NotFoundPage": {
+        "title": "Page Not Found",
+        "subTitle": "Oops! The page you are looking for does not exist.",
+        "returnToHomeButton": "Return to the homepage"
+    }
+}
