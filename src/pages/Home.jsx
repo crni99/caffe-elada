@@ -66,40 +66,46 @@ export default function HomePage() {
                     <div className="col-md-8">
                         <Carousel id="gallery" interval="3000">
                             <Carousel.Item>
-                                <a href="https://www.instagram.com/p/DGOjDuxof7W/" target="_blank" rel="noopener noreferrer">
-                                    <img
-                                        className="d-block w-100"
-                                        src="/assets/images/elada-3.jpg"
-                                        alt="Instagram Post 1"
-                                    />
-                                </a>
+                                <img
+                                    className="d-block w-100"
+                                    src="/assets/images/elada-5.webp"
+                                    alt="Instagram Post 1"
+                                />
                             </Carousel.Item>
                             <Carousel.Item>
-                                <a href="https://www.instagram.com/p/DGLHXtyo9UZ/" target="_blank" rel="noopener noreferrer">
-                                    <img
-                                        className="d-block w-100"
-                                        src="/assets/images/elada-3.jpg"
-                                        alt="Instagram Post 2"
-                                    />
-                                </a>
+                                <img
+                                    className="d-block w-100"
+                                    src="/assets/images/elada-6.webp"
+                                    alt="Instagram Post 2"
+                                />
                             </Carousel.Item>
                             <Carousel.Item>
-                                <a href="https://www.instagram.com/p/DF6FNw1I1pZ/" target="_blank" rel="noopener noreferrer">
-                                    <img
-                                        className="d-block w-100"
-                                        src="/assets/images/elada-3.jpg"
-                                        alt="Instagram Post 3"
-                                    />
-                                </a>
+                                <img
+                                    className="d-block w-100"
+                                    src="/assets/images/elada-7.webp"
+                                    alt="Instagram Post 3"
+                                />
                             </Carousel.Item>
                             <Carousel.Item>
-                                <a href="https://www.instagram.com/p/DErue7Po2OR/" target="_blank" rel="noopener noreferrer">
-                                    <img
-                                        className="d-block w-100"
-                                        src="/assets/images/elada-3.jpg"
-                                        alt="Instagram Post 4"
-                                    />
-                                </a>
+                                <img
+                                    className="d-block w-100"
+                                    src="/assets/images/elada-8.webp"
+                                    alt="Instagram Post 4"
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100"
+                                    src="/assets/images/elada-9.webp"
+                                    alt="Instagram Post 4"
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100"
+                                    src="/assets/images/elada-2.jpg"
+                                    alt="Instagram Post 4"
+                                />
                             </Carousel.Item>
                         </Carousel>
                     </div>
