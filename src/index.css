@@ -189,13 +189,13 @@ footer a:active {
     margin-right: auto;
   }
 
-  .home-section-container {
-    margin-top: 3rem;
-  }
-
   .contact-container {
     margin-top: 3rem;
     margin-bottom: 3rem;
+  }
+
+  .instagram-embed {
+    display: none !important;
   }
 }
 
@@ -215,36 +215,8 @@ footer a:active {
     margin-left: 0rem;
   }
 
-  .zoom-in-move-down-hover:hover {
-    transform: none !important;
-  }
-
-  .zoom-in-move-left-hover {
-    transform: none !important;
-  }
-
-  .zoom-in-move-right-hover {
-    transform: none !important;
-  }
-
-  .carousel-control-prev {
-    margin-left: -1rem !important;
-  }
-
-  .carousel-control-next {
-    margin-right: -1rem !important;
-  }
-
   .min-vh-90 {
     min-height: 100dvh;
-  }
-
-  .carousel-control-next-icon:after {
-    font-size: 3rem !important;
-  }
-
-  .carousel-control-prev-icon:after {
-    font-size: 3rem !important;
   }
 
   .contact-map {
@@ -269,18 +241,6 @@ footer a:active {
 
   .playroom-bundle-image {
     max-width: 100% !important;
-  }
-
-  .carousel-playroom {
-    transform: translateX(0%) !important;
-  }
-
-  .playroom-text-bundle {
-    margin-bottom: 0rem !important;
-  }
-
-  .playroom-main-image-2 {
-    margin-bottom: 1rem !important;
   }
 
   .display-4 {
@@ -322,10 +282,6 @@ footer a:active {
     margin-top: 4rem !important;
   }
 
-  .playroom-carousel-wrapper {
-    margin-top: 3rem !important
-  }
-
   .home-reserve-title {
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
@@ -353,22 +309,6 @@ footer a:active {
     margin-right: 1rem;
   }
 
-  .carousel-indicators {
-    transform: translateX(0%) !important;
-  }
-
-  .card-title {
-    font-size: 1.3rem !important;
-  }
-
-  .card-text {
-    font-size: 0.9rem !important;
-  }
-
-  .card-button {
-    font-size: 0.9rem !important;
-  }
-
   .home-main-container {
     height: 200px !important;
   }
@@ -380,13 +320,13 @@ footer a:active {
     margin-right: auto;
   }
 
-  .home-section-container {
-    margin-top: 3rem;
-  }
-
   .contact-container {
     margin-top: 3rem;
     margin-bottom: 3rem;
+  }
+
+  .instagram-embed {
+    display: none !important;
   }
 }
 
@@ -417,26 +357,6 @@ footer a:active {
     transform: none !important;
   }
 
-  .carousel {
-    margin-bottom: 0rem !important;
-  }
-
-  .carousel-control-prev {
-    margin-left: -2rem !important;
-  }
-
-  .carousel-control-next {
-    margin-right: -2rem !important;
-  }
-
-  .carousel-control-next-icon:after {
-    font-size: 3.5rem !important;
-  }
-
-  .carousel-control-prev-icon:after {
-    font-size: 3.5rem !important;
-  }
-
   .contact-map {
     height: 400px;
   }
@@ -455,22 +375,6 @@ footer a:active {
 
   .col-md-6 {
     width: 100%;
-  }
-
-  .playroom-bundle-image {
-    max-width: 100% !important;
-  }
-
-  .carousel-playroom {
-    transform: translateX(0%) !important;
-  }
-
-  .playroom-text-bundle {
-    margin-bottom: 0rem !important;
-  }
-
-  .playroom-main-image-2 {
-    margin-bottom: 1rem !important;
   }
 
   .display-4 {
@@ -506,26 +410,6 @@ footer a:active {
     margin-top: 0rem !important;
   }
 
-  .home-menu-playroom-1 {
-    margin-top: -3rem !important;
-  }
-
-  .home-menu-playroom-2 {
-    margin-top: -3rem !important;
-  }
-
-  .playroom-main-image-wrapper {
-    margin-top: 3.5rem !important;
-  }
-
-  .full-width-images-playroom-wrapper {
-    margin-top: 5rem !important;
-  }
-
-  .playroom-carousel-wrapper {
-    margin-top: 6rem !important
-  }
-
   .alert-wrapper {
     width: 75% !important;
   }
@@ -543,10 +427,6 @@ footer a:active {
     border: unset !important;
   }
 
-  .carousel-indicators {
-    transform: translateX(0%) !important;
-  }
-
   .home-main-image {
     width: 100% !important;
     margin-top: 3rem;
@@ -554,33 +434,18 @@ footer a:active {
     margin-right: auto;
   }
 
-  .home-section-container {
-    margin-top: 3rem;
-  }
-
   .contact-container {
     margin-top: 3rem;
     margin-bottom: 3rem;
+  }
+
+  .instagram-embed {
+    display: none !important;
   }
 }
 
 /* Medium Screens (≥768px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .carousel-control-prev {
-    margin-left: -2.5rem !important;
-  }
-
-  .carousel-control-next {
-    margin-right: -2.5rem !important;
-  }
-
-  .carousel-control-next-icon:after {
-    font-size: 3.5rem !important;
-  }
-
-  .carousel-control-prev-icon:after {
-    font-size: 3.5rem !important;
-  }
 
   .menu-image {
     max-height: 350px !important;
@@ -627,44 +492,12 @@ footer a:active {
     max-width: 95% !important;
   }
 
-  .carousel-playroom {
-    transform: translateX(3%) !important;
-  }
-
-  .playroom-text-bundle {
-    margin-bottom: 0rem !important;
-  }
-
-  .playroom-main-image-2 {
-    margin-bottom: 1rem !important;
-  }
-
   .home-text {
     margin-bottom: 0rem !important;
   }
 
   .full-width-image {
     height: 400px !important;
-  }
-
-  .home-reserve-table-images {
-    margin-top: 5rem !important;
-  }
-
-  .home-menu-playroom-1 {
-    margin-top: -2rem !important;
-  }
-
-  .playroom-main-image-wrapper {
-    margin-top: 3.5rem !important;
-  }
-
-  .full-width-images-playroom-wrapper {
-    margin-bottom: 5rem !important;
-  }
-
-  .playroom-carousel-wrapper {
-    margin-top: 5rem !important
   }
 
   .alert-wrapper {
@@ -680,10 +513,6 @@ footer a:active {
     border: unset !important;
   }
 
-  .carousel-indicators {
-    transform: translateX(-3.5%) !important;
-  }
-
   .home-main-image {
     width: 100% !important;
     margin-top: 3rem;
@@ -691,36 +520,13 @@ footer a:active {
     margin-right: auto;
   }
 
-  .home-section-container {
-    margin-top: 3rem;
-  }
-
 }
 
 /* Large Screens (≥992px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .carousel-control-prev {
-    margin-left: -3rem !important;
-  }
-
-  .carousel-control-next {
-    margin-right: -3rem !important;
-  }
-
-  .carousel-control-next-icon:after {
-    font-size: 3.5rem !important;
-  }
-
-  .carousel-control-prev-icon:after {
-    font-size: 3.5rem !important;
-  }
 
   .menu-text {
     margin-left: -2rem;
-  }
-
-  .zoom-in-move-down-hover:hover {
-    transform: none !important;
   }
 
   .row-direction {
@@ -736,45 +542,8 @@ footer a:active {
     width: 100%;
   }
 
-  .playroom-text-bundle {
-    margin-bottom: 0rem !important;
-  }
-
-  .playroom-bundle-image {
-    max-width: 90% !important;
-  }
-
-  .carousel-playroom {
-    transform: translateX(5%) !important;
-  }
-
-  .playroom-main-image-2 {
-    margin-bottom: 1rem !important;
-  }
-
-  .playroom-main-image-wrapper {
-    margin-top: 2.5rem !important;
-  }
-
-  .full-width-images-playroom-wrapper {
-    margin-top: 3.5rem !important;
-  }
-
   .home-text {
     margin-bottom: 0rem !important;
-  }
-
-  .home-menu-playroom-1 {
-    margin-top: 3rem !important;
-    margin-bottom: 3rem !important;
-  }
-
-  .home-menu-playroom-2 {
-    margin-bottom: 3rem !important;
-  }
-
-  .carousel-indicators {
-    transform: translateX(-7%) !important;
   }
 
   .image-menu-placeholder {
@@ -788,33 +557,10 @@ footer a:active {
     margin-right: auto;
   }
 
-  .home-section-container {
-    margin-top: 3rem;
-  }
 }
 
 /* Extra Large Screens (≥1200px) */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
-
-  .carousel-control-prev {
-    margin-left: -3rem !important;
-  }
-
-  .carousel-control-next {
-    margin-right: -3rem !important;
-  }
-
-  .zoom-in-move-down-hover:hover {
-    transform: scale(1.1) translateY(20%) !important;
-  }
-
-  .playroom-text {
-    font-size: 1.1rem !important;
-  }
-
-  .playroom-text-bundle {
-    margin-bottom: 1rem !important;
-  }
 
   .image-menu-placeholder {
     min-height: 500px;
@@ -935,4 +681,14 @@ footer a:active {
 
 .contact-map {
   margin-bottom: 1rem;
+}
+
+
+.home-section-container {
+  margin-top: 2rem;
+}
+
+.contact-container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }

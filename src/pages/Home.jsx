@@ -1,9 +1,9 @@
 import React from 'react';
+import { Carousel } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { Trans } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MainTitle from '../components/MainTitle';
-import InstagramEmbed from '../components/InstagramEmbed';
 import { faInstagramSquare, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faClock } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,7 +23,7 @@ export default function HomePage() {
                 />
             </div>
 
-            <div className="container d-flex justify-content-center align-items-center min-vh-66 home-section-container"
+            <div className="container d-flex justify-content-center align-items-center min-vh-75 home-section-container"
                 data-aos="fade-up" data-aos-duration="2000">
                 <div className="row">
                     <div className="row-wrapper col-md-6 home-text">
@@ -58,31 +58,56 @@ export default function HomePage() {
                 />
             </div>
 
-            <div className="container d-flex justify-content-center align-items-center min-vh-66 mt-5"
-                data-aos="fade-up" data-aos-duration="2000" id="gallery">
-                <div className='row'>
-                    <div className="col-md-4 mb-5 mt-3">
-                        <InstagramEmbed url="https://www.instagram.com/p/DGOjDuxof7W/" />
+            <div className="container d-flex justify-content-center 
+                align-items-center min-vh-66 mt-5"
+                data-aos="fade-up" data-aos-duration="2000" id='contact'>
+                <div className="row w-100">
+                    <div className="col-md-2">&nbsp;</div>
+                    <div className="col-md-8">
+                        <Carousel id="gallery" interval="3000">
+                            <Carousel.Item>
+                                <a href="https://www.instagram.com/p/DGOjDuxof7W/" target="_blank" rel="noopener noreferrer">
+                                    <img
+                                        className="d-block w-100"
+                                        src="/assets/images/elada-3.jpg"
+                                        alt="Instagram Post 1"
+                                    />
+                                </a>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <a href="https://www.instagram.com/p/DGLHXtyo9UZ/" target="_blank" rel="noopener noreferrer">
+                                    <img
+                                        className="d-block w-100"
+                                        src="/assets/images/elada-3.jpg"
+                                        alt="Instagram Post 2"
+                                    />
+                                </a>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <a href="https://www.instagram.com/p/DF6FNw1I1pZ/" target="_blank" rel="noopener noreferrer">
+                                    <img
+                                        className="d-block w-100"
+                                        src="/assets/images/elada-3.jpg"
+                                        alt="Instagram Post 3"
+                                    />
+                                </a>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <a href="https://www.instagram.com/p/DErue7Po2OR/" target="_blank" rel="noopener noreferrer">
+                                    <img
+                                        className="d-block w-100"
+                                        src="/assets/images/elada-3.jpg"
+                                        alt="Instagram Post 4"
+                                    />
+                                </a>
+                            </Carousel.Item>
+                        </Carousel>
                     </div>
-                    <div className="col-md-4 mb-5 mt-3">
-                        <InstagramEmbed url="https://www.instagram.com/p/DGLHXtyo9UZ/" />
-                    </div>
-                    <div className="col-md-4 mb-5 mt-3">
-                        <InstagramEmbed url="https://www.instagram.com/p/DF6FNw1I1pZ/" />
-                    </div>
-                    <div className="col-md-4">
-                        <InstagramEmbed url="https://www.instagram.com/p/DErue7Po2OR/" />
-                    </div>
-                    <div className="col-md-4">
-                        <InstagramEmbed url="https://www.instagram.com/p/DFU-X30IoGp/" />
-                    </div>
-                    <div className="col-md-4">
-                        <InstagramEmbed url="https://www.instagram.com/p/DDr7Ga9IhQM/" />
-                    </div>
+                    <div className="col-md-2">&nbsp;</div>
                 </div>
             </div>
 
-            <div className="container d-flex justify-content-center align-items-center container-full-view min-vh-75 contact-container"
+            <div className="container d-flex justify-content-center align-items-center container-full-view min-vh-66 contact-container"
                 data-aos="fade-up" data-aos-duration="2000"
                 id='contact'>
                 <div className="row w-100 row-wrapper">
