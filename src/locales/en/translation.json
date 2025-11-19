@@ -20,5 +20,21 @@
         "title": "Page Not Found",
         "subTitle": "Oops! The page you are looking for does not exist.",
         "returnToHomeButton": "Return to the homepage"
+    },
+    "Drinks": {
+        "title": "Drinks",
+        "subTitle": "Choose from our carefully selected range of hot, non-alcoholic and spirits.",
+        "coffee": "Coffees",
+        "hotDrinks": "Hot drinks",
+        "water": "Water",
+        "juices": "Juices",
+        "energy": "Energy drinks",
+        "beers": "Beers",
+        "ciders": "Ciders",
+        "wines": "Wines",
+        "likers": "Aperitifs and liqueurs",
+        "rakijas": "Rakijas",
+        "hardDrinks": "Spirits",
+        "cocktails": "Cocktails"
     }
 }

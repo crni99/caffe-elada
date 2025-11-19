@@ -29,10 +29,13 @@ export default function Header() {
                                 <Link to="/" className="nav-link">{t("Home")}</Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Link to="#gallery" className="nav-link">{t("Gallery")}</Link>
+                                <Link to="/drinks" className="nav-link">{t("Drinks.title")}</Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Link to="#contact" className="nav-link">{t("Contact")}</Link>
+                                <Link to="/#gallery" className="nav-link">{t("Gallery")}</Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Link to="/#contact" className="nav-link">{t("Contact")}</Link>
                             </Nav.Item>
                             <NavDropdown
                                 title={

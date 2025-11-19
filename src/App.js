@@ -6,6 +6,7 @@ import i18n from './i18n';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/Home';
+import DrinksPage from './pages/Drinks';
 import NotFoundPage from './components/NotFoundPage';
 
 import AOS from 'aos';
@@ -39,6 +40,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/drinks" element={<DrinksPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
           <Footer />

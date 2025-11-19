@@ -20,5 +20,21 @@
         "title": "Stranica Nije Pronađena",
         "subTitle": "Ups! Stranica koju tražite ne postoji.",
         "returnToHomeButton": "Vratite se na početnu stranicu"
+    },
+    "Drinks": {
+        "title": "Karta pića",
+        "subTitle": "Odaberite iz naše pažljivo sortirane ponude toplih, bezalkoholnih i žestokih pića.",
+        "coffee": "Kafe",
+        "hotDrinks": "Topli napici",
+        "water": "Voda",
+        "juices": "Sokovi",
+        "energy": "Energetska pića",
+        "beers": "Piva",
+        "ciders": "Cideri",
+        "wines": "Vina",
+        "likers": "Aperitivi i likeri",
+        "rakijas": "Rakije",
+        "hardDrinks": "Žestoka pića",
+        "cocktails": "Kokteli"
     }
 }

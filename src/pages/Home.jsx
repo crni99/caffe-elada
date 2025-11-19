@@ -48,7 +48,7 @@ export default function HomePage() {
                 </div>
             </div>
 
-            <div className="full-width-image position-relative home-full-width-menu-wrapper min-vh-75"
+            <div className="full-width-image position-relative home-full-width-menu-wrapper min-vh-75 shadow"
                 data-aos="zoom-in" data-aos-duration="2000">
                 <img src="/assets/images/elada-1.jpg" loading="lazy"
                     className="w-50 h-100 object-fit-cover" alt={t('HomePage.sectionImageAlt2')}
@@ -58,13 +58,14 @@ export default function HomePage() {
                 />
             </div>
 
+            <div id="gallery"></div>
             <div className="container d-flex justify-content-center 
-                align-items-center min-vh-66 mt-5"
-                data-aos="fade-up" data-aos-duration="2000" id='contact'>
+                align-items-center min-vh-66 mt-7"
+                data-aos="fade-up" data-aos-duration="2000" >
                 <div className="row w-100">
-                    <div className="col-md-2">&nbsp;</div>
-                    <div className="col-md-8">
-                        <Carousel id="gallery" interval="3000">
+                    <div className="col-md-3">&nbsp;</div>
+                    <div className="col-md-6">
+                        <Carousel interval="3000" className='rounded'>
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100"
@@ -109,13 +110,13 @@ export default function HomePage() {
                             </Carousel.Item>
                         </Carousel>
                     </div>
-                    <div className="col-md-2">&nbsp;</div>
+                    <div className="col-md-3">&nbsp;</div>
                 </div>
             </div>
 
             <div className="container d-flex justify-content-center align-items-center container-full-view min-vh-66 contact-container"
                 data-aos="fade-up" data-aos-duration="2000"
-                id='contact'>
+            >
                 <div className="row w-100 row-wrapper">
                     <div className="col-md-4 mt-3 mb-4">
                         <h3 className='text-uppercase fw-bold mb-4'>{t('ContactPage.subTitle')}</h3>
@@ -131,20 +132,20 @@ export default function HomePage() {
                                 </a>
                             </p>
                             <p className="mt-5">
-                                <a href="https://www.facebook.com/profile.php?id=61565711781481" target="_blank" rel="noopener noreferrer">
-                                    <FontAwesomeIcon icon={faFacebookSquare} size="xl" className="mx-2 custom-icon" title="Facebook" />
-                                    {t('ContactPage.Facebook')}
-                                </a>
-                            </p>
-                            <p className="mt-5">
                                 <a href="https://www.instagram.com/caffe_elada/" target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={faInstagramSquare} size="xl" className="mx-2 custom-icon" title="Instagram" />
                                     {t('ContactPage.Instagram')}
                                 </a>
                             </p>
+                            <p className="mt-5">
+                                <a href="https://www.facebook.com/profile.php?id=61565711781481" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faFacebookSquare} size="xl" className="mx-2 custom-icon" title="Facebook" />
+                                    {t('ContactPage.Facebook')}
+                                </a>
+                            </p>
                         </div>
                     </div>
-                    <div className="col-md-8 d-flex justify-content-end mt-3">
+                    <div className="col-md-8 d-flex justify-content-end mt-3" id='contact'>
                         <iframe
                             src={t('ContactPage.GoogleMap')}
                             width="100%"

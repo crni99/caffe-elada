@@ -115,6 +115,14 @@ footer a:active {
   margin-top: 2rem !important;
 }
 
+.mt-6 {
+  margin-top: 3.5rem !important;
+}
+
+.mt-7 {
+  margin-top: 4rem !important;
+}
+
 .home-section-title {
   color: var(--dark-blue);
   font-weight: 500;
@@ -670,6 +678,10 @@ footer a:active {
   margin-bottom: 3.5rem !important;
 }
 
+.mb-7 {
+  margin-bottom: 4rem !important;
+}
+
 .rounded {
   border-radius: 1rem !important;
 }
@@ -691,4 +703,8 @@ footer a:active {
 .contact-container {
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.carousel-inner {
+  border-radius: 1rem !important;
 }
