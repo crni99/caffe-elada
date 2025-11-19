@@ -28,11 +28,6 @@ a {
   font-family: 'Playfair Display' !important;
 }
 
-strong,
-b {
-  color: var(--dark-blue);
-}
-
 .main-title {
   color: var(--dark-blue);
   border-color: var(--white);
@@ -124,7 +119,7 @@ footer a:active {
 }
 
 .home-section-title {
-  color: var(--dark-blue);
+  color: var(--white);
   font-weight: 500;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -697,7 +692,7 @@ footer a:active {
 
 
 .home-section-container {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .contact-container {

@@ -23,10 +23,10 @@ export default function HomePage() {
                 />
             </div>
 
-            <div className="container d-flex justify-content-center align-items-center min-vh-75 home-section-container"
+            <div className="container d-flex justify-content-center align-items-center home-section-container"
                 data-aos="fade-up" data-aos-duration="2000">
                 <div className="row">
-                    <div className="row-wrapper col-md-6 home-text">
+                    <div className="col-md-6 home-text text-white">
                         <h3 className="home-section-title text-center">
                             <Trans i18nKey="HomePage.sectionTitle"></Trans>
                         </h3>
