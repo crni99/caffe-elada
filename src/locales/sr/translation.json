@@ -7,14 +7,37 @@
         "sectionText2": "Smestili smo se u samom srcu Ljiga, a naš cilj je da svaki posetilac pronađe nešto posebno u našem ambijentu – bilo da uživate u mirnoj šolji kafe, ukusnoj čokoladi ili prijatnoj atmosferi koju stvaramo svakodnevno.",
         "sectionText3": "U <strong>Caffe Eladi</strong>, svakodnevno se trudimo da kreiramo nezaboravne trenutke, bilo kroz specijalne događaje, ili kroz bogatu ponudu pića pripremljenih sa pažnjom i ljubavlju. Pridružite nam se i otkrijte zašto Caffe Elada brzo postaje omiljeno mesto u Ljigu."
     },
+    "Reviews": {
+        "title": "Šta su gosti rekli za nas?",
+        "description": "Pročitajte utiske i iskustva naših gostiju i saznajte zašto nam se uvek rado vraćaju.",
+        "review1": "Simpatičan kafić, odlična usluga, najbrža karta za Grčku!",
+        "review2": "Kafić sa dušom ❤❤❤ Sve je izuzetno, ambijent, atmosfera, osobe, vlasnici..",
+        "review3": "Prelep ambijent, osoblje, atmosfera i naravno vlasnici. ❤",
+        "review4": "Malo, izuzetno privatno mesto sa raznovrsnim pićem, ljubazan osobljem, prijateljskom atmosferom."
+    },
     "Contact": "Kontakt",
     "ContactPage": {
-        "GoogleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5717.8362699355075!2d20.231763355382416!3d44.22934381497805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759e325a57f1005%3A0xcb8bd57d12fdb7b1!2sElada%20Ljig!5e0!3m2!1ssr!2srs!4v1743068402409!5m2!1ssr!2srs",
-        "subTitle": "Informacije",
-        "Phone": "Pozovite nas +381 64 121 5566",
-        "Mail": "Imate pitanje? Pišite nam.",
-        "Facebook": "Pogledajte Facebook stranicu.",
-        "Instagram": "Zapratite nas na Instagramu."
+        "description": "Posetite nas na dole navedenoj adresi ili nas kontaktirajte.",
+        "subTitle": "Kontakt Informacije",
+        "subDescription": "Slobodno nam se obratite sa svim pitanjima o rezervacijama ili medijskim upitima.",
+        "openingHoursTitle": "Radno Vreme:",
+        "openingHoursDescription1": "Pon - Čet i Nedelja: 08 - 00",
+        "openingHoursDescription2": "Pet - Sub: 08 - 01",
+        "phoneTitle": "Telefon:",
+        "addressTitle": "Adresa:",
+        "addressDescription1": "Kralja Petra 22",
+        "addressDescription2": "Ljig 14240",
+        "googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5717.8362699355075!2d20.231763355382416!3d44.22934381497805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759e325a57f1005%3A0xcb8bd57d12fdb7b1!2sElada%20Ljig!5e0!3m2!1ssr!2srs!4v1743068402409!5m2!1ssr!2srs"
+    },
+    "Footer": {
+        "description1": "Otkrijte naš jedinstveni ambijent i uživajte u najboljoj kafi i pićima. ",
+        "description2": "Vaše omiljeno mesto u Ljigu!",
+        "subTitle1": "Budite u toku",
+        "placeholder1": "Unesite vašu e-mail adresu",
+        "subTitle2": "",
+        "subTitle3": "Kontaktirajte nas",
+        "allRightsReserved": "Sva prava zadržava",
+        "designedBy": "Dizajnirao"
     },
     "NotFoundPage": {
         "title": "Stranica Nije Pronađena",

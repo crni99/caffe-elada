@@ -5,7 +5,8 @@ import { Trans } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MainTitle from '../components/MainTitle';
 import { faInstagramSquare, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faClock, faLocationDot, faCommentDots, faStar } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function HomePage() {
 
@@ -14,6 +15,21 @@ export default function HomePage() {
     return (
         <>
             <MainTitle title={t('Home')} />
+
+            <header className="masthead">
+                <div className="container px-4 px-lg-5 h-100">
+                    <div className="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                        <div className="col-lg-8 align-self-end">
+                            <h1 className="text-white font-weight-bold">Your Favorite Place for Free Bootstrap Themes</h1>
+                            <hr className="divider" />
+                        </div>
+                        <div className="col-lg-8 align-self-baseline">
+                            <p className="text-white-75 mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
+                            <a className="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
             <div className='w-100 home-main-container d-flex justify-content-center align-items-center'>
                 <img src="/assets/images/EladaLogoV2.svg"
@@ -114,51 +130,201 @@ export default function HomePage() {
                 </div>
             </div>
 
-            <div className="container d-flex justify-content-center align-items-center container-full-view min-vh-66 contact-container"
-                data-aos="fade-up" data-aos-duration="2000"
-            >
-                <div className="row w-100 row-wrapper">
-                    <div className="col-md-4 mt-3 mb-4">
-                        <h3 className='text-uppercase fw-bold mb-4'>{t('ContactPage.subTitle')}</h3>
-                        <div className=''>
-                            <p className="mt-5">
-                                <FontAwesomeIcon icon={faClock} size="xl" className="mx-2 custom-icon" title="Time" />
-                                08:00 - 00:00
-                            </p>
-                            <p className="mt-5">
-                                <a href="tel:+381641215566" target="_blank" rel="noopener noreferrer">
-                                    <FontAwesomeIcon icon={faPhone} size="xl" className="mx-2 custom-icon" title="Phone" />
-                                    {t('ContactPage.Phone')}
-                                </a>
-                            </p>
-                            <p className="mt-5">
-                                <a href="https://www.instagram.com/caffe_elada/" target="_blank" rel="noopener noreferrer">
-                                    <FontAwesomeIcon icon={faInstagramSquare} size="xl" className="mx-2 custom-icon" title="Instagram" />
-                                    {t('ContactPage.Instagram')}
-                                </a>
-                            </p>
-                            <p className="mt-5">
-                                <a href="https://www.facebook.com/profile.php?id=61565711781481" target="_blank" rel="noopener noreferrer">
-                                    <FontAwesomeIcon icon={faFacebookSquare} size="xl" className="mx-2 custom-icon" title="Facebook" />
-                                    {t('ContactPage.Facebook')}
-                                </a>
-                            </p>
+            <section id="testimonials" class="testimonials section light-background">
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>{t('Reviews.title')}</h2>
+                    <p>{t('Reviews.description')}</p>
+                </div>
+                <div class="container">
+                    <div class="testimonial-grid">
+                        <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-meta">
+                                        <h3>Sandra L.</h3>
+                                        <h4 className='star-reviews'>
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                        </h4>
+                                        <div class="company-logo">
+                                            <i class="bi bi-building"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-body">
+                                    <i class="bi bi-chat-quote-fill quote-icon">
+                                        <FontAwesomeIcon icon={faCommentDots} size="sm" className="mx-2" title="Comment Dots" />
+                                    </i>
+                                    <p>{t('Reviews.review2')}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item featured" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-meta">
+                                        <h3>Milica V.</h3>
+                                        <h4 className='star-reviews'>
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                        </h4>
+                                        <div class="company-logo">
+                                            <i class="bi bi-buildings"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-body">
+                                    <i class="bi bi-chat-quote-fill quote-icon">
+                                        <FontAwesomeIcon icon={faCommentDots} size="sm" className="mx-2" title="Comment Dots" />
+                                    </i>
+                                    <p>{t('Reviews.review1')}</p><span className="flag-icon flag-icon-gr"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-meta">
+                                        <h3>Jana G.</h3>
+                                        <h4 className='star-reviews'>
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                        </h4>
+                                        <div class="company-logo">
+                                            <i class="bi bi-building-check"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-body">
+                                    <i class="bi bi-chat-quote-fill quote-icon">
+                                        <FontAwesomeIcon icon={faCommentDots} size="sm" className="mx-2" title="Comment Dots" />
+                                    </i>
+                                    <p>{t('Reviews.review3')}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-meta">
+                                        <h3>Stevan M.</h3>
+                                        <h4 className='star-reviews'>
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                            <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
+                                        </h4>
+                                        <div class="company-logo">
+                                            <i class="bi bi-building-gear"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-body">
+                                    <i class="bi bi-chat-quote-fill quote-icon">
+                                        <FontAwesomeIcon icon={faCommentDots} size="sm" className="mx-2" title="Comment Dots" />
+                                    </i>
+                                    <p>{t('Reviews.review4')}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="col-md-8 d-flex justify-content-end mt-3" id='contact'>
-                        <iframe
-                            src={t('ContactPage.GoogleMap')}
-                            width="100%"
-                            height="500"
-                            className='contact-map'
-                            allowFullScreen=""
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                            title='Google Map'>
-                        </iframe>
+                </div>
+            </section>
+
+            <section id="contact" className="contact section">
+                <div className="container section-title" data-aos="fade-up">
+                    <h2>{t('Contact')}</h2>
+                    <p>{t('ContactPage.description')}</p>
+                </div>
+                <div className="container">
+                    <div className="row d-flex align-items-stretch">
+                        <div className="col-lg-5">
+                            <div className="contact-info">
+                                <div className="contact-card">
+                                    <h3>{t('ContactPage.subTitle')}</h3>
+                                    <p>{t('ContactPage.subDescription')}</p>
+                                    <div className="contact-details">
+                                        <div className="contact-item">
+                                            <i className="bi">
+                                                <FontAwesomeIcon icon={faClock} size="sm" className="mx-2" title="Clock" />
+                                            </i>
+                                            <div>
+                                                <h4>{t('ContactPage.openingHoursTitle')}</h4>
+                                                <p>{t('ContactPage.openingHoursDescription1')}</p>
+                                                <p>{t('ContactPage.openingHoursDescription2')}</p>
+                                            </div>
+                                        </div>
+                                        <div className="contact-item">
+                                            <i className="bi">
+                                                <a href="tel:+381641215566" rel="noopener noreferrer">
+                                                    <FontAwesomeIcon icon={faPhone} size="sm" className="mx-2" title="Phone" />
+                                                </a>
+                                            </i>
+                                            <div>
+                                                <a href="tel:+381641215566" rel="noopener noreferrer">
+                                                    <h4>{t('ContactPage.phoneTitle')}</h4>
+                                                    <p className='font-weight-bold'>
+                                                        +381 64 121-5566
+                                                    </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className="contact-item">
+                                            <i className="bi">
+                                                <a href="https://maps.app.goo.gl/1N3gb5m4EPXZM3iBA" target="_blank" rel="noopener noreferrer">
+                                                    <FontAwesomeIcon icon={faLocationDot} size="sm" className="mx-2" title="Location Dot" />
+                                                </a>
+                                            </i>
+                                            <div>
+                                                <a href="https://maps.app.goo.gl/1N3gb5m4EPXZM3iBA" target="_blank" rel="noopener noreferrer">
+                                                    <h4>{t('ContactPage.addressTitle')}</h4>
+                                                    <p>{t('ContactPage.addressDescription1')}</p>
+                                                    <p>{t('ContactPage.addressDescription2')}</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="social-links">
+                                        <a href="https://www.facebook.com/profile.php?id=61565711781481" target="_blank" rel="noopener noreferrer">
+                                            <FontAwesomeIcon icon={faFacebookSquare} className="mx-2" title="Facebook" />
+                                        </a>
+                                        <a href="https://www.instagram.com/caffe_elada/" target="_blank" rel="noopener noreferrer">
+                                            <FontAwesomeIcon icon={faInstagramSquare} className="mx-2" title="Instagram" />
+                                        </a>
+                                        <a href="tel:+381641215566" rel="noopener noreferrer">
+                                            <FontAwesomeIcon icon={faPhone} className="mx-2" title="Phone" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-7">
+                            <div className="contact-form-wrapper map-container-height-fix">
+                                <iframe
+                                    src={t('ContactPage.googleMap')}
+                                    width="100%"
+                                    height="100%"
+                                    className='contact-map'
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title='Google Map'>
+                                </iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
         </>
     );
