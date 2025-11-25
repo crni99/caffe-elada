@@ -184,6 +184,10 @@ footer a:active {
   width: 150px;
 }
 
+.drink-wrapper {
+  border-top: 3px solid var(--accent-color);
+}
+
 /* Extra Extra Small (Old Mobile) */
 @media (max-width: 400px) {
   .menu-image {
