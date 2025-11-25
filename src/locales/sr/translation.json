@@ -1,14 +1,23 @@
 {
+    "Header": {
+        "bookTable": "Rezervišite Sto"
+    },
     "Home": "Početna",
-    "Gallery": "Galerija",
     "HomePage": {
         "sectionTitle": "Dobrodošli u <strong>Caffe Elada</strong>",
-        "sectionText1": "Otvoreni 24. oktobra 2024. godine, <strong>Caffe Elada</strong> je stvoren sa željom da pruži prijatan kutak za sve ljubitelje kafe, opuštanja i društvenih trenutaka.",
-        "sectionText2": "Smestili smo se u samom srcu Ljiga, a naš cilj je da svaki posetilac pronađe nešto posebno u našem ambijentu – bilo da uživate u mirnoj šolji kafe, ukusnoj čokoladi ili prijatnoj atmosferi koju stvaramo svakodnevno.",
-        "sectionText3": "U <strong>Caffe Eladi</strong>, svakodnevno se trudimo da kreiramo nezaboravne trenutke, bilo kroz specijalne događaje, ili kroz bogatu ponudu pića pripremljenih sa pažnjom i ljubavlju. Pridružite nam se i otkrijte zašto Caffe Elada brzo postaje omiljeno mesto u Ljigu."
+        "sectionText1": "Otvoreni 24. oktobra 2024. godine u srcu Ljiga, Caffe Elada je brzo postao omiljeni kutak za opuštanje i druženje. Naš cilj je da svaki posetilac uživa u vrhunskoj kafi, ukusnoj čokoladi i jedinstvenoj, prijatnoj atmosferi.",
+        "sectionText2": "Kreiramo nezaboravne trenutke kroz pažljivo pripremljenu ponudu pića i organizaciju specijalnih događaja. Pridružite nam se i otkrijte zašto smo brzo postali omiljeno mesto u Ljigu.",
+        "bookTable": "REZERVIŠITE STO",
+        "viewDrinks": "KARTA PIĆA",
+        "openDaily": "OTVORENO SVAKI DAN",
+        "location": "LOKACIJA"
+    },
+    "Gallery": {
+        "title": "Galerija",
+        "subTitle": "Istražite jedinstveni ambijent našeg prostora, od jutarnjih latea do kasnonoćnog veselja."
     },
     "Reviews": {
-        "title": "Šta su gosti rekli za nas?",
+        "title": "Šta su gosti rekli o nama?",
         "description": "Pročitajte utiske i iskustva naših gostiju i saznajte zašto nam se uvek rado vraćaju.",
         "review1": "Simpatičan kafić, odlična usluga, najbrža karta za Grčku!",
         "review2": "Kafić sa dušom ❤❤❤ Sve je izuzetno, ambijent, atmosfera, osobe, vlasnici..",

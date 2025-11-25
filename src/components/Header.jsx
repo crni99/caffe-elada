@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { NavDropdown } from 'react-bootstrap';
 import { useLanguage } from '../context/LanguageContext';
 import flagSr from "../assets/lang-flags/sr.svg";
 import flagEn from "../assets/lang-flags/en.svg";
@@ -16,55 +16,45 @@ export default function Header() {
     };
 
     return (
-        <header>
-            <Navbar expand="lg" className="shadow-sm mb-3 bg-body-tertiary">
-                <Container>
-                    <Link to="/" className="navbar-brand">
-                        <span>Caffe Elada</span>
-                    </Link>
-                    <Navbar.Toggle aria-controls="navbarResponsive" />
-                    <Navbar.Collapse id="navbarResponsive">
-                        <Nav className="ms-auto">
-                            <Nav.Item>
-                                <Link to="/" className="nav-link">{t("Home")}</Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Link to="/drinks" className="nav-link">{t("Drinks.title")}</Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Link to="/#gallery" className="nav-link">{t("Gallery")}</Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Link to="/#contact" className="nav-link">{t("Contact")}</Link>
-                            </Nav.Item>
-                            <NavDropdown
-                                title={
-                                    <img
-                                        src={
-                                            language === 'sr' ? flagSr : language === 'gr' ? flagGr : flagEn
-                                        }
-                                        alt="Language Flag"
-                                        width="20"
-                                        height="14"
-                                    />
-                                }
-                                id="language-dropdown"
-                                align="end"
-                            >
-                                <NavDropdown.Item onClick={() => handleLanguageChange('sr')}>
-                                    &nbsp;<img src={flagSr} alt="Serbian" width="20" height="14" /> &nbsp;
-                                </NavDropdown.Item>
-                                <NavDropdown.Item onClick={() => handleLanguageChange('gr')}>
-                                    &nbsp;<img src={flagGr} alt="Greek" width="20" height="14" /> &nbsp;
-                                </NavDropdown.Item>
-                                <NavDropdown.Item onClick={() => handleLanguageChange('en')}>
-                                    &nbsp;<img src={flagEn} alt="English" width="20" height="14" /> &nbsp;
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+        <header id="header" className="header d-flex align-items-center sticky-top">
+            <div className="container position-relative d-flex align-items-center justify-content-between">
+                <Link to="/" className="logo d-flex align-items-center me-auto me-xl-0">
+                    <img src="/assets/images/EladaLogoV2.svg" alt="Elada Logo" />
+                </Link>
+                <nav id="navmenu" className="navmenu">
+                    <ul>
+                        <li><Link to="/" className="active">{t("Home")}</Link></li>
+                        <li><Link to="#gallery">{t("Gallery.title")}</Link></li>
+                        <li><Link to="/drinks">{t("Drinks.title")}</Link></li>
+                        <li><Link to="#contact">{t("Contact")}</Link></li>
+                    </ul>
+                </nav>
+                <NavDropdown
+                    title={
+                        <img
+                            src={
+                                language === 'sr' ? flagSr : language === 'gr' ? flagGr : flagEn
+                            }
+                            alt="Language Flag"
+                            width="20"
+                            height="14"
+                        />
+                    }
+                    id="language-dropdown-header-btn"
+                    align="end"
+                    className="btn-getstarted"
+                >
+                    <NavDropdown.Item onClick={() => handleLanguageChange('sr')}>
+                        &nbsp;<img src={flagSr} alt="Serbian" width="20" height="14" /> &nbsp;
+                    </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => handleLanguageChange('gr')}>
+                        &nbsp;<img src={flagGr} alt="Greek" width="20" height="14" /> &nbsp;
+                    </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => handleLanguageChange('en')}>
+                        &nbsp;<img src={flagEn} alt="English" width="20" height="14" /> &nbsp;
+                    </NavDropdown.Item>
+                </NavDropdown>
+            </div>
         </header>
     );
 }

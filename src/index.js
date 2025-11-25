@@ -5,10 +5,12 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './index.css';
 import '@fontsource/playfair-display';
 import 'flag-icons/css/flag-icons.min.css';
+import 'glightbox/dist/css/glightbox.min.css';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

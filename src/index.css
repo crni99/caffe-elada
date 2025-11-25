@@ -180,10 +180,8 @@ footer a:active {
   margin-top: 0px !important;
 }
 
-.footer-logo {
-  width: 200px;
-  height: auto;
-  margin-left: -1rem !important;
+.header .logo {
+  width: 150px;
 }
 
 /* Extra Extra Small (Old Mobile) */
@@ -256,6 +254,22 @@ footer a:active {
 
   .instagram-embed {
     display: none !important;
+  }
+
+  .hero-subtitle {
+    margin-bottom: 2rem !important;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-info {
+    justify-content: center;
+  }
+
+  .sitename {
+    margin-top: 1rem;
   }
 
   .footer-content .logo {
@@ -389,6 +403,22 @@ footer a:active {
     display: none !important;
   }
 
+  .hero-subtitle {
+    margin-bottom: 2rem !important;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-info {
+    justify-content: center;
+  }
+
+  .sitename {
+    margin-top: 1rem;
+  }
+
   .footer-content .logo {
     justify-content: center !important;
   }
@@ -503,6 +533,22 @@ footer a:active {
     display: none !important;
   }
 
+  .hero-subtitle {
+    margin-bottom: 2rem !important;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-info {
+    justify-content: center;
+  }
+
+  .sitename {
+    margin-top: 1rem;
+  }
+
   .footer-content .logo {
     justify-content: center !important;
   }
@@ -584,6 +630,18 @@ footer a:active {
     margin-right: auto;
   }
 
+  .hero-subtitle {
+    margin-bottom: 2rem !important;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-info {
+    justify-content: center;
+  }
+
   .footer-contact {
     margin-top: 3rem;
   }
@@ -592,6 +650,10 @@ footer a:active {
 
 /* Large Screens (≥992px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+
+  .hero-title {
+    margin-top: -6rem !important;
+  }
 
   .menu-text {
     margin-left: -2rem;
@@ -630,6 +692,10 @@ footer a:active {
 /* Extra Large Screens (≥1200px) */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
 
+  .hero-title {
+    margin-top: -6rem !important;
+  }
+
   .image-menu-placeholder {
     min-height: 500px;
   }
@@ -638,6 +704,11 @@ footer a:active {
 
 /* Extra Extra Large Screens (≥1400px) */
 @media (min-width: 1400px) {
+
+  .hero-title {
+    margin-top: -6rem !important;
+  }
+
   .image-menu-placeholder {
     min-height: 500px;
   }
@@ -978,7 +1049,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 100%;
   margin-right: 8px;
 }
 
@@ -999,7 +1070,6 @@ h6 {
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
-  background: var(--accent-color);
   padding: 8px 26px;
   margin: 0;
   border-radius: 50px;
@@ -1079,7 +1149,8 @@ h6 {
   }
 
   .navmenu li:last-child a {
-    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .navmenu li:hover>a,

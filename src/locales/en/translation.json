@@ -1,11 +1,20 @@
 {
+    "Header": {
+        "bookTable": "Book a Table"
+    },
     "Home": "Home",
-    "Gallery": "Gallery",
     "HomePage": {
         "sectionTitle": "Welcome to <strong>Caffe Elada</strong>",
         "sectionText1": "Opened on October 24, 2024, <strong>Caffe Elada</strong> was created with the desire to provide a cozy corner for all coffee lovers, relaxation, and social moments.",
         "sectionText2": "We are located in the heart of Ljig, and our goal is for every visitor to find something special in our atmosphere – whether you enjoy a peaceful cup of coffee, delicious chocolate, or the pleasant atmosphere we create every day.",
-        "sectionText3": "At <strong>Caffe Elada</strong>, we strive daily to create unforgettable moments, whether through special events or a rich selection of drinks prepared with care and love. Join us and discover why Caffe Elada is quickly becoming the favorite spot in Ljig."
+        "bookTable": "BOOK A TABLE",
+        "viewDrinks": "VIEW DRINKS",
+        "openDaily": "OPEN DAILY",
+        "location": "LOCATION"
+    },
+    "Gallery": {
+        "title": "Gallery",
+        "subTitle": "Explore the unique ambiance of our space, from morning lattes to late-night revelry."
     },
     "Reviews": {
         "title": "What Have Our Guests Said About Us?",

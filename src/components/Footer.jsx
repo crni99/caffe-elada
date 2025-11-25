@@ -18,11 +18,7 @@ export default function Footer() {
                         <div className="col-lg-4">
                             <div className="footer-content">
                                 <Link to="/" className="logo d-flex align-items-center mb-4">
-                                    <span className="sitename">
-                                        <img src="/assets/images/EladaLogoV2.svg"
-                                            className='footer-logo'
-                                            alt="Elada Logo"></img>
-                                    </span>
+                                    <span class="sitename">Caffe Elada</span>
                                 </Link>
                                 <p className="mb-4">
                                     {t('Footer.description1')}<br></br>

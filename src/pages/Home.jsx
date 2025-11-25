@@ -1,68 +1,96 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Trans } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import MainTitle from '../components/MainTitle';
 import { faInstagramSquare, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faClock, faLocationDot, faCommentDots, faStar } from '@fortawesome/free-solid-svg-icons';
-
+import { faPhone, faClock, faLocationDot, faCommentDots, faStar, faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons';
+import GLightbox from 'glightbox';
 
 export default function HomePage() {
 
     const { t } = useTranslation();
 
+    useEffect(() => {
+        const lightbox = GLightbox({
+            selector: '.glightbox',
+        });
+
+        return () => {
+            if (lightbox && lightbox.destroy) {
+                lightbox.destroy();
+            }
+        };
+    }, []);
+
     return (
         <>
-            <MainTitle title={t('Home')} />
+            <section id="hero" class="hero section light-background">
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="hero-content">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                                <div class="content">
+                                    <h1 class="hero-title mb-4">Caffe Elada</h1>
+                                    <p class="hero-subtitle mb-4">
+                                        <Trans i18nKey="HomePage.sectionText1"></Trans> <br></br><br></br>
+                                        <Trans i18nKey="HomePage.sectionText2"></Trans>
+                                    </p>
+                                    <div class="hero-actions d-flex flex-wrap gap-3 mb-4">
+                                        <a href="tel:+381641215566" rel="noopener noreferrer" class="btn btn-primary">
+                                            {t('HomePage.bookTable')}
+                                        </a>
+                                        <Link to="/drinks" className="btn btn-outline">
+                                            {t('HomePage.viewDrinks')}
+                                        </Link>
+                                    </div>
+                                    <div class="hero-info d-flex flex-wrap align-items-center gap-4">
+                                        <div class="info-item d-flex align-items-center">
+                                            <i class="bi me-2">
+                                                <FontAwesomeIcon icon={faClock} className="mx-2" title="Clock" />
+                                            </i>
+                                            <div>
+                                                <small class="text-muted">{t('HomePage.openDaily')}</small>
+                                                <div class="fw-medium">08:00 - 00:00</div>
+                                            </div>
+                                        </div>
+                                        <a href="https://maps.app.goo.gl/1N3gb5m4EPXZM3iBA" target="_blank" rel="noopener noreferrer">
+                                            <div class="info-item d-flex align-items-center">
 
-            <header className="masthead">
-                <div className="container px-4 px-lg-5 h-100">
-                    <div className="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                        <div className="col-lg-8 align-self-end">
-                            <h1 className="text-white font-weight-bold">Your Favorite Place for Free Bootstrap Themes</h1>
-                            <hr className="divider" />
-                        </div>
-                        <div className="col-lg-8 align-self-baseline">
-                            <p className="text-white-75 mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-                            <a className="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                                                <i class="bi me-2">
+                                                    <FontAwesomeIcon icon={faLocationDot} className="mx-2" title="Location Dot" />
+                                                </i>
+                                                <div>
+                                                    <small class="text-muted">{t('HomePage.location')}</small>
+                                                    <div class="fw-medium">
+                                                        {t('ContactPage.addressDescription1')},&nbsp;
+                                                        {t('ContactPage.addressDescription2')}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                                <div class="hero-images">
+                                    <div class="main-image">
+                                        <img src="/assets/images/elada-3.jpg" alt="Signature Mediterranean Dish" class="img-fluid" />
+                                    </div>
+                                    <div class="floating-images">
+                                        <div class="floating-image floating-image-1">
+                                            <img src="/assets/images/elada-1.jpg" alt="Grilled Seafood" class="img-fluid" />
+                                        </div>
+                                        <div class="floating-image floating-image-2">
+                                            <img src="/assets/images/elada-4.jpg" alt="Mediterranean Dessert" class="img-fluid" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </header>
-
-            <div className='w-100 home-main-container d-flex justify-content-center align-items-center'>
-                <img src="/assets/images/EladaLogoV2.svg"
-                    className="w-100 rounded home-main-logo-image"
-                    alt="Elada Logo"
-                    data-aos="zoom-in" data-aos-duration="2000"
-                />
-            </div>
-
-            <div className="container d-flex justify-content-center align-items-center home-section-container"
-                data-aos="fade-up" data-aos-duration="2000">
-                <div className="row">
-                    <div className="col-md-6 home-text text-white">
-                        <h3 className="home-section-title text-center">
-                            <Trans i18nKey="HomePage.sectionTitle"></Trans>
-                        </h3>
-                        <p className='mt4'>
-                            <Trans i18nKey="HomePage.sectionText1"></Trans>
-                        </p>
-                        <p className='mt-4'>
-                            <Trans i18nKey="HomePage.sectionText2"></Trans>
-                        </p>
-                        <p className='mt-4'>
-                            <Trans i18nKey="HomePage.sectionText3"></Trans>
-                        </p>
-                    </div>
-                    <div className="col-md-6">
-                        <img src="/assets/images/elada-3.jpg"
-                            className="w-100 rounded mb-4 home-main-image"
-                            alt={t('HomePage.sectionImageAlt1')} />
-                    </div>
-                </div>
-            </div>
+            </section>
 
             <div className="full-width-image position-relative home-full-width-menu-wrapper min-vh-75 shadow"
                 data-aos="zoom-in" data-aos-duration="2000">
@@ -74,61 +102,125 @@ export default function HomePage() {
                 />
             </div>
 
-            <div id="gallery"></div>
-            <div className="container d-flex justify-content-center 
-                align-items-center min-vh-66 mt-7"
-                data-aos="fade-up" data-aos-duration="2000" >
-                <div className="row w-100">
-                    <div className="col-md-3">&nbsp;</div>
-                    <div className="col-md-6">
-                        <Carousel interval="3000" className='rounded'>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src="/assets/images/elada-5.webp"
-                                    alt="Instagram Post 1"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src="/assets/images/elada-6.webp"
-                                    alt="Instagram Post 2"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src="/assets/images/elada-7.webp"
-                                    alt="Instagram Post 3"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src="/assets/images/elada-8.webp"
-                                    alt="Instagram Post 4"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src="/assets/images/elada-9.webp"
-                                    alt="Instagram Post 4"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src="/assets/images/elada-2.jpg"
-                                    alt="Instagram Post 4"
-                                />
-                            </Carousel.Item>
-                        </Carousel>
-                    </div>
-                    <div className="col-md-3">&nbsp;</div>
+            <section id="gallery" class="gallery section">
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>{t('Gallery.title')}</h2>
+                    <p>{t('Gallery.subTitle')}</p>
                 </div>
-            </div>
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+                        {/*
+                        <ul class="gallery-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".filter-food">Food</li>
+                            <li data-filter=".filter-interior">Interior</li>
+                            <li data-filter=".filter-events">Events</li>
+                            <li data-filter=".filter-staff">Staff</li>
+                        </ul>
+                        */}
+
+                        <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-food">
+                                <div class="gallery-wrap">
+                                    <img src="/assets/images/elada-5.webp" class="img-fluid" alt="Appetizer Platter" loading="lazy" />
+                                    <div class="gallery-info">
+                                        <h4>Gourmet Appetizer Selection</h4>
+                                        <p>Seasonal ingredients with artisan bread</p>
+                                        <div class="gallery-links">
+                                            <a href="/assets/images/elada-5.webp" class="glightbox" title="Gourmet Appetizer Selection" data-gallery="savora-gallery">
+                                                <i class="bi">
+                                                    <FontAwesomeIcon icon={faMagnifyingGlassPlus} className="mx-2" title="Magnifying Glass Plus" />
+                                                </i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-interior">
+                                <div class="gallery-wrap">
+                                    <img src="/assets/images/elada-6.webp" class="img-fluid" alt="Restaurant Interior" loading="lazy" />
+                                    <div class="gallery-info">
+                                        <h4>Main Dining Area</h4>
+                                        <p>Elegant atmosphere with natural lighting</p>
+                                        <div class="gallery-links">
+                                            <a href="/assets/images/elada-6.webp" class="glightbox" title="Main Dining Area">
+                                                <i class="bi">
+                                                    <FontAwesomeIcon icon={faMagnifyingGlassPlus} className="mx-2" title="Magnifying Glass Plus" />
+                                                </i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-food">
+                                <div class="gallery-wrap">
+                                    <img src="/assets/images/elada-7.webp" class="img-fluid" alt="Main Course" loading="lazy" />
+                                    <div class="gallery-info">
+                                        <h4>Signature Main Course</h4>
+                                        <p>Chef's special with seasonal vegetables</p>
+                                        <div class="gallery-links">
+                                            <a href="/assets/images/elada-7.webp" class="glightbox" title="Signature Main Course">
+                                                <i class="bi">
+                                                    <FontAwesomeIcon icon={faMagnifyingGlassPlus} className="mx-2" title="Magnifying Glass Plus" />
+                                                </i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-events">
+                                <div class="gallery-wrap">
+                                    <img src="/assets/images/elada-8.webp" class="img-fluid" alt="Special Event" loading="lazy" />
+                                    <div class="gallery-info">
+                                        <h4>Wine Tasting Evening</h4>
+                                        <p>Monthly culinary experience with paired wines</p>
+                                        <div class="gallery-links">
+                                            <a href="/assets/images/elada-8.webp" class="glightbox" title="Wine Tasting Evening">
+                                                <i class="bi">
+                                                    <FontAwesomeIcon icon={faMagnifyingGlassPlus} className="mx-2" title="Magnifying Glass Plus" />
+                                                </i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-staff">
+                                <div class="gallery-wrap">
+                                    <img src="/assets/images/elada-9.webp" class="img-fluid" alt="Chef Portrait" loading="lazy" />
+                                    <div class="gallery-info">
+                                        <h4>Executive Chef</h4>
+                                        <p>Creating culinary masterpieces since 2010</p>
+                                        <div class="gallery-links">
+                                            <a href="/assets/images/elada-9.webp" class="glightbox" title="Executive Chef">
+                                                <i class="bi">
+                                                    <FontAwesomeIcon icon={faMagnifyingGlassPlus} className="mx-2" title="Magnifying Glass Plus" />
+                                                </i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-interior">
+                                <div class="gallery-wrap">
+                                    <img src="/assets/images/elada-2.jpg" class="img-fluid" alt="Private Dining Room" loading="lazy" />
+                                    <div class="gallery-info">
+                                        <h4>Private Dining Space</h4>
+                                        <p>Intimate setting for special occasions</p>
+                                        <div class="gallery-links">
+                                            <a href="/assets/images/elada-2.jpg" class="glightbox" title="Private Dining Space">
+                                                <i class="bi">
+                                                    <FontAwesomeIcon icon={faMagnifyingGlassPlus} className="mx-2" title="Magnifying Glass Plus" />
+                                                </i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section id="testimonials" class="testimonials section light-background">
                 <div class="container section-title" data-aos="fade-up">
