@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import MainTitle from '../components/MainTitle';
 import DrinksList from '../components/drinks/DrinksList';
 import {
     COFFEE_DRINKS_DATA, HOT_DRINKS_DATA, WATER_DRINKS_DATA, JUICES_DRINKS_DATA, WINES_DRINKS_DATA, COCKTAILS_DRINKS_DATA,
@@ -29,25 +28,39 @@ export default function DrinksPage() {
 
     return (
         <>
-            <MainTitle title={t('Drinks')} />
-
-            <div className="container mt-5">
-                <h1 className="display-3 text-center text-white mb-4">
-                    {t('Drinks.title')}
-                </h1>
-                <p className="lead text-center text-muted">
-                    {t('Drinks.subTitle')}
-                </p>
-            </div>
-
-            {drinkCategories.map((category) => (
-                <DrinksList
-                    name={t(category.nameKey)}
-                    items={category.data}
-                    key={category.nameKey}
-                />
-            ))}
-
+            <section id="hero" className="hero section light-background">
+                <div className="container" data-aos="fade-up" data-aos-delay="100">
+                    <div className="hero-content">
+                        <div className="row align-items-center">
+                            <div data-aos="fade-right" data-aos-delay="200">
+                                <div className="content">
+                                    <div className="container section-title section light-background" data-aos="fade-up">
+                                        <h2>{t('Drinks.title')}</h2>
+                                        <p className='text-muted'>{t('Drinks.subTitle')}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section >
+            <section id="drinks-menu" className="drinks-menu section">
+                <div className="container" data-aos="fade-up" data-aos-delay="100">
+                    <div className="row">
+                        {drinkCategories.map((category) => (
+                            <div
+                                key={category.nameKey}
+                                className="col-12 mb-4"
+                            >
+                                <DrinksList
+                                    name={t(category.nameKey)}
+                                    items={category.data}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </>
     );
 }

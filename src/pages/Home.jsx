@@ -25,44 +25,44 @@ export default function HomePage() {
 
     return (
         <>
-            <section id="hero" class="hero section light-background">
-                <div class="container" data-aos="fade-up" data-aos-delay="100">
-                    <div class="hero-content">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-                                <div class="content">
-                                    <h1 class="hero-title mb-4">Caffe Elada</h1>
-                                    <p class="hero-subtitle mb-4">
+            <section id="hero" className="hero section light-background">
+                <div className="container" data-aos="fade-up" data-aos-delay="100">
+                    <div className="hero-content">
+                        <div className="row align-items-center">
+                            <div className="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                                <div className="content">
+                                    <h1 className="hero-title mb-4">Caffe Elada</h1>
+                                    <p className="hero-subtitle mb-4">
                                         <Trans i18nKey="HomePage.sectionText1"></Trans> <br></br><br></br>
                                         <Trans i18nKey="HomePage.sectionText2"></Trans>
                                     </p>
-                                    <div class="hero-actions d-flex flex-wrap gap-3 mb-4">
-                                        <a href="tel:+381641215566" rel="noopener noreferrer" class="btn btn-primary">
+                                    <div className="hero-actions d-flex flex-wrap gap-3 mb-4">
+                                        <a href="tel:+381641215566" rel="noopener noreferrer" className="btn btn-primary">
                                             {t('HomePage.bookTable')}
                                         </a>
                                         <Link to="/drinks" className="btn btn-outline">
                                             {t('HomePage.viewDrinks')}
                                         </Link>
                                     </div>
-                                    <div class="hero-info d-flex flex-wrap align-items-center gap-4">
-                                        <div class="info-item d-flex align-items-center">
-                                            <i class="bi me-2">
+                                    <div className="hero-info d-flex flex-wrap align-items-center gap-4">
+                                        <div className="info-item d-flex align-items-center">
+                                            <i className="bi me-2">
                                                 <FontAwesomeIcon icon={faClock} className="mx-2" title="Clock" />
                                             </i>
                                             <div>
-                                                <small class="text-muted">{t('HomePage.openDaily')}</small>
-                                                <div class="fw-medium">08:00 - 00:00</div>
+                                                <small className="text-muted">{t('HomePage.openDaily')}</small>
+                                                <div className="fw-medium">08:00 - 00:00</div>
                                             </div>
                                         </div>
                                         <a href="https://maps.app.goo.gl/1N3gb5m4EPXZM3iBA" target="_blank" rel="noopener noreferrer">
-                                            <div class="info-item d-flex align-items-center">
+                                            <div className="info-item d-flex align-items-center">
 
-                                                <i class="bi me-2">
+                                                <i className="bi me-2">
                                                     <FontAwesomeIcon icon={faLocationDot} className="mx-2" title="Location Dot" />
                                                 </i>
                                                 <div>
-                                                    <small class="text-muted">{t('HomePage.location')}</small>
-                                                    <div class="fw-medium">
+                                                    <small className="text-muted">{t('HomePage.location')}</small>
+                                                    <div className="fw-medium">
                                                         {t('ContactPage.addressDescription1')},&nbsp;
                                                         {t('ContactPage.addressDescription2')}
                                                     </div>
@@ -72,17 +72,17 @@ export default function HomePage() {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-                                <div class="hero-images">
-                                    <div class="main-image">
-                                        <img src="/assets/images/elada-3.jpg" alt="Signature Mediterranean Dish" class="img-fluid" />
+                            <div className="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                                <div className="hero-images">
+                                    <div className="main-image">
+                                        <img src="/assets/images/elada-3.jpg" alt="Signature Mediterranean Dish" className="img-fluid" />
                                     </div>
-                                    <div class="floating-images">
-                                        <div class="floating-image floating-image-1">
-                                            <img src="/assets/images/elada-1.jpg" alt="Grilled Seafood" class="img-fluid" />
+                                    <div className="floating-images">
+                                        <div className="floating-image floating-image-1">
+                                            <img src="/assets/images/elada-1.jpg" alt="Grilled Seafood" className="img-fluid" />
                                         </div>
-                                        <div class="floating-image floating-image-2">
-                                            <img src="/assets/images/elada-4.jpg" alt="Mediterranean Dessert" class="img-fluid" />
+                                        <div className="floating-image floating-image-2">
+                                            <img src="/assets/images/elada-4.jpg" alt="Mediterranean Dessert" className="img-fluid" />
                                         </div>
                                     </div>
                                 </div>
@@ -92,27 +92,44 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <div className="full-width-image position-relative home-full-width-menu-wrapper min-vh-75 shadow"
-                data-aos="zoom-in" data-aos-duration="2000">
-                <img src="/assets/images/elada-1.jpg" loading="lazy"
-                    className="w-50 h-100 object-fit-cover" alt={t('HomePage.sectionImageAlt2')}
-                />
-                <img src="/assets/images/elada-4.jpg" loading="lazy"
-                    className="w-50 h-100 object-fit-cover" alt={t('HomePage.sectionImageAlt3')}
-                />
-            </div>
+            <section id="about" className="about section">
+                <div className="container" data-aos="fade-up" data-aos-delay="100">
+                    <div className="restaurant-gallery" data-aos="fade-up" data-aos-delay="400">
+                        <div className="row g-4">
+                            <div className="col-lg-6 col-md-6">
+                                <div className="gallery-item">
+                                    <img src="/assets/images/elada-1.jpg" alt="Signature Dish" className="img-fluid rounded" />
+                                    <div className="gallery-caption">
+                                        <h4>Signature Dishes</h4>
+                                        <p>Artfully crafted seasonal specialties</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6 col-md-6">
+                                <div className="gallery-item">
+                                    <img src="/assets/images/elada-4.jpg" alt="Wine Selection" className="img-fluid rounded" />
+                                    <div className="gallery-caption">
+                                        <h4>Curated Wine</h4>
+                                        <p>Exceptional pairings from around the world</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <section id="gallery" class="gallery section">
-                <div class="container section-title" data-aos="fade-up">
+            <section id="gallery" className="gallery section">
+                <div className="container section-title" data-aos="fade-up">
                     <h2>{t('Gallery.title')}</h2>
                     <p>{t('Gallery.subTitle')}</p>
                 </div>
-                <div class="container" data-aos="fade-up" data-aos-delay="100">
-                    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+                <div className="container" data-aos="fade-up" data-aos-delay="100">
+                    <div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
                         {/*
-                        <ul class="gallery-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                            <li data-filter="*" class="filter-active">All</li>
+                        <ul className="gallery-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                            <li data-filter="*" className="filter-active">All</li>
                             <li data-filter=".filter-food">Food</li>
                             <li data-filter=".filter-interior">Interior</li>
                             <li data-filter=".filter-events">Events</li>
@@ -120,16 +137,16 @@ export default function HomePage() {
                         </ul>
                         */}
 
-                        <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-food">
-                                <div class="gallery-wrap">
-                                    <img src="/assets/images/elada-5.webp" class="img-fluid" alt="Appetizer Platter" loading="lazy" />
-                                    <div class="gallery-info">
+                        <div className="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                            <div className="col-lg-4 col-md-6 gallery-item isotope-item filter-food">
+                                <div className="gallery-wrap">
+                                    <img src="/assets/images/elada-5.webp" className="img-fluid" alt="Appetizer Platter" loading="lazy" />
+                                    <div className="gallery-info">
                                         <h4>Gourmet Appetizer Selection</h4>
                                         <p>Seasonal ingredients with artisan bread</p>
-                                        <div class="gallery-links">
-                                            <a href="/assets/images/elada-5.webp" class="glightbox" title="Gourmet Appetizer Selection" data-gallery="savora-gallery">
-                                                <i class="bi">
+                                        <div className="gallery-links">
+                                            <a href="/assets/images/elada-5.webp" className="glightbox" title="Gourmet Appetizer Selection" data-gallery="savora-gallery">
+                                                <i className="bi">
                                                     <FontAwesomeIcon icon={faMagnifyingGlassPlus} className="mx-2" title="Magnifying Glass Plus" />
                                                 </i>
                                             </a>
@@ -137,15 +154,15 @@ export default function HomePage() {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-interior">
-                                <div class="gallery-wrap">
-                                    <img src="/assets/images/elada-6.webp" class="img-fluid" alt="Restaurant Interior" loading="lazy" />
-                                    <div class="gallery-info">
+                            <div className="col-lg-4 col-md-6 gallery-item isotope-item filter-interior">
+                                <div className="gallery-wrap">
+                                    <img src="/assets/images/elada-6.webp" className="img-fluid" alt="Restaurant Interior" loading="lazy" />
+                                    <div className="gallery-info">
                                         <h4>Main Dining Area</h4>
                                         <p>Elegant atmosphere with natural lighting</p>
-                                        <div class="gallery-links">
-                                            <a href="/assets/images/elada-6.webp" class="glightbox" title="Main Dining Area">
-                                                <i class="bi">
+                                        <div className="gallery-links">
+                                            <a href="/assets/images/elada-6.webp" className="glightbox" title="Main Dining Area">
+                                                <i className="bi">
                                                     <FontAwesomeIcon icon={faMagnifyingGlassPlus} className="mx-2" title="Magnifying Glass Plus" />
                                                 </i>
                                             </a>
@@ -153,15 +170,15 @@ export default function HomePage() {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-food">
-                                <div class="gallery-wrap">
-                                    <img src="/assets/images/elada-7.webp" class="img-fluid" alt="Main Course" loading="lazy" />
-                                    <div class="gallery-info">
+                            <div className="col-lg-4 col-md-6 gallery-item isotope-item filter-food">
+                                <div className="gallery-wrap">
+                                    <img src="/assets/images/elada-7.webp" className="img-fluid" alt="Main Course" loading="lazy" />
+                                    <div className="gallery-info">
                                         <h4>Signature Main Course</h4>
                                         <p>Chef's special with seasonal vegetables</p>
-                                        <div class="gallery-links">
-                                            <a href="/assets/images/elada-7.webp" class="glightbox" title="Signature Main Course">
-                                                <i class="bi">
+                                        <div className="gallery-links">
+                                            <a href="/assets/images/elada-7.webp" className="glightbox" title="Signature Main Course">
+                                                <i className="bi">
                                                     <FontAwesomeIcon icon={faMagnifyingGlassPlus} className="mx-2" title="Magnifying Glass Plus" />
                                                 </i>
                                             </a>
@@ -169,15 +186,15 @@ export default function HomePage() {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-events">
-                                <div class="gallery-wrap">
-                                    <img src="/assets/images/elada-8.webp" class="img-fluid" alt="Special Event" loading="lazy" />
-                                    <div class="gallery-info">
+                            <div className="col-lg-4 col-md-6 gallery-item isotope-item filter-events">
+                                <div className="gallery-wrap">
+                                    <img src="/assets/images/elada-8.webp" className="img-fluid" alt="Special Event" loading="lazy" />
+                                    <div className="gallery-info">
                                         <h4>Wine Tasting Evening</h4>
                                         <p>Monthly culinary experience with paired wines</p>
-                                        <div class="gallery-links">
-                                            <a href="/assets/images/elada-8.webp" class="glightbox" title="Wine Tasting Evening">
-                                                <i class="bi">
+                                        <div className="gallery-links">
+                                            <a href="/assets/images/elada-8.webp" className="glightbox" title="Wine Tasting Evening">
+                                                <i className="bi">
                                                     <FontAwesomeIcon icon={faMagnifyingGlassPlus} className="mx-2" title="Magnifying Glass Plus" />
                                                 </i>
                                             </a>
@@ -185,15 +202,15 @@ export default function HomePage() {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-staff">
-                                <div class="gallery-wrap">
-                                    <img src="/assets/images/elada-9.webp" class="img-fluid" alt="Chef Portrait" loading="lazy" />
-                                    <div class="gallery-info">
+                            <div className="col-lg-4 col-md-6 gallery-item isotope-item filter-staff">
+                                <div className="gallery-wrap">
+                                    <img src="/assets/images/elada-9.webp" className="img-fluid" alt="Chef Portrait" loading="lazy" />
+                                    <div className="gallery-info">
                                         <h4>Executive Chef</h4>
                                         <p>Creating culinary masterpieces since 2010</p>
-                                        <div class="gallery-links">
-                                            <a href="/assets/images/elada-9.webp" class="glightbox" title="Executive Chef">
-                                                <i class="bi">
+                                        <div className="gallery-links">
+                                            <a href="/assets/images/elada-9.webp" className="glightbox" title="Executive Chef">
+                                                <i className="bi">
                                                     <FontAwesomeIcon icon={faMagnifyingGlassPlus} className="mx-2" title="Magnifying Glass Plus" />
                                                 </i>
                                             </a>
@@ -201,15 +218,15 @@ export default function HomePage() {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-interior">
-                                <div class="gallery-wrap">
-                                    <img src="/assets/images/elada-2.jpg" class="img-fluid" alt="Private Dining Room" loading="lazy" />
-                                    <div class="gallery-info">
+                            <div className="col-lg-4 col-md-6 gallery-item isotope-item filter-interior">
+                                <div className="gallery-wrap">
+                                    <img src="/assets/images/elada-2.jpg" className="img-fluid" alt="Private Dining Room" loading="lazy" />
+                                    <div className="gallery-info">
                                         <h4>Private Dining Space</h4>
                                         <p>Intimate setting for special occasions</p>
-                                        <div class="gallery-links">
-                                            <a href="/assets/images/elada-2.jpg" class="glightbox" title="Private Dining Space">
-                                                <i class="bi">
+                                        <div className="gallery-links">
+                                            <a href="/assets/images/elada-2.jpg" className="glightbox" title="Private Dining Space">
+                                                <i className="bi">
                                                     <FontAwesomeIcon icon={faMagnifyingGlassPlus} className="mx-2" title="Magnifying Glass Plus" />
                                                 </i>
                                             </a>
@@ -222,17 +239,17 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <section id="testimonials" class="testimonials section light-background">
-                <div class="container section-title" data-aos="fade-up">
+            <section id="testimonials" className="testimonials section light-background">
+                <div className="container section-title" data-aos="fade-up">
                     <h2>{t('Reviews.title')}</h2>
                     <p>{t('Reviews.description')}</p>
                 </div>
-                <div class="container">
-                    <div class="testimonial-grid">
-                        <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="testimonial-card">
-                                <div class="testimonial-header">
-                                    <div class="testimonial-meta">
+                <div className="container">
+                    <div className="testimonial-grid">
+                        <div className="testimonial-item" data-aos="zoom-in" data-aos-delay="100">
+                            <div className="testimonial-card">
+                                <div className="testimonial-header">
+                                    <div className="testimonial-meta">
                                         <h3>Sandra L.</h3>
                                         <h4 className='star-reviews'>
                                             <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
@@ -241,23 +258,23 @@ export default function HomePage() {
                                             <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
                                             <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
                                         </h4>
-                                        <div class="company-logo">
-                                            <i class="bi bi-building"></i>
+                                        <div className="company-logo">
+                                            <i className="bi bi-building"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="testimonial-body">
-                                    <i class="bi bi-chat-quote-fill quote-icon">
+                                <div className="testimonial-body">
+                                    <i className="bi bi-chat-quote-fill quote-icon">
                                         <FontAwesomeIcon icon={faCommentDots} size="sm" className="mx-2" title="Comment Dots" />
                                     </i>
                                     <p>{t('Reviews.review2')}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="testimonial-item featured" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="testimonial-card">
-                                <div class="testimonial-header">
-                                    <div class="testimonial-meta">
+                        <div className="testimonial-item featured" data-aos="zoom-in" data-aos-delay="200">
+                            <div className="testimonial-card">
+                                <div className="testimonial-header">
+                                    <div className="testimonial-meta">
                                         <h3>Milica V.</h3>
                                         <h4 className='star-reviews'>
                                             <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
@@ -266,23 +283,23 @@ export default function HomePage() {
                                             <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
                                             <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
                                         </h4>
-                                        <div class="company-logo">
-                                            <i class="bi bi-buildings"></i>
+                                        <div className="company-logo">
+                                            <i className="bi bi-buildings"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="testimonial-body">
-                                    <i class="bi bi-chat-quote-fill quote-icon">
+                                <div className="testimonial-body">
+                                    <i className="bi bi-chat-quote-fill quote-icon">
                                         <FontAwesomeIcon icon={faCommentDots} size="sm" className="mx-2" title="Comment Dots" />
                                     </i>
                                     <p>{t('Reviews.review1')}</p><span className="flag-icon flag-icon-gr"></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="testimonial-card">
-                                <div class="testimonial-header">
-                                    <div class="testimonial-meta">
+                        <div className="testimonial-item" data-aos="zoom-in" data-aos-delay="300">
+                            <div className="testimonial-card">
+                                <div className="testimonial-header">
+                                    <div className="testimonial-meta">
                                         <h3>Jana G.</h3>
                                         <h4 className='star-reviews'>
                                             <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
@@ -291,23 +308,23 @@ export default function HomePage() {
                                             <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
                                             <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
                                         </h4>
-                                        <div class="company-logo">
-                                            <i class="bi bi-building-check"></i>
+                                        <div className="company-logo">
+                                            <i className="bi bi-building-check"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="testimonial-body">
-                                    <i class="bi bi-chat-quote-fill quote-icon">
+                                <div className="testimonial-body">
+                                    <i className="bi bi-chat-quote-fill quote-icon">
                                         <FontAwesomeIcon icon={faCommentDots} size="sm" className="mx-2" title="Comment Dots" />
                                     </i>
                                     <p>{t('Reviews.review3')}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="testimonial-card">
-                                <div class="testimonial-header">
-                                    <div class="testimonial-meta">
+                        <div className="testimonial-item" data-aos="zoom-in" data-aos-delay="400">
+                            <div className="testimonial-card">
+                                <div className="testimonial-header">
+                                    <div className="testimonial-meta">
                                         <h3>Stevan M.</h3>
                                         <h4 className='star-reviews'>
                                             <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
@@ -316,13 +333,13 @@ export default function HomePage() {
                                             <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
                                             <FontAwesomeIcon icon={faStar} className="mx-2" style={{ color: 'gold' }} title="Comment Dots" />
                                         </h4>
-                                        <div class="company-logo">
-                                            <i class="bi bi-building-gear"></i>
+                                        <div className="company-logo">
+                                            <i className="bi bi-building-gear"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="testimonial-body">
-                                    <i class="bi bi-chat-quote-fill quote-icon">
+                                <div className="testimonial-body">
+                                    <i className="bi bi-chat-quote-fill quote-icon">
                                         <FontAwesomeIcon icon={faCommentDots} size="sm" className="mx-2" title="Comment Dots" />
                                     </i>
                                     <p>{t('Reviews.review4')}</p>

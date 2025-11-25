@@ -1,21 +1,25 @@
 import React from 'react';
 
 const DrinksItem = ({ name, volume, price, description }) => {
-    const displayVolume = volume ? `(${volume})` : ''; 
+    const displayVolume = volume ? `(${volume})` : '';
 
     return (
         <li className="list-group-item w-100">
-            <div className="d-flex flex-column justify-content-center align-items-center w-100 text-center pt-2 pb-2">
-                <h5 className="fw-bold mb-0">
-                    {name} {displayVolume}
+            <div className="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                <h5 className="fw-bold mb-0 me-3">
+                    {name} <small className="text-muted fw-normal">{displayVolume}</small>
                 </h5>
-                <p className="mb-0"><small className="text-muted">{price}</small></p>
-                {description && (
-                    <p className="mb-0 pt-1">
-                        <small className="text-secondary">{description}</small>
-                    </p>
-                )}
+                <p className="mb-0 text-nowrap">
+                    <strong className="text-dark">{price}</strong>
+                </p>
             </div>
+            {description && (
+                <div className="d-flex justify-content-start pb-1">
+                    <p className="mb-0">
+                        <small className="text-secondary fst-italic">{description}</small>
+                    </p>
+                </div>
+            )}
         </li>
     );
 };

@@ -18,7 +18,7 @@ export default function Footer() {
                         <div className="col-lg-4">
                             <div className="footer-content">
                                 <Link to="/" className="logo d-flex align-items-center mb-4">
-                                    <span class="sitename">Caffe Elada</span>
+                                    <span className="sitename">Caffe Elada</span>
                                 </Link>
                                 <p className="mb-4">
                                     {t('Footer.description1')}<br></br>

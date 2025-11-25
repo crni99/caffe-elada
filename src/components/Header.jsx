@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { NavDropdown } from 'react-bootstrap';
 import { useLanguage } from '../context/LanguageContext';
 import flagSr from "../assets/lang-flags/sr.svg";
@@ -8,11 +8,27 @@ import flagEn from "../assets/lang-flags/en.svg";
 import flagGr from "../assets/lang-flags/gr.svg";
 
 export default function Header() {
+
     const { t } = useTranslation();
     const { language, changeLanguage } = useLanguage();
+    const location = useLocation();
 
     const handleLanguageChange = (newLanguage) => {
         changeLanguage(newLanguage);
+    };
+
+    const getLinkClass = (path) => {
+        if (path.startsWith('/#')) {
+            const hash = path.substring(1);
+            if (location.pathname === '/' && location.hash === hash) {
+                return 'active';
+            }
+        } else {
+            if (location.pathname === path) {
+                return 'active';
+            }
+        }
+        return '';
     };
 
     return (
@@ -23,10 +39,18 @@ export default function Header() {
                 </Link>
                 <nav id="navmenu" className="navmenu">
                     <ul>
-                        <li><Link to="/" className="active">{t("Home")}</Link></li>
-                        <li><Link to="#gallery">{t("Gallery.title")}</Link></li>
-                        <li><Link to="/drinks">{t("Drinks.title")}</Link></li>
-                        <li><Link to="#contact">{t("Contact")}</Link></li>
+                        <li>
+                            <Link to="/" className={getLinkClass("/")}>{t("Home")}</Link>
+                        </li>
+                        <li>
+                            <Link to="/#gallery" className={getLinkClass("/#gallery")}>{t("Gallery.title")}</Link>
+                        </li>
+                        <li>
+                            <Link to="/#contact" className={getLinkClass("/#contact")}>{t("Contact")}</Link>
+                        </li>
+                        <li>
+                            <Link to="/drinks" className={getLinkClass("/drinks")}>{t("Drinks.title")}</Link>
+                        </li>
                     </ul>
                 </nav>
                 <NavDropdown
