@@ -48,7 +48,6 @@ export default function Footer() {
                                     {t('Footer.description1')}<br></br>
                                     {t('Footer.description2')}
                                 </p>
-
                                 <div className="newsletter-form">
                                     <h5>{t('Footer.subTitle1')}</h5>
                                     <a
@@ -63,7 +62,7 @@ export default function Footer() {
                                             </strong>
                                         </span>
                                         <span className="btn-icon-part" data-aos="fade-up" data-aos-duration="2000">
-                                            <FontAwesomeIcon icon={faStar} className="icon-white" />
+                                            <FontAwesomeIcon icon={faStar} className="icon-animate" size='lg'/>
                                         </span>
                                     </a>
                                 </div>

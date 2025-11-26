@@ -56,6 +56,7 @@
     "Drinks": {
         "title": "Drinks",
         "subTitle": "*Prices may differ from cafe prices!",
+        "all": "All",
         "coffee": "Coffees",
         "hotDrinks": "Hot drinks",
         "water": "Water",

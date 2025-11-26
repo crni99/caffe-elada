@@ -56,6 +56,7 @@
     "Drinks": {
         "title": "Karta pića",
         "subTitle": "*Cene se mogu razlikovati od cena u kafiću!",
+        "all": "Sve",
         "coffee": "Kafe",
         "hotDrinks": "Topli napici",
         "water": "Voda",

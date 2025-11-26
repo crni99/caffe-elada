@@ -205,7 +205,7 @@ footer a:active {
   flex-grow: 1;
   background-color: white;
   color: var(--blue-color);
-  padding: 10px 15px;
+  padding: 12px 12px;
   font-weight: bold;
   text-align: center;
   display: flex;
@@ -225,6 +225,24 @@ footer a:active {
 
 .btn-icon-part .icon-white {
   font-size: 1.2rem;
+}
+
+.icon-animate {
+  animation: colorSwap 5s infinite;
+}
+
+@keyframes colorSwap {
+  0% {
+    color: gold;
+  }
+
+  50% {
+    color: white;
+  }
+
+  100% {
+    color: gold;
+  }
 }
 
 /* Extra Extra Small (Old Mobile) */
@@ -322,6 +340,10 @@ footer a:active {
     display: flex;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .gallery .gallery-filters li {
+    padding: 8px !important;
   }
 
 }
@@ -1460,6 +1482,17 @@ h6 {
   }
 }
 
+.navmenu ul {
+  display: flex;
+  /* desktop */
+}
+
+.navmenu.navbar-mobile ul {
+  display: block;
+  /* mobile */
+}
+
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -1915,6 +1948,46 @@ section,
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
+.section-title-h1 {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title-h1 h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title-h1 h1:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 160px;
+  height: 1px;
+  background: color-mix(in srgb, var(--default-color), transparent 60%);
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  margin: auto;
+}
+
+.section-title-h1 h1::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 .section-title {
   text-align: center;
   padding-bottom: 60px;
@@ -1968,6 +2041,7 @@ section,
   overflow: hidden;
   position: relative;
   padding: 100px 0;
+  border-top: 2px solid var(--accent-color);
 }
 
 .hero .hero-content {
@@ -3981,6 +4055,13 @@ section,
   margin-bottom: 30px;
   padding: 0;
   list-style: none;
+}
+
+.gallery .gallery-filters li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .gallery .gallery-filters li {

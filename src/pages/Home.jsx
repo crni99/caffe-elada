@@ -92,7 +92,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <section id="about" className="about section">
+            <section id="about" className="about section light-background">
                 <div className="container" data-aos="fade-up" data-aos-delay="100">
                     <div className="restaurant-gallery" data-aos="fade-up" data-aos-delay="400">
                         <div className="row g-4">

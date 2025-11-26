@@ -3,8 +3,7 @@ import DrinksItem from './DrinksItem';
 
 const DrinksList = ({ name, items = [] }) => {
     return (
-        <div className="container mt-5 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper"
-            data-aos="fade-up" data-aos-duration="2000">
+        <div className="container mt-5 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper">
             <div className="row">
                 <div className="col-12 text-center mb-3">
                     <h2 className="display-6 pt-2 menu-title">{name}</h2>
