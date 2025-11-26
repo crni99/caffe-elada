@@ -1,14 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagramSquare, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faLocationDot, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faLocationDot, faStar, faChevronRight, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
 
     const { t } = useTranslation();
     const currentYear = new Date().getFullYear();
+
+    const [isVisible, setIsVisible] = useState(false);
+
+    const toggleVisibility = () => {
+        if (window.scrollY > 300) {
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', toggleVisibility);
+        return () => {
+            window.removeEventListener('scroll', toggleVisibility);
+        };
+    }, []);
 
     return (
         <>
@@ -27,30 +51,48 @@ export default function Footer() {
 
                                 <div className="newsletter-form">
                                     <h5>{t('Footer.subTitle1')}</h5>
-                                    <div className="input-group">
-                                        <input type="email" name="email" className="form-control" placeholder={t('Footer.placeholder1')} required="" />
-                                        <button type="submit" className="btn-subscribe">
-                                            <i className="bi">
-                                                <FontAwesomeIcon icon={faPaperPlane} className="mx-2 icon-white" title="Phone" />
-                                            </i>
-                                        </button>
-                                    </div>
+                                    <a
+                                        href="https://search.google.com/local/writereview?placeid=ChIJBRB_pSXjWUcRsbf9En3Vi8s"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="btn-review-split"
+                                    >
+                                        <span className="btn-main-text">
+                                            <strong>
+                                                {t('Footer.placeholder1')}
+                                            </strong>
+                                        </span>
+                                        <span className="btn-icon-part" data-aos="fade-up" data-aos-duration="2000">
+                                            <FontAwesomeIcon icon={faStar} className="icon-white" />
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-6">
-                            {/*
+                        <div className="col-lg-4 d-flex justify-content-lg-center">
                             <div className="footer-links">
-                                <h4>Company</h4>
+                                <h4>{t("Footer.subTitle2")}</h4>
                                 <ul>
-                                    <li><a href="#"><i className="bi bi-chevron-right"></i> About</a></li>
-                                    <li><a href="#"><i className="bi bi-chevron-right"></i> Careers</a></li>
-                                    <li><a href="#"><i className="bi bi-chevron-right"></i> Press</a></li>
-                                    <li><a href="#"><i className="bi bi-chevron-right"></i> Blog</a></li>
-                                    <li><a href="#"><i className="bi bi-chevron-right"></i> Contact</a></li>
+                                    <li>
+                                        <Link to="/karta-pica" className=''>
+                                            <FontAwesomeIcon icon={faChevronRight} className="mx-2 icon-blue" title="Chevron Right" />
+                                            {t("Drinks.title")}
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/#galerija">
+                                            <FontAwesomeIcon icon={faChevronRight} className="mx-2 icon-blue" title="Chevron Right" />
+                                            {t("Gallery.title")}
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/#kontakt">
+                                            <FontAwesomeIcon icon={faChevronRight} className="mx-2 icon-blue" title="Chevron Right" />
+                                            {t("Contact")}
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
-                            */}
                         </div>
                         <div className="col-lg-4">
                             <div className="footer-contact">
@@ -60,7 +102,7 @@ export default function Footer() {
 
                                         <div className="contact-icon">
                                             <i className="bi">
-                                                <FontAwesomeIcon icon={faLocationDot} className="mx-2" title="Phone" />
+                                                <FontAwesomeIcon icon={faLocationDot} className="mx-2" title="Location Dot" />
                                             </i>
                                         </div>
                                         <div className="contact-info">
@@ -110,14 +152,23 @@ export default function Footer() {
                                 </div>
                                 */}
                                 <div className="credits">
-                                    {t('Footer.designedBy')} <a href="https://www.linkedin.com/in/ognj3n/">Ognjen</a>
+                                    {t('Footer.designedBy')}&nbsp;
+                                    <a href="https://www.linkedin.com/in/ognj3n/" target="_blank" rel="noopener noreferrer">
+                                        <strong>Ognjen</strong>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </footer >
-
+            <a href="#root" id="scroll-top"
+                className={`scroll-top d-flex align-items-center justify-content-center ${isVisible ? 'active' : ''}`}
+                onClick={scrollToTop}>
+                <i className="bi">
+                    <FontAwesomeIcon icon={faChevronUp} className="mx-2 icon-white" title="Chevron Up" />
+                </i>
+            </a>
         </>
     );
 }

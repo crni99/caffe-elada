@@ -40,7 +40,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/drinks" element={<DrinksPage />} />
+            <Route path="/karta-pica" element={<DrinksPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
           <Footer />

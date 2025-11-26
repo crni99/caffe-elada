@@ -40,7 +40,7 @@ export default function HomePage() {
                                         <a href="tel:+381641215566" rel="noopener noreferrer" className="btn btn-primary">
                                             {t('HomePage.bookTable')}
                                         </a>
-                                        <Link to="/drinks" className="btn btn-outline">
+                                        <Link to="/karta-pica" className="btn btn-outline">
                                             {t('HomePage.viewDrinks')}
                                         </Link>
                                     </div>
@@ -119,7 +119,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <section id="gallery" className="gallery section">
+            <section id="galerija" className="gallery section">
                 <div className="container section-title" data-aos="fade-up">
                     <h2>{t('Gallery.title')}</h2>
                     <p>{t('Gallery.subTitle')}</p>
@@ -350,7 +350,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <section id="contact" className="contact section">
+            <section id="kontakt" className="contact section">
                 <div className="container section-title" data-aos="fade-up">
                     <h2>{t('Contact')}</h2>
                     <p>{t('ContactPage.description')}</p>

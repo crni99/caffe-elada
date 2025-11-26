@@ -43,13 +43,13 @@ export default function Header() {
                             <Link to="/" className={getLinkClass("/")}>{t("Home")}</Link>
                         </li>
                         <li>
-                            <Link to="/#gallery" className={getLinkClass("/#gallery")}>{t("Gallery.title")}</Link>
+                            <Link to="/#galerija" className={getLinkClass("/#galerija")}>{t("Gallery.title")}</Link>
                         </li>
                         <li>
-                            <Link to="/#contact" className={getLinkClass("/#contact")}>{t("Contact")}</Link>
+                            <Link to="/#kontakt" className={getLinkClass("/#kontakt")}>{t("Contact")}</Link>
                         </li>
                         <li>
-                            <Link to="/drinks" className={getLinkClass("/drinks")}>{t("Drinks.title")}</Link>
+                            <Link to="/karta-pica" className={getLinkClass("/karta-pica")}>{t("Drinks.title")}</Link>
                         </li>
                     </ul>
                 </nav>
