@@ -5109,3 +5109,121 @@ section,
     grid-template-columns: 1fr;
   }
 }
+
+/* New Navigation */
+.mobile-nav-toggle,
+.mobile-nav-show,
+.mobile-nav-hide {
+  display: none !important;
+}
+
+.custom-header {
+  background: #fff;
+  padding: 15px 0;
+  z-index: 9999;
+  border-bottom: 1px solid #eee;
+}
+
+.logo img {
+  height: 4rem;
+}
+
+.custom-mobile-toggle {
+  font-size: 28px;
+  padding-right: 0.5rem;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.custom-navmenu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+}
+
+.custom-navmenu .main-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-navmenu .language-container {
+  position: absolute;
+  right: 0;
+}
+
+.custom-navmenu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.custom-navmenu a.active {
+  color: var(--accent-color);
+}
+
+.custom-navmenu li {
+  border-bottom: 2px solid transparent;
+}
+
+.custom-navmenu li:hover {
+  border-bottom-color: var(--accent-color);
+}
+
+#language-dropdown {
+  color: var(--accent-color) !important;
+}
+
+#language-dropdown:active,
+#language-dropdown:hover,
+#language-dropdown:focus,
+#language-dropdown:focus-visible,
+#language-dropdown:focus-within {
+  color: var(--white);
+  background-color: var(--white) !important;
+}
+
+.dropdown-menu.show {
+  border: 2px solid var(--accent-color);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Mobile menu */
+@media (max-width: 992px) {
+  .custom-navmenu {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100vh;
+    padding-top: 80px;
+    background: #fff;
+    transition: right 0.35s ease;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    justify-content: flex-start;
+  }
+
+  .custom-navmenu.open {
+    right: 0;
+  }
+
+  .custom-navmenu .main-links {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .custom-navmenu .language-container {
+    position: static;
+    margin-top: 20px;
+  }
+
+}
