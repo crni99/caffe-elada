@@ -5147,8 +5147,9 @@ section,
   display: flex;
   gap: 2rem;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  padding-right: 2rem;
 }
 
 .custom-navmenu .language-container {
