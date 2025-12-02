@@ -1765,10 +1765,15 @@ section,
     --bs-dropdown-min-width: auto !important;
 }
 
-.dropdown-menu.show {
+.dropdown-menu {
     border: 2px solid var(--accent-color);
     padding-bottom: 0;
     padding-top: 0;
+}
+
+.dropdown-item {
+    width: 100%;
+    white-space: nowrap;
 }
 
 .dropdown-item:active,
@@ -1776,6 +1781,10 @@ section,
 .dropdown-item:hover {
     background-color: var(--accent-color);
     color: var(--white);
+}
+
+.dropdown.show .dropdown-menu {
+    display: block;
 }
 
 /*--------------------------------------------------------------

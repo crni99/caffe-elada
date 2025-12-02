@@ -632,10 +632,10 @@
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-21YLVEDG36"></script>
     <script>function gtag() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-21YLVEDG36")</script>
 
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/aos.css" rel="stylesheet">
-    <link href="/css/glightbox.min.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/glightbox.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
 </head>
 
@@ -644,7 +644,7 @@
     <div id="root">
         <header id="header" class="custom-header sticky-top">
             <div class="container d-flex align-items-center justify-content-between"><a class="logo" href="/"
-                    data-discover="true"><img alt="Elada Logo" src="/images/logos/EladaLogo.svg"></a><svg
+                    data-discover="true"><img alt="Elada Logo" src="images/logos/EladaLogo.svg"></a><svg
                     aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
                     class="svg-inline--fa fa-bars custom-mobile-toggle d-lg-none" role="img"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -652,18 +652,31 @@
                         d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z">
                     </path>
                 </svg>
-                <nav class="custom-navmenu ">
+                <nav class="custom-navmenu">
                     <ul class="main-links">
-                        <li><a class="active" href="/" data-discover="true">Početna</a></li>
-                        <li><a class="" href="/#galerija" data-discover="true">Galerija</a></li>
-                        <li><a class="" href="/#kontakt" data-discover="true">Kontakt</a></li>
-                        <li><a class="" href="/karta-pica" data-discover="true">Karta pića</a></li>
+                        <li><a class="active" href="/" data-discover="true" data-i18n-key="Home">Početna</a></li>
+                        <li><a class="" href="/#galerija" data-discover="true" data-i18n-key="Gallery.title">Galerija</a></li>
+                        <li><a class="" href="/#kontakt" data-discover="true" data-i18n-key="Contact">Kontakt</a></li>
+                        <li><a class="" href="/karta-pica" data-discover="true" data-i18n-key="Drinks.title">Karta pića</a></li>
                     </ul>
                     <div class="language-container">
-                        <div class="language-dropdown nav-item dropdown"><a id="language-dropdown" aria-expanded="false"
-                                role="button" class="dropdown-toggle nav-link" tabindex="0" href="#"><img width="20"
-                                    height="14" alt="Language"
-                                    src="/static/media/sr.b22bf6c0b70e80fe4431f9eaf64bcb58.svg"></a></div>
+                        <div class="language-dropdown nav-item dropdown">
+                            <a id="language-dropdown" aria-expanded="false" role="button"
+                                class="dropdown-toggle nav-link" tabindex="0" href="#">
+                                <img width="20" height="14" alt="Language" src="images/icons/sr.svg">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="language-dropdown">
+                                <a class="dropdown-item pt-2 pb-2" href="#" data-locale="sr">
+                                    <img src="images/icons/sr.svg" width="20" height="14" alt="Flag of Serbia">
+                                </a>
+                                <a class="dropdown-item pt-2 pb-2" href="#" data-locale="gr">
+                                    <img src="images/icons/gr.svg" width="20" height="14" alt="Flag of Greece">
+                                </a>
+                                <a class="dropdown-item pt-2 pb-2" href="#" data-locale="en">
+                                    <img src="images/icons/en.svg" width="20" height="14" alt="Flag of England">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -721,12 +734,12 @@
                         <div class="col-lg-6 aos-init aos-animate" data-aos="fade-left" data-aos-delay="300">
                             <div class="hero-images">
                                 <div class="main-image"><img alt="Signature Mediterranean Dish" class="img-fluid"
-                                        src="/images/gallery/elada-3.jpg"></div>
+                                        src="images/gallery/elada-3.jpg"></div>
                                 <div class="floating-images">
                                     <div class="floating-image floating-image-1"><img alt="Grilled Seafood"
-                                            class="img-fluid" src="/images/gallery/elada-1.jpg"></div>
+                                            class="img-fluid" src="images/gallery/elada-1.jpg"></div>
                                     <div class="floating-image floating-image-2"><img alt="Mediterranean Dessert"
-                                            class="img-fluid" src="/images/gallery/elada-4.jpg"></div>
+                                            class="img-fluid" src="images/gallery/elada-4.jpg"></div>
                                 </div>
                             </div>
                         </div>
@@ -734,13 +747,14 @@
                 </div>
             </div>
         </section>
+        <!--
         <section id="about" class="about section light-background">
             <div class="container aos-init" data-aos="fade-up" data-aos-delay="100">
                 <div class="restaurant-gallery aos-init" data-aos="fade-up" data-aos-delay="400">
                     <div class="row g-4">
                         <div class="col-lg-6 col-md-6">
                             <div class="gallery-item"><img alt="Signature Dish" class="img-fluid rounded"
-                                    src="/images/gallery/elada-1.jpg">
+                                    src="images/gallery/elada-1.jpg">
                                 <div class="gallery-caption">
                                     <h4>Title 1</h4>
                                     <p>Subtitle 1</p>
@@ -749,7 +763,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="gallery-item"><img alt="Wine Selection" class="img-fluid rounded"
-                                    src="/images/gallery/elada-4.jpg">
+                                    src="images/gallery/elada-4.jpg">
                                 <div class="gallery-caption">
                                     <h4>Title 2</h4>
                                     <p>Subtitle 2</p>
@@ -760,6 +774,7 @@
                 </div>
             </div>
         </section>
+        -->
         <section id="galerija" class="gallery section">
             <div class="container section-title aos-init" data-aos="fade-up">
                 <h2>Galerija</h2>
@@ -769,11 +784,11 @@
                 <div class="row g-4 isotope-container aos-init" data-aos="fade-up" data-aos-delay="200">
                     <div class="col-lg-4 col-md-6 gallery-item aos-init" data-aos="fade-up">
                         <div class="gallery-wrap"><img class="img-fluid" alt="Title 1" loading="lazy"
-                                src="/images/gallery/elada-5.webp">
+                                src="images/gallery/elada-5.webp">
                             <div class="gallery-info">
                                 <h4>Title 1</h4>
                                 <p>Subtitle 1</p>
-                                <div class="gallery-links"><a href="/images/gallery/elada-5.webp" class="glightbox"
+                                <div class="gallery-links"><a href="images/gallery/elada-5.webp" class="glightbox"
                                         title="Title 1 - Subtitle 1"><i class="bi"><svg
                                                 aria-labelledby="svg-inline--fa-title-wSlt0oaLEi59" data-prefix="fas"
                                                 data-icon="magnifying-glass-plus"
@@ -790,11 +805,11 @@
                     </div>
                     <div class="col-lg-4 col-md-6 gallery-item aos-init" data-aos="fade-up">
                         <div class="gallery-wrap"><img class="img-fluid" alt="Title 2" loading="lazy"
-                                src="/images/gallery/elada-6.webp">
+                                src="images/gallery/elada-6.webp">
                             <div class="gallery-info">
                                 <h4>Title 2</h4>
                                 <p>Subtitle 2</p>
-                                <div class="gallery-links"><a href="/images/gallery/elada-6.webp" class="glightbox"
+                                <div class="gallery-links"><a href="images/gallery/elada-6.webp" class="glightbox"
                                         title="Title 2 - Subtitle 2"><i class="bi"><svg
                                                 aria-labelledby="svg-inline--fa-title-qljl3W1ItMFq" data-prefix="fas"
                                                 data-icon="magnifying-glass-plus"
@@ -811,11 +826,11 @@
                     </div>
                     <div class="col-lg-4 col-md-6 gallery-item aos-init" data-aos="fade-up">
                         <div class="gallery-wrap"><img class="img-fluid" alt="Title 3" loading="lazy"
-                                src="/images/gallery/elada-7.webp">
+                                src="images/gallery/elada-7.webp">
                             <div class="gallery-info">
                                 <h4>Title 3</h4>
                                 <p>Subtitle 3</p>
-                                <div class="gallery-links"><a href="/images/gallery/elada-7.webp" class="glightbox"
+                                <div class="gallery-links"><a href="images/gallery/elada-7.webp" class="glightbox"
                                         title="Title 3 - Subtitle 3"><i class="bi"><svg
                                                 aria-labelledby="svg-inline--fa-title-GdHz9x1L93JX" data-prefix="fas"
                                                 data-icon="magnifying-glass-plus"
@@ -832,11 +847,11 @@
                     </div>
                     <div class="col-lg-4 col-md-6 gallery-item aos-init" data-aos="fade-up">
                         <div class="gallery-wrap"><img class="img-fluid" alt="Title 4" loading="lazy"
-                                src="/images/gallery/elada-8.webp">
+                                src="images/gallery/elada-8.webp">
                             <div class="gallery-info">
                                 <h4>Title 4</h4>
                                 <p>Subtitle 4</p>
-                                <div class="gallery-links"><a href="/images/gallery/elada-8.webp" class="glightbox"
+                                <div class="gallery-links"><a href="images/gallery/elada-8.webp" class="glightbox"
                                         title="Title 4 - Subtitle 4"><i class="bi"><svg
                                                 aria-labelledby="svg-inline--fa-title-jWR1xfgNzkGD" data-prefix="fas"
                                                 data-icon="magnifying-glass-plus"
@@ -853,11 +868,11 @@
                     </div>
                     <div class="col-lg-4 col-md-6 gallery-item aos-init" data-aos="fade-up">
                         <div class="gallery-wrap"><img class="img-fluid" alt="Title 5" loading="lazy"
-                                src="/images/gallery/elada-9.webp">
+                                src="images/gallery/elada-9.webp">
                             <div class="gallery-info">
                                 <h4>Title 5</h4>
                                 <p>Subtitle 5</p>
-                                <div class="gallery-links"><a href="/images/gallery/elada-9.webp" class="glightbox"
+                                <div class="gallery-links"><a href="images/gallery/elada-9.webp" class="glightbox"
                                         title="Title 5 - Subtitle 5"><i class="bi"><svg
                                                 aria-labelledby="svg-inline--fa-title-3aVMSuFkAcqG" data-prefix="fas"
                                                 data-icon="magnifying-glass-plus"
@@ -874,11 +889,11 @@
                     </div>
                     <div class="col-lg-4 col-md-6 gallery-item aos-init" data-aos="fade-up">
                         <div class="gallery-wrap"><img class="img-fluid" alt="Title 6" loading="lazy"
-                                src="/images/gallery/elada-2.jpg">
+                                src="images/gallery/elada-2.jpg">
                             <div class="gallery-info">
                                 <h4>Title 6</h4>
                                 <p>Subtitle 6</p>
-                                <div class="gallery-links"><a href="/images/gallery/elada-2.jpg" class="glightbox"
+                                <div class="gallery-links"><a href="images/gallery/elada-2.jpg" class="glightbox"
                                         title="Title 6 - Subtitle 6"><i class="bi"><svg
                                                 aria-labelledby="svg-inline--fa-title-3luyTuYLBJEA" data-prefix="fas"
                                                 data-icon="magnifying-glass-plus"
@@ -1402,15 +1417,16 @@
                 </svg></i></a>
     </div>
 
-    <script src="/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/aos.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="/js/glightbox.min.js"></script>
+    <script src="js/glightbox.min.js"></script>
     <script>
         const lightbox = GLightbox();
     </script>
+    <script src="js/i18n.js"></script>
 
 </body>
 

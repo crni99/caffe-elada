@@ -1,0 +1,73 @@
+{
+    "Header": {
+        "bookTable": "Rezervišite Sto"
+    },
+    "Home": "Početna",
+    "HomePage": {
+        "sectionTitle": "Dobrodošli u <strong>Caffe Elada</strong>",
+        "sectionText1": "Otvoreni 24. oktobra 2024. godine u srcu Ljiga, Caffe Elada je brzo postao omiljeni kutak za opuštanje i druženje. Naš cilj je da svaki posetilac uživa u vrhunskoj kafi, ukusnoj čokoladi i jedinstvenoj, prijatnoj atmosferi.",
+        "sectionText2": "Kreiramo nezaboravne trenutke kroz pažljivo pripremljenu ponudu pića i organizaciju specijalnih događaja. Pridružite nam se i otkrijte zašto smo brzo postali omiljeno mesto u Ljigu.",
+        "bookTable": "REZERVIŠITE STO",
+        "viewDrinks": "KARTA PIĆA",
+        "openDaily": "OTVORENO SVAKI DAN",
+        "location": "LOKACIJA"
+    },
+    "Gallery": {
+        "title": "Galerija",
+        "subTitle": "Istražite jedinstveni ambijent našeg prostora, od jutarnjih latea do kasnonoćnog veselja."
+    },
+    "Reviews": {
+        "title": "Šta su gosti rekli o nama?",
+        "description": "Pročitajte utiske i iskustva naših gostiju i saznajte zašto nam se uvek rado vraćaju.",
+        "review1": "Kafić sa dušom ❤❤❤ Sve je izuzetno, ambijent, atmosfera, osobe, vlasnici..",
+        "review2": "Simpatičan kafić, odlična usluga, najbrža karta za Grčku!",
+        "review3": "Prelep ambijent, osoblje, atmosfera i naravno vlasnici. ❤",
+        "review4": "Malo, izuzetno privatno mesto sa raznovrsnim pićem, ljubaznim osobljem, prijateljskom atmosferom."
+    },
+    "Contact": "Kontakt",
+    "ContactPage": {
+        "description": "Posetite nas na dole navedenoj adresi ili nas kontaktirajte.",
+        "subTitle": "Kontakt Informacije",
+        "subDescription": "Slobodno nam se obratite sa svim pitanjima o rezervacijama ili medijskim upitima.",
+        "openingHoursTitle": "Radno Vreme:",
+        "openingHoursDescription1": "Pon - Čet i Nedelja: 08 - 00",
+        "openingHoursDescription2": "Pet - Sub: 08 - 01",
+        "phoneTitle": "Telefon:",
+        "addressTitle": "Adresa:",
+        "addressDescription1": "Kralja Petra 22",
+        "addressDescription2": "Ljig 14240",
+        "googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5717.8362699355075!2d20.231763355382416!3d44.22934381497805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759e325a57f1005%3A0xcb8bd57d12fdb7b1!2sElada%20Ljig!5e0!3m2!1ssr!2srs!4v1743068402409!5m2!1ssr!2srs"
+    },
+    "Footer": {
+        "description1": "Otkrijte naš jedinstveni ambijent i uživajte u najboljoj kafi i pićima. ",
+        "description2": "Vaše omiljeno mesto u Ljigu!",
+        "subTitle1": "Podelite Vaše Iskustvo",
+        "placeholder1": "Ocenite nas na Google-u",
+        "subTitle2": "Korisni linkovi",
+        "subTitle3": "Kontaktirajte nas",
+        "allRightsReserved": "Sva prava zadržava",
+        "designedBy": "Dizajnirao"
+    },
+    "NotFoundPage": {
+        "title": "Stranica Nije Pronađena",
+        "subTitle": "Ups! Stranica koju tražite ne postoji.",
+        "returnToHomeButton": "Vratite se na početnu stranicu"
+    },
+    "Drinks": {
+        "title": "Karta pića",
+        "subTitle": "*Cene se mogu razlikovati od cena u kafiću!",
+        "all": "Sve",
+        "coffee": "Kafe",
+        "hotDrinks": "Topli napici",
+        "water": "Voda",
+        "juices": "Sokovi",
+        "energy": "Energetska pića",
+        "beers": "Piva",
+        "ciders": "Cideri",
+        "wines": "Vina",
+        "likers": "Aperitivi i likeri",
+        "rakijas": "Rakije",
+        "hardDrinks": "Žestoka pića",
+        "cocktails": "Kokteli"
+    }
+}
