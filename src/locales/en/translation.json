@@ -5,7 +5,7 @@
     "Home": "Home",
     "HomePage": {
         "sectionTitle": "Welcome to <strong>Caffe Elada</strong>",
-        "sectionText1": "Opened on October 24, 2024, <strong>Caffe Elada</strong> was created with the desire to provide a cozy corner for all coffee lovers, relaxation, and social moments.",
+        "sectionText1": "Opened on October 24, 2024, Caffe Elada was created with the desire to provide a cozy corner for all coffee lovers, relaxation, and social moments.",
         "sectionText2": "We are located in the heart of Ljig, and our goal is for every visitor to find something special in our atmosphere – whether you enjoy a peaceful cup of coffee, delicious chocolate, or the pleasant atmosphere we create every day.",
         "bookTable": "BOOK A TABLE",
         "viewDrinks": "VIEW DRINKS",
@@ -19,8 +19,8 @@
     "Reviews": {
         "title": "What Have Our Guests Said About Us?",
         "description": "Read the impressions and experiences of our guests and find out why they always gladly return to us.",
-        "review1": "A charming cafe, excellent service, the fastest ticket to Greece!",
-        "review2": "A cafe with a soul ❤❤❤ Everything is exceptional: the setting, atmosphere, people, owners..",
+        "review1": "A cafe with a soul ❤❤❤ Everything is exceptional: the setting, atmosphere, people, owners..",
+        "review2": "A charming cafe, excellent service, the fastest ticket to Greece!",
         "review3": "Beautiful ambiance, staff, atmosphere, and of course, the owners. ❤",
         "review4": "A small, exceptionally private place with a diverse menu, kind staff, and a friendly atmosphere."
     },

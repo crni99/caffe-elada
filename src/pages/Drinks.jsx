@@ -116,7 +116,7 @@ export default function DrinksPage() {
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
             <section id="drinks-menu" className="drinks-menu section">
                 <div className="container" data-aos="fade-up" data-aos-delay="100">
                     <div className="gallery isotope-layout mt-3 mb-3" data-default-filter="*" data-layout="masonry" data-sort="original-order">

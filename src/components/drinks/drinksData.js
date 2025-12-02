@@ -63,7 +63,7 @@ export const BEERS_DRINKS_DATA = [
     { id: 7, name: 'Mythos', volume: '0,33L', price: '290,00 RSD' },
     { id: 8, name: 'Nimfi Limenka', volume: '0,33L', price: '220,00 RSD' },
     { id: 9, name: 'Heineken', volume: '0,25L', price: '260,00 RSD' },
-    { id: 10, name: 'Tuborg', volume: '0,33L', price: '170,00 RSD' },
+    { id: 10, name: 'Tuborg', volume: '0,33L', price: '270,00 RSD' },
     { id: 11, name: 'Zaječarsko', volume: '0,5L', price: '200,00 RSD' },
     { id: 12, name: 'Zaječarsko', volume: '0,33L', price: '220,00 RSD' },
     { id: 13, name: 'Valjevsko', volume: '0,5L', price: '210,00 RSD' },
@@ -107,5 +107,5 @@ export const LIKERS_DRINKS_DATA = [
     { id: 2, name: 'Ouzo', volume: '0,03L', price: '140,00 RSD' },
     { id: 3, name: 'Liker Kafa Anis', volume: '0,03L', price: '210,00 RSD' },
     { id: 4, name: 'Curacao Blue', volume: '0,03L', price: '180,00 RSD', },
-    { id: 4, name: 'Liker Malina', volume: '0,03L', price: '220,00 RSD', },
+    { id: 5, name: 'Liker Malina', volume: '0,03L', price: '220,00 RSD', },
 ];
