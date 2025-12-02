@@ -86,8 +86,9 @@ export const RAKIJAS_DRINKS_DATA = [
     { id: 2, name: 'Rakija Dunja', volume: '0,03L', price: '190,00 RSD' },
     { id: 3, name: 'Viljamovka', volume: '0,03L', price: '200,00 RSD' },
     { id: 4, name: 'Medovača', volume: '0,03L', price: '200,00 RSD' },
-    { id: 5, name: 'Grčka Medovača', volume: '0,03L', price: '210,00 RSD', description: 'Rakomelo' },
-    { id: 6, name: 'Metaxa', volume: '0,03L', price: '250,00 RSD' },
+    { id: 5, name: 'Rakija Kajsija', volume: '0,03L', price: '220,00 RSD' },
+    { id: 6, name: 'Grčka Medovača', volume: '0,03L', price: '210,00 RSD', description: 'Rakomelo' },
+    { id: 7, name: 'Metaxa', volume: '0,03L', price: '250,00 RSD' },
 ];
 
 export const HARD_DRINKS_DATA = [
