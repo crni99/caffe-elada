@@ -200,6 +200,11 @@ footer a:active {
         padding: 8px !important;
     }
 
+    .footer .footer-bottom {
+        margin-top: 0 !important;
+    }
+
+
 }
 
 /* Extra Small (Mobile) */
@@ -251,6 +256,11 @@ footer a:active {
         margin-right: auto;
     }
 
+    .footer .footer-bottom {
+        margin-top: 0 !important;
+    }
+
+
 }
 
 /* Small Screens (≥576px) */
@@ -300,6 +310,10 @@ footer a:active {
         display: flex;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .footer .footer-bottom {
+        margin-top: 0 !important;
     }
 
 }
@@ -1278,7 +1292,7 @@ section,
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .testimonials .testimonial-meta {
@@ -1787,6 +1801,18 @@ section,
     display: block;
 }
 
+.custom-mobile-toggle .icon-xmark {
+    display: none;
+}
+
+.custom-mobile-toggle.icon-active .icon-bars {
+    display: none;
+}
+
+.custom-mobile-toggle.icon-active .icon-xmark {
+    display: block;
+}
+
 /*--------------------------------------------------------------
 # Preloader Overlay
 --------------------------------------------------------------*/
@@ -1826,4 +1852,30 @@ section,
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s, visibility 0.5s;
+}
+
+
+/*--------------------------------------------------------------
+# Review 2 Flag Animation
+--------------------------------------------------------------*/
+@keyframes flag-cycle-pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.6);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.flag-pulse-anim {
+    animation: flag-cycle-pulse 3s ease-in-out infinite;
+    transform-origin: center center;
+    vertical-align: middle;
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
 }
