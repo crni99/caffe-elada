@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#f0f0f0">
+    <meta name="description"
+        content="Caffe Elada je udoban kafić u samom srcu Ljiga, Srbija. Otvoren u oktobru 2024. godine, savršen je za ljubitelje kafe, opuštanje i društvene trenutke.">
+    <meta name="keywords"
+        content="Caffe Elada, kafić, Ljig, ljubitelji kafe, društveni trenuci, Srbija, Caffe Elada Ljig, pića, specijalni događaji">
+    <meta property="og:title" content="Caffe Elada">
+    <meta property="og:description"
+        content="Otkrijte Caffe Elada u Ljigu - udoban kafić gde možete uživati u ukusnoj kafi, čokoladi i opuštajućoj atmosferi. Otvoren u oktobru 2024. godine, brzo postaje omiljeno mesto u Ljigu.">
+    <meta property="og:image" content="images/logos/logo192.avif">
+    <meta property="og:url" content="https:/caffe-elada.vercel.app/">
+    <meta property="og:type" content="website">
+    <style type="text/css">
+        :root,
+        :host {
+            --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+            --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+            --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+            --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+            --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+            --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+            --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+            --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+            --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+            --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+            --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+            --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+            --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+            --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+            --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";
+            --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";
+            --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";
+        }
+
+        svg:not(:root).svg-inline--fa,
+        svg:not(:host).svg-inline--fa {
+            overflow: visible;
+            box-sizing: content-box;
+        }
+
+        .svg-inline--fa {
+            display: var(--fa-display, inline-block);
+            height: 1em;
+            overflow: visible;
+            vertical-align: -0.125em;
+        }
+
+        .svg-inline--fa.fa-2xs {
+            vertical-align: 0.1em;
+        }
+
+        .svg-inline--fa.fa-xs {
+            vertical-align: 0em;
+        }
+
+        .svg-inline--fa.fa-sm {
+            vertical-align: -0.0714285705em;
+        }
+
+        .svg-inline--fa.fa-lg {
+            vertical-align: -0.2em;
+        }
+
+        .svg-inline--fa.fa-xl {
+            vertical-align: -0.25em;
+        }
+
+        .svg-inline--fa.fa-2xl {
+            vertical-align: -0.3125em;
+        }
+
+        .svg-inline--fa.fa-pull-left {
+            margin-right: var(--fa-pull-margin, 0.3em);
+            width: auto;
+        }
+
+        .svg-inline--fa.fa-pull-right {
+            margin-left: var(--fa-pull-margin, 0.3em);
+            width: auto;
+        }
+
+        .svg-inline--fa.fa-li {
+            width: var(--fa-li-width, 2em);
+            top: 0.25em;
+        }
+
+        .svg-inline--fa.fa-fw {
+            width: var(--fa-fw-width, 1.25em);
+        }
+
+        .fa-layers svg.svg-inline--fa {
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .fa-layers-counter,
+        .fa-layers-text {
+            display: inline-block;
+            position: absolute;
+            text-align: center;
+        }
+
+        .fa-layers {
+            display: inline-block;
+            height: 1em;
+            position: relative;
+            text-align: center;
+            vertical-align: -0.125em;
+            width: 1em;
+        }
+
+        .fa-layers svg.svg-inline--fa {
+            transform-origin: center center;
+        }
+
+        .fa-layers-text {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: center center;
+        }
+
+        .fa-layers-counter {
+            background-color: var(--fa-counter-background-color, #ff253a);
+            border-radius: var(--fa-counter-border-radius, 1em);
+            box-sizing: border-box;
+            color: var(--fa-inverse, #fff);
+            line-height: var(--fa-counter-line-height, 1);
+            max-width: var(--fa-counter-max-width, 5em);
+            min-width: var(--fa-counter-min-width, 1.5em);
+            overflow: hidden;
+            padding: var(--fa-counter-padding, 0.25em 0.5em);
+            right: var(--fa-right, 0);
+            text-overflow: ellipsis;
+            top: var(--fa-top, 0);
+            transform: scale(var(--fa-counter-scale, 0.25));
+            transform-origin: top right;
+        }
+
+        .fa-layers-bottom-right {
+            bottom: var(--fa-bottom, 0);
+            right: var(--fa-right, 0);
+            top: auto;
+            transform: scale(var(--fa-layers-scale, 0.25));
+            transform-origin: bottom right;
+        }
+
+        .fa-layers-bottom-left {
+            bottom: var(--fa-bottom, 0);
+            left: var(--fa-left, 0);
+            right: auto;
+            top: auto;
+            transform: scale(var(--fa-layers-scale, 0.25));
+            transform-origin: bottom left;
+        }
+
+        .fa-layers-top-right {
+            top: var(--fa-top, 0);
+            right: var(--fa-right, 0);
+            transform: scale(var(--fa-layers-scale, 0.25));
+            transform-origin: top right;
+        }
+
+        .fa-layers-top-left {
+            left: var(--fa-left, 0);
+            right: auto;
+            top: var(--fa-top, 0);
+            transform: scale(var(--fa-layers-scale, 0.25));
+            transform-origin: top left;
+        }
+
+        .fa-1x {
+            font-size: 1em;
+        }
+
+        .fa-2x {
+            font-size: 2em;
+        }
+
+        .fa-3x {
+            font-size: 3em;
+        }
+
+        .fa-4x {
+            font-size: 4em;
+        }
+
+        .fa-5x {
+            font-size: 5em;
+        }
+
+        .fa-6x {
+            font-size: 6em;
+        }
+
+        .fa-7x {
+            font-size: 7em;
+        }
+
+        .fa-8x {
+            font-size: 8em;
+        }
+
+        .fa-9x {
+            font-size: 9em;
+        }
+
+        .fa-10x {
+            font-size: 10em;
+        }
+
+        .fa-2xs {
+            font-size: 0.625em;
+            line-height: 0.1em;
+            vertical-align: 0.225em;
+        }
+
+        .fa-xs {
+            font-size: 0.75em;
+            line-height: 0.0833333337em;
+            vertical-align: 0.125em;
+        }
+
+        .fa-sm {
+            font-size: 0.875em;
+            line-height: 0.0714285718em;
+            vertical-align: 0.0535714295em;
+        }
+
+        .fa-lg {
+            font-size: 1.25em;
+            line-height: 0.05em;
+            vertical-align: -0.075em;
+        }
+
+        .fa-xl {
+            font-size: 1.5em;
+            line-height: 0.0416666682em;
+            vertical-align: -0.125em;
+        }
+
+        .fa-2xl {
+            font-size: 2em;
+            line-height: 0.03125em;
+            vertical-align: -0.1875em;
+        }
+
+        .fa-fw {
+            text-align: center;
+            width: 1.25em;
+        }
+
+        .fa-ul {
+            list-style-type: none;
+            margin-left: var(--fa-li-margin, 2.5em);
+            padding-left: 0;
+        }
+
+        .fa-ul>li {
+            position: relative;
+        }
+
+        .fa-li {
+            left: calc(-1 * var(--fa-li-width, 2em));
+            position: absolute;
+            text-align: center;
+            width: var(--fa-li-width, 2em);
+            line-height: inherit;
+        }
+
+        .fa-border {
+            border-color: var(--fa-border-color, #eee);
+            border-radius: var(--fa-border-radius, 0.1em);
+            border-style: var(--fa-border-style, solid);
+            border-width: var(--fa-border-width, 0.08em);
+            padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+        }
+
+        .fa-pull-left {
+            float: left;
+            margin-right: var(--fa-pull-margin, 0.3em);
+        }
+
+        .fa-pull-right {
+            float: right;
+            margin-left: var(--fa-pull-margin, 0.3em);
+        }
+
+        .fa-beat {
+            animation-name: fa-beat;
+            animation-delay: var(--fa-animation-delay, 0s);
+            animation-direction: var(--fa-animation-direction, normal);
+            animation-duration: var(--fa-animation-duration, 1s);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-timing-function: var(--fa-animation-timing, ease-in-out);
+        }
+
+        .fa-bounce {
+            animation-name: fa-bounce;
+            animation-delay: var(--fa-animation-delay, 0s);
+            animation-direction: var(--fa-animation-direction, normal);
+            animation-duration: var(--fa-animation-duration, 1s);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+        }
+
+        .fa-fade {
+            animation-name: fa-fade;
+            animation-delay: var(--fa-animation-delay, 0s);
+            animation-direction: var(--fa-animation-direction, normal);
+            animation-duration: var(--fa-animation-duration, 1s);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+        }
+
+        .fa-beat-fade {
+            animation-name: fa-beat-fade;
+            animation-delay: var(--fa-animation-delay, 0s);
+            animation-direction: var(--fa-animation-direction, normal);
+            animation-duration: var(--fa-animation-duration, 1s);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+        }
+
+        .fa-flip {
+            animation-name: fa-flip;
+            animation-delay: var(--fa-animation-delay, 0s);
+            animation-direction: var(--fa-animation-direction, normal);
+            animation-duration: var(--fa-animation-duration, 1s);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-timing-function: var(--fa-animation-timing, ease-in-out);
+        }
+
+        .fa-shake {
+            animation-name: fa-shake;
+            animation-delay: var(--fa-animation-delay, 0s);
+            animation-direction: var(--fa-animation-direction, normal);
+            animation-duration: var(--fa-animation-duration, 1s);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-timing-function: var(--fa-animation-timing, linear);
+        }
+
+        .fa-spin {
+            animation-name: fa-spin;
+            animation-delay: var(--fa-animation-delay, 0s);
+            animation-direction: var(--fa-animation-direction, normal);
+            animation-duration: var(--fa-animation-duration, 2s);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-timing-function: var(--fa-animation-timing, linear);
+        }
+
+        .fa-spin-reverse {
+            --fa-animation-direction: reverse;
+        }
+
+        .fa-pulse,
+        .fa-spin-pulse {
+            animation-name: fa-spin;
+            animation-direction: var(--fa-animation-direction, normal);
+            animation-duration: var(--fa-animation-duration, 1s);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-timing-function: var(--fa-animation-timing, steps(8));
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .fa-beat,
+            .fa-bounce,
+            .fa-fade,
+            .fa-beat-fade,
+            .fa-flip,
+            .fa-pulse,
+            .fa-shake,
+            .fa-spin,
+            .fa-spin-pulse {
+                animation-delay: -1ms;
+                animation-duration: 1ms;
+                animation-iteration-count: 1;
+                transition-delay: 0s;
+                transition-duration: 0s;
+            }
+        }
+
+        @keyframes fa-beat {
+
+            0%,
+            90% {
+                transform: scale(1);
+            }
+
+            45% {
+                transform: scale(var(--fa-beat-scale, 1.25));
+            }
+        }
+
+        @keyframes fa-bounce {
+            0% {
+                transform: scale(1, 1) translateY(0);
+            }
+
+            10% {
+                transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            }
+
+            30% {
+                transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            }
+
+            50% {
+                transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            }
+
+            57% {
+                transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            }
+
+            64% {
+                transform: scale(1, 1) translateY(0);
+            }
+
+            100% {
+                transform: scale(1, 1) translateY(0);
+            }
+        }
+
+        @keyframes fa-fade {
+            50% {
+                opacity: var(--fa-fade-opacity, 0.4);
+            }
+        }
+
+        @keyframes fa-beat-fade {
+
+            0%,
+            100% {
+                opacity: var(--fa-beat-fade-opacity, 0.4);
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(var(--fa-beat-fade-scale, 1.125));
+            }
+        }
+
+        @keyframes fa-flip {
+            50% {
+                transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            }
+        }
+
+        @keyframes fa-shake {
+            0% {
+                transform: rotate(-15deg);
+            }
+
+            4% {
+                transform: rotate(15deg);
+            }
+
+            8%,
+            24% {
+                transform: rotate(-18deg);
+            }
+
+            12%,
+            28% {
+                transform: rotate(18deg);
+            }
+
+            16% {
+                transform: rotate(-22deg);
+            }
+
+            20% {
+                transform: rotate(22deg);
+            }
+
+            32% {
+                transform: rotate(-12deg);
+            }
+
+            36% {
+                transform: rotate(12deg);
+            }
+
+            40%,
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes fa-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .fa-rotate-90 {
+            transform: rotate(90deg);
+        }
+
+        .fa-rotate-180 {
+            transform: rotate(180deg);
+        }
+
+        .fa-rotate-270 {
+            transform: rotate(270deg);
+        }
+
+        .fa-flip-horizontal {
+            transform: scale(-1, 1);
+        }
+
+        .fa-flip-vertical {
+            transform: scale(1, -1);
+        }
+
+        .fa-flip-both,
+        .fa-flip-horizontal.fa-flip-vertical {
+            transform: scale(-1, -1);
+        }
+
+        .fa-rotate-by {
+            transform: rotate(var(--fa-rotate-angle, 0));
+        }
+
+        .fa-stack {
+            display: inline-block;
+            vertical-align: middle;
+            height: 2em;
+            position: relative;
+            width: 2.5em;
+        }
+
+        .fa-stack-1x,
+        .fa-stack-2x {
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: var(--fa-stack-z-index, auto);
+        }
+
+        .svg-inline--fa.fa-stack-1x {
+            height: 1em;
+            width: 1.25em;
+        }
+
+        .svg-inline--fa.fa-stack-2x {
+            height: 2em;
+            width: 2.5em;
+        }
+
+        .fa-inverse {
+            color: var(--fa-inverse, #fff);
+        }
+
+        .sr-only,
+        .fa-sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .sr-only-focusable:not(:focus),
+        .fa-sr-only-focusable:not(:focus) {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .svg-inline--fa .fa-primary {
+            fill: var(--fa-primary-color, currentColor);
+            opacity: var(--fa-primary-opacity, 1);
+        }
+
+        .svg-inline--fa .fa-secondary {
+            fill: var(--fa-secondary-color, currentColor);
+            opacity: var(--fa-secondary-opacity, 0.4);
+        }
+
+        .svg-inline--fa.fa-swap-opacity .fa-primary {
+            opacity: var(--fa-secondary-opacity, 0.4);
+        }
+
+        .svg-inline--fa.fa-swap-opacity .fa-secondary {
+            opacity: var(--fa-primary-opacity, 1);
+        }
+
+        .svg-inline--fa mask .fa-primary,
+        .svg-inline--fa mask .fa-secondary {
+            fill: black;
+        }
+    </style>
+    <link rel="icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/logos/logo192.avif">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+        rel="stylesheet">
+    <title>Caffe Elada</title>
+
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-21YLVEDG36"></script>
+    <script>function gtag() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-21YLVEDG36")</script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/glightbox.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body id="root" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0"
+    data-new-gr-c-s-check-loaded="14.1264.0" data-gr-ext-installed="">
+    <header id="header" class="custom-header sticky-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a class="logo" href="/" data-discover="true">
+                <img alt="Elada Logo" src="images/logos/EladaLogo.svg">
+            </a>
+            <div class="custom-mobile-toggle d-lg-none">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+                    class="svg-inline--fa fa-bars icon-bars" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                        d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z">
+                    </path>
+                </svg>
+
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark"
+                    class="svg-inline--fa fa-xmark icon-xmark" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512">
+                    <path fill="currentColor"
+                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z">
+                    </path>
+                </svg>
+            </div>
+            <nav class="custom-navmenu">
+                <ul class="main-links">
+                    <li>
+                        <a class="" href="/" data-discover="true" data-i18n-key="Home">Početna</a>
+                    </li>
+                    <li>
+                        <a class="" href="/#galerija" data-discover="true" data-i18n-key="Gallery.title">Galerija</a>
+                    </li>
+                    <li>
+                        <a class="" href="/#kontakt" data-discover="true" data-i18n-key="Contact">Kontakt</a>
+                    </li>
+                    <li>
+                        <a class="active" href="/karta-pica" data-discover="true" data-i18n-key="Drinks.title">Karta
+                            pića</a>
+                    </li>
+                </ul>
+                <div class="language-container">
+                    <div class="language-dropdown nav-item dropdown">
+                        <a id="language-dropdown" aria-expanded="false" role="button" class="dropdown-toggle nav-link"
+                            tabindex="0" href="#">
+                            <img width="20" height="14" alt="Language" src="images/icons/sr.svg">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="language-dropdown">
+                            <a class="dropdown-item pt-2 pb-2" href="#" data-locale="sr">
+                                <img src="images/icons/sr.svg" width="20" height="14" alt="Flag of Serbia">
+                            </a>
+                            <a class="dropdown-item pt-2 pb-2" href="#" data-locale="gr">
+                                <img src="images/icons/gr.svg" width="20" height="14" alt="Flag of Greece">
+                            </a>
+                            <a class="dropdown-item pt-2 pb-2" href="#" data-locale="en">
+                                <img src="images/icons/en.svg" width="20" height="14" alt="Flag of England">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section id="hero" class="hero section light-background">
+        <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="hero-content">
+                <div class="row align-items-center">
+                    <div data-aos="fade-right" data-aos-delay="200" class="aos-init aos-animate">
+                        <div class="content">
+                            <div class="container section-title-h1 section light-background aos-init aos-animate"
+                                data-aos="fade-up">
+                                <h1 data-i18n-key="Drinks.title">Karta pića</h1>
+                                <p class="text-muted" data-i18n-key="Drinks.subTitle">*Cene se mogu razlikovati od cena
+                                    u kafiću!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="drinks-menu" class="drinks-menu section">
+        <div id="drinks-container" class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery isotope-layout mt-3 mb-3" data-default-filter="*" data-layout="masonry"
+                data-sort="original-order">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="gallery-filters isotope-filters filter-row-0 aos-init aos-animate" data-aos="fade-up"
+                            data-aos-delay="100"
+                            style="display: flex; flex-wrap: nowrap; justify-content: center; margin-bottom: 16px;">
+                            <li data-filter="*" class="filter-active" data-i18n-key="Drinks.all">Sve</li>
+                            <li data-filter=".filter-coffee" data-i18n-key="Drinks.coffee">Kafe</li>
+                            <li data-filter=".filter-hot-drinks" data-i18n-key="Drinks.hotDrinks">Topli napici</li>
+                            <li data-filter=".filter-water" data-i18n-key="Drinks.water">Voda</li>
+                            <li data-filter=".filter-juices" data-i18n-key="Drinks.juices">Sokovi</li>
+                        </ul>
+                        <ul class="gallery-filters isotope-filters filter-row-1 aos-init aos-animate" data-aos="fade-up"
+                            data-aos-delay="100"
+                            style="display: flex; flex-wrap: nowrap; justify-content: center; margin-bottom: 16px;">
+                            <li data-filter=".filter-energy" data-i18n-key="Drinks.energy">Energetska pića</li>
+                            <li data-filter=".filter-beers" data-i18n-key="Drinks.beers">Piva</li>
+                            <li data-filter=".filter-ciders" data-i18n-key="Drinks.ciders">Cideri</li>
+                            <li data-filter=".filter-wines" data-i18n-key="Drinks.wines">Vina</li>
+                        </ul>
+                        <ul class="gallery-filters isotope-filters filter-row-2 aos-init aos-animate" data-aos="fade-up"
+                            data-aos-delay="100"
+                            style="display: flex; flex-wrap: nowrap; justify-content: center; margin-bottom: 16px;">
+                            <li data-filter=".filter-likers" data-i18n-key="Drinks.likers">Aperitivi i likeri</li>
+                            <li data-filter=".filter-rakijas" data-i18n-key="Drinks.rakijas">Rakije</li>
+                            <li data-filter=".filter-hard-drinks" data-i18n-key="Drinks.hardDrinks">Žestoka pića</li>
+                            <li data-filter=".filter-cocktails" data-i18n-key="Drinks.cocktails">Kokteli</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 mb-4 isotope-item filter-coffee">
+                    <div class="container mt-3 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper">
+                        <div class="row">
+                            <div class="col-12 text-center mb-3">
+                                <h2 class="display-6 pt-2 menu-title" data-i18n-key="Drinks.coffee">Kafe</h2>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush rounded">
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Kafa Domaća Mala <small
+                                            class="text-muted fw-normal">(0,06L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">70,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Kafa Domaća <small
+                                            class="text-muted fw-normal">(0,15L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">120,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Kafa Domaća sa Mlekom <small
+                                            class="text-muted fw-normal">(0,16L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">130,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Espreso <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">150,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Dupli Espreso <small
+                                            class="text-muted fw-normal">(0,06L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">240,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Espreso sa Mlekom <small
+                                            class="text-muted fw-normal">(0,06L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">170,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Kapućino <small
+                                            class="text-muted fw-normal">(0,1L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">180,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Nes Kafa <small
+                                            class="text-muted fw-normal">(0,25L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">180,00 RSD</strong></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 isotope-item filter-hot-drinks">
+                    <div class="container mt-5 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper">
+                        <div class="row">
+                            <div class="col-12 text-center mb-3">
+                                <h2 class="display-6 pt-2 menu-title" data-i18n-key="Drinks.hotDrinks">Topli napici</h2>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush rounded">
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Čaj Teekanne <small
+                                            class="text-muted fw-normal">(0,3L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">180,00 RSD</strong></p>
+                                </div>
+                                <div class="d-flex justify-content-start pb-1">
+                                    <p class="mb-0"><small class="text-secondary fst-italic">Nana, Kamilica,
+                                            Pomorandža, Multivitamin, Winter</small></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Topla Čokolada <small
+                                            class="text-muted fw-normal">(0,25L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">330,00 RSD</strong></p>
+                                </div>
+                                <div class="d-flex justify-content-start pb-1">
+                                    <p class="mb-0"><small class="text-secondary fst-italic">Klasik, Lešnik, Badem,
+                                            Cimet</small></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Mleko <small
+                                            class="text-muted fw-normal">(0,2L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">100,00 RSD</strong></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 isotope-item filter-water">
+                    <div class="container mt-5 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper">
+                        <div class="row">
+                            <div class="col-12 text-center mb-3">
+                                <h2 class="display-6 pt-2 menu-title" data-i18n-key="Drinks.water">Voda</h2>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush rounded">
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Aqua Viva <small
+                                            class="text-muted fw-normal">(0,25L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">160,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Knjaz Miloš <small
+                                            class="text-muted fw-normal">(0,25L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">170,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Knjaz Miloš Čaša <small
+                                            class="text-muted fw-normal">(0,2L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">100,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Knjaz Miloš <small
+                                            class="text-muted fw-normal">(1L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">210,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Knjaz Miloš Limun <small
+                                            class="text-muted fw-normal">(0,33L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">170,00 RSD</strong></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 isotope-item filter-juices">
+                    <div class="container mt-5 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper">
+                        <div class="row">
+                            <div class="col-12 text-center mb-3">
+                                <h2 class="display-6 pt-2 menu-title" data-i18n-key="Drinks.juices">Sokovi</h2>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush rounded">
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Pepsi <small
+                                            class="text-muted fw-normal">(0,25L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">200,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Pepsi Zero <small
+                                            class="text-muted fw-normal">(0,25L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">200,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Mirinda <small
+                                            class="text-muted fw-normal">(0,25L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">200,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">7 Up <small
+                                            class="text-muted fw-normal">(0,25L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">200,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Evervess Bitter <small
+                                            class="text-muted fw-normal">(0,25L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">210,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Evervess Tonic <small
+                                            class="text-muted fw-normal">(0,25L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">210,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Gusto <small
+                                            class="text-muted fw-normal">(0,2L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">220,00 RSD</strong></p>
+                                </div>
+                                <div class="d-flex justify-content-start pb-1">
+                                    <p class="mb-0"><small class="text-secondary fst-italic">Breskva, Jagoda,
+                                            Borovnica, Jabuka, Ananas</small></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Limunada <small
+                                            class="text-muted fw-normal">(0,3L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">190,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Ceđena Pomorandža <small
+                                            class="text-muted fw-normal">(0,2L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">290,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Cedevita Kesica <small
+                                            class="text-muted fw-normal">(19G)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">160,00 RSD</strong></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 isotope-item filter-energy">
+                    <div class="container mt-5 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper">
+                        <div class="row">
+                            <div class="col-12 text-center mb-3">
+                                <h2 class="display-6 pt-2 menu-title" data-i18n-key="Drinks.energy">Energetska pića</h2>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush rounded">
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Guarana <small
+                                            class="text-muted fw-normal">(0,25L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">220,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Red Bull <small
+                                            class="text-muted fw-normal">(0,33L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">320,00 RSD</strong></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 isotope-item filter-beers">
+                    <div class="container mt-5 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper">
+                        <div class="row">
+                            <div class="col-12 text-center mb-3">
+                                <h2 class="display-6 pt-2 menu-title" data-i18n-key="Drinks.beers">Piva</h2>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush rounded">
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Alfa <small
+                                            class="text-muted fw-normal">(0,33L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">260,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Alfa Limenka <small
+                                            class="text-muted fw-normal">(0,5L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">250,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Alfa Slano <small
+                                            class="text-muted fw-normal">(0,33L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">220,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Mamos Limenka <small
+                                            class="text-muted fw-normal">(0,33L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">220,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Mamos Flaša <small
+                                            class="text-muted fw-normal">(0,33L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">260,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Mythos Limenka <small
+                                            class="text-muted fw-normal">(0,5)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">310,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Mythos <small
+                                            class="text-muted fw-normal">(0,33L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">290,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Nimfi Limenka <small
+                                            class="text-muted fw-normal">(0,33L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">220,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Heineken <small
+                                            class="text-muted fw-normal">(0,25L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">260,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Tuborg <small
+                                            class="text-muted fw-normal">(0,33L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">270,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Zaječarsko <small
+                                            class="text-muted fw-normal">(0,5L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">200,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Zaječarsko <small
+                                            class="text-muted fw-normal">(0,33L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">220,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Valjevsko <small
+                                            class="text-muted fw-normal">(0,5L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">210,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Valjevsko <small
+                                            class="text-muted fw-normal">(0,33L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">200,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Valjevsko Točeno <small
+                                            class="text-muted fw-normal">(0,5L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">250,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Valjevsko Točeno <small
+                                            class="text-muted fw-normal">(0,33L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">220,00 RSD</strong></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 isotope-item filter-ciders">
+                    <div class="container mt-5 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper">
+                        <div class="row">
+                            <div class="col-12 text-center mb-3">
+                                <h2 class="display-6 pt-2 menu-title" data-i18n-key="Drinks.ciders">Cideri</h2>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush rounded">
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Somersby <small
+                                            class="text-muted fw-normal">(0,33L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">280,00 RSD</strong></p>
+                                </div>
+                                <div class="d-flex justify-content-start pb-1">
+                                    <p class="mb-0"><small class="text-secondary fst-italic">Borovnica, Jabuka,
+                                            Malina, Kruška</small></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 isotope-item filter-wines">
+                    <div class="container mt-5 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper">
+                        <div class="row">
+                            <div class="col-12 text-center mb-3">
+                                <h2 class="display-6 pt-2 menu-title" data-i18n-key="Drinks.wines">Vina</h2>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush rounded">
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Medveđa Krv <small
+                                            class="text-muted fw-normal">(0,2L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">220,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Smederevka <small
+                                            class="text-muted fw-normal">(0,2L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">230,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Rose <small
+                                            class="text-muted fw-normal">(0,2L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">190,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Vranac <small
+                                            class="text-muted fw-normal">(0,187L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">350,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Rose <small
+                                            class="text-muted fw-normal">(0,187L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">190,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Chardonai <small
+                                            class="text-muted fw-normal">(0,187L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">190,00 RSD</strong></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 isotope-item filter-likers">
+                    <div class="container mt-5 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper">
+                        <div class="row">
+                            <div class="col-12 text-center mb-3">
+                                <h2 class="display-6 pt-2 menu-title" data-i18n-key="Drinks.likers">Aperitivi i likeri
+                                </h2>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush rounded">
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Baileys <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">330,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Ouzo <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">140,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Liker Kafa Anis <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">210,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Curacao Blue <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">180,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Liker Malina <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">220,00 RSD</strong></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 isotope-item filter-rakijas">
+                    <div class="container mt-5 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper">
+                        <div class="row">
+                            <div class="col-12 text-center mb-3">
+                                <h2 class="display-6 pt-2 menu-title" data-i18n-key="Drinks.rakijas">Rakije</h2>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush rounded">
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Rakija Šljiva <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">160,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Rakija Dunja <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">190,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Viljamovka <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">200,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Medovača <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">200,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Rakija Kajsija <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">220,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Grčka Medovača <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">210,00 RSD</strong></p>
+                                </div>
+                                <div class="d-flex justify-content-start pb-1">
+                                    <p class="mb-0"><small class="text-secondary fst-italic">Rakomelo</small></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Metaxa <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">250,00 RSD</strong></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 isotope-item filter-hard-drinks">
+                    <div class="container mt-5 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper">
+                        <div class="row">
+                            <div class="col-12 text-center mb-3">
+                                <h2 class="display-6 pt-2 menu-title" data-i18n-key="Drinks.hardDrinks">Žestoka pića
+                                </h2>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush rounded">
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Johnnie Walker <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">250,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Smirnoff <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">210,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Džin <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">150,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Džin Sinner <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">180,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Tekila <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">250,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Vinjak <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">140,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Konjak <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">150,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Jägermeister <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">230,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Gorki List <small
+                                            class="text-muted fw-normal">(0,03L)</small></h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">150,00 RSD</strong></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 isotope-item filter-cocktails">
+                    <div class="container mt-5 mb-4 pb-3 px-3 py-3 rounded shadow-lg section drink-wrapper">
+                        <div class="row">
+                            <div class="col-12 text-center mb-3">
+                                <h2 class="display-6 pt-2 menu-title" data-i18n-key="Drinks.cocktails">Kokteli</h2>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush rounded">
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Tasos <small class="text-muted fw-normal"></small>
+                                    </h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">500,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Mikonos <small class="text-muted fw-normal"></small>
+                                    </h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">500,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Lefkada <small class="text-muted fw-normal"></small>
+                                    </h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">600,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Zakintos <small class="text-muted fw-normal"></small>
+                                    </h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">650,00 RSD</strong></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item w-100">
+                                <div class="d-flex justify-content-between align-items-baseline pt-2 pb-1">
+                                    <h5 class="fw-bold mb-0 me-3">Lezbos <small class="text-muted fw-normal"></small>
+                                    </h5>
+                                    <p class="mb-0 text-nowrap"><strong class="text-dark">650,00 RSD</strong></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="footer light-background">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4">
+                    <div class="footer-content">
+                        <a class="logo d-flex align-items-center mb-4" href="/" data-discover="true">
+                            <span class="sitename">Caffe Elada</span>
+                        </a>
+                        <p class="mb-4">
+                            <span data-i18n-key="Footer.description1">
+                                Otkrijte naš jedinstveni ambijent i uživajte u najboljoj kafi i pićima.
+                            </span>
+                            <br>
+                            <span data-i18n-key="Footer.description2">
+                                Vaše omiljeno mesto u Ljigu!
+                            </span>
+                        </p>
+                        <div class="newsletter-form">
+                            <h5 data-i18n-key="Footer.subTitle1">Podelite Vaše Iskustvo</h5>
+                            <a href="https://search.google.com/local/writereview?placeid=ChIJBRB_pSXjWUcRsbf9En3Vi8s"
+                                target="_blank" rel="noopener noreferrer" class="btn-review-split">
+                                <span class="btn-main-text">
+                                    <strong data-i18n-key="Footer.placeholder1">Ocenite nas na Google-u</strong>
+                                </span>
+                                <span class="btn-icon-part aos-init" data-aos="fade-up" data-aos-duration="2000">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="svg-inline--fa fa-star fa-lg icon-animate" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex justify-content-lg-center">
+                    <div class="footer-links">
+                        <h4 data-i18n-key="Footer.subTitle2">Korisni linkovi</h4>
+                        <ul>
+                            <li>
+                                <a class="" href="/karta-pica" data-discover="true">
+                                    <svg aria-labelledby="svg-inline--fa-title-ZEqs6FMaiDnP" data-prefix="fas"
+                                        data-icon="chevron-right" class="svg-inline--fa fa-chevron-right mx-2 icon-blue"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <title id="svg-inline--fa-title-ZEqs6FMaiDnP">Chevron Right</title>
+                                        <path fill="currentColor"
+                                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                                        </path>
+                                    </svg>
+                                    <span data-i18n-key="Drinks.title">
+                                        Karta pića
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/#galerija" data-discover="true">
+                                    <svg aria-labelledby="svg-inline--fa-title-rYGKpeHj3d9u" data-prefix="fas"
+                                        data-icon="chevron-right" class="svg-inline--fa fa-chevron-right mx-2 icon-blue"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <title id="svg-inline--fa-title-rYGKpeHj3d9u">Chevron Right</title>
+                                        <path fill="currentColor"
+                                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                                        </path>
+                                    </svg>
+                                    <span data-i18n-key="Gallery.title">
+                                        Galerija
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/#kontakt" data-discover="true">
+                                    <svg aria-labelledby="svg-inline--fa-title-4CHIjY0XcgqB" data-prefix="fas"
+                                        data-icon="chevron-right" class="svg-inline--fa fa-chevron-right mx-2 icon-blue"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <title id="svg-inline--fa-title-4CHIjY0XcgqB">Chevron Right</title>
+                                        <path fill="currentColor"
+                                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                                        </path>
+                                    </svg>
+                                    <span data-i18n-key="Contact">
+                                        Kontakt
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <h4 data-i18n-key="Footer.subTitle3">Kontaktirajte nas</h4><a
+                            href="https://maps.app.goo.gl/1N3gb5m4EPXZM3iBA" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="bi">
+                                        <svg aria-labelledby="svg-inline--fa-title-ASJae7hBov80" data-prefix="fas"
+                                            data-icon="location-dot" class="svg-inline--fa fa-location-dot mx-2"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                            <title id="svg-inline--fa-title-ASJae7hBov80">Location Dot</title>
+                                            <path fill="currentColor"
+                                                d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
+                                            </path>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="contact-info">
+                                    <p>Kralja Petra 22<br>Ljig 14240</p>
+                                </div>
+                            </div>
+                        </a><a href="tel:+381641215566" rel="noopener noreferrer">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="bi">
+                                        <svg aria-labelledby="svg-inline--fa-title-TzOqD5tBBAxX" data-prefix="fas"
+                                            data-icon="phone" class="svg-inline--fa fa-phone mx-2" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <title id="svg-inline--fa-title-TzOqD5tBBAxX">Phone</title>
+                                            <path fill="currentColor"
+                                                d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z">
+                                            </path>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="contact-info">
+                                    <p>+381 64 121-5566</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61565711781481" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg aria-labelledby="svg-inline--fa-title-9WHlX0WWEimv" data-prefix="fab"
+                                    data-icon="square-facebook" class="svg-inline--fa fa-square-facebook fa-lg mx-2"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <title id="svg-inline--fa-title-9WHlX0WWEimv">Facebook</title>
+                                    <path fill="currentColor"
+                                        d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/caffe_elada/" target="_blank" rel="noopener noreferrer">
+                                <svg aria-labelledby="svg-inline--fa-title-a3U7hBBazcjI" data-prefix="fab"
+                                    data-icon="square-instagram" class="svg-inline--fa fa-square-instagram fa-lg mx-2"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <title id="svg-inline--fa-title-a3U7hBBazcjI">Instagram</title>
+                                    <path fill="currentColor"
+                                        d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="copyright">
+                            <p>2025 ©<strong class="px-1 sitename">Caffe Elada</strong><span
+                                    data-i18n-key="Footer.allRightsReserved">Sva prava zadržava</span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="credits">
+                            <span data-i18n-key="Footer.designedBy">
+                                Dizajnirao
+                            </span>
+                            <a href="https://www.linkedin.com/in/ognj3n/" target="_blank" rel="noopener noreferrer">
+                                <strong>Ognjen</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#root" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center ">
+        <i class="bi">
+            <svg aria-labelledby="svg-inline--fa-title-M0FnACk00Gun" data-prefix="fas" data-icon="chevron-up"
+                class="svg-inline--fa fa-chevron-up mx-2 icon-white" role="img" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512">
+                <title id="svg-inline--fa-title-M0FnACk00Gun">Chevron Up</title>
+                <path fill="currentColor"
+                    d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z">
+                </path>
+            </svg>
+        </i>
+    </a>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/glightbox.min.js"></script>
+    <script>
+        const lightbox = GLightbox();
+    </script>
+    <script src="js/i18n.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const galleryContainer = document.querySelector('.row.mt-5');
+
+            if (!galleryContainer) {
+                console.error("Isotope container not found!");
+                return;
+            }
+
+            const iso = new Isotope(galleryContainer, {
+                itemSelector: '.isotope-item',
+                layoutMode: 'vertical',
+                percentPosition: true
+            });
+
+            const filterButtons = document.querySelectorAll('.gallery-filters li');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    filterButtons.forEach(btn => btn.classList.remove('filter-active'));
+                    this.classList.add('filter-active');
+                    const filterValue = this.getAttribute('data-filter');
+                    iso.arrange({ filter: filterValue });
+                });
+            });
+
+            window.addEventListener('resize', function () {
+                iso.layout();
+            });
+        });
+    </script>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

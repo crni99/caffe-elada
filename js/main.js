@@ -24,28 +24,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     toggleScrollTopVisibility();
 });
-
-/*
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileToggle = document.querySelector('.custom-mobile-toggle');
-    const navMenu = document.querySelector('.custom-navmenu');
-
-    if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('open');
-            mobileToggle.classList.toggle('icon-active');
-            document.body.classList.toggle('mobile-menu-open');
-        });
-    }
-
-    document.querySelectorAll('.custom-navmenu a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('open')) {
-                navMenu.classList.remove('open');
-                mobileToggle.classList.remove('icon-active');
-                document.body.classList.remove('mobile-menu-open');
-            }
-        });
-    });
-});
-*/
