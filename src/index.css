@@ -1818,3 +1818,28 @@ section,
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s;
 }
+
+/*--------------------------------------------------------------
+# Review 2 Flag Animation
+--------------------------------------------------------------*/
+@keyframes flag-cycle-pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.6);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.flag-pulse-anim {
+    animation: flag-cycle-pulse 3s ease-in-out infinite;
+    transform-origin: center center;
+    vertical-align: middle;
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
+}

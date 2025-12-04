@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentDots, faStar } from '@fortawesome/free-solid-svg-icons';
+import flagGr from "../../assets/lang-flags/gr.svg";
 
 const StarRating = () => {
     const stars = Array(5).fill(faStar);
@@ -40,8 +41,14 @@ const ReviewItem = ({ review, t }) => {
                     <i className="bi bi-chat-quote-fill quote-icon">
                         <FontAwesomeIcon icon={faCommentDots} size="sm" className="mx-2" title="Comment Dots" />
                     </i>
-                    <p>{t(review.reviewKey)}</p>
-                    {review.featured && <span className="flag-icon flag-icon-gr"></span>}
+                    <p>
+                        <span>{t(review.reviewKey)}</span>
+                        &nbsp;
+                        {review.featured &&
+                            <img src={flagGr} width="30" height="24" alt="Flag of Greece"
+                                class="flag-pulse-anim"></img>
+                        }
+                    </p>
                 </div>
             </div>
         </div>
