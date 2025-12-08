@@ -1,6 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const FeatureGallery = () => {
+
+    const { t } = useTranslation();
+
     return (
         <section id="about" className="about section light-background">
             <div className="container" data-aos="fade-up" data-aos-delay="100">
@@ -8,19 +12,19 @@ const FeatureGallery = () => {
                     <div className="row g-4">
                         <div className="col-lg-6 col-md-6">
                             <div className="gallery-item">
-                                <img src="/assets/images/elada-1.jpg" alt="Signature Dish" className="img-fluid rounded" />
+                                <img src="/assets/images/elada-1.jpg" alt={t('FeatureGallery.alt1')} className="img-fluid rounded" />
                                 <div className="gallery-caption">
-                                    <h4>Title 1</h4>
-                                    <p>Subtitle 1</p>
+                                    <h4>{t('FeatureGallery.title1')}</h4>
+                                    <p>{t('FeatureGallery.subTitle1')}</p>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-6">
                             <div className="gallery-item">
-                                <img src="/assets/images/elada-4.jpg" alt="Wine Selection" className="img-fluid rounded" />
+                                <img src="/assets/images/elada-4.jpg" alt={t('FeatureGallery.alt2')} className="img-fluid rounded" />
                                 <div className="gallery-caption">
-                                    <h4>Title 2</h4>
-                                    <p>Subtitle 2</p>
+                                    <h4>{t('FeatureGallery.title2')}</h4>
+                                    <p>{t('FeatureGallery.subTitle2')}</p>
                                 </div>
                             </div>
                         </div>

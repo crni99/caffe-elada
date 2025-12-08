@@ -62,7 +62,7 @@ export default function Footer() {
                                             </strong>
                                         </span>
                                         <span className="btn-icon-part" data-aos="fade-up" data-aos-duration="2000">
-                                            <FontAwesomeIcon icon={faStar} className="icon-animate" size='lg'/>
+                                            <FontAwesomeIcon icon={faStar} className="icon-animate" size='lg' />
                                         </span>
                                     </a>
                                 </div>
@@ -75,19 +75,19 @@ export default function Footer() {
                                     <li>
                                         <Link to="/karta-pica" className=''>
                                             <FontAwesomeIcon icon={faChevronRight} className="mx-2 icon-blue" title="Chevron Right" />
-                                            {t("Drinks.title")}
+                                            {t("Header.Drinks")}
                                         </Link>
                                     </li>
                                     <li>
                                         <Link to="/#galerija">
                                             <FontAwesomeIcon icon={faChevronRight} className="mx-2 icon-blue" title="Chevron Right" />
-                                            {t("Gallery.title")}
+                                            {t("Header.Gallery")}
                                         </Link>
                                     </li>
                                     <li>
                                         <Link to="/#kontakt">
                                             <FontAwesomeIcon icon={faChevronRight} className="mx-2 icon-blue" title="Chevron Right" />
-                                            {t("Contact")}
+                                            {t("Header.Contact")}
                                         </Link>
                                     </li>
                                 </ul>
@@ -96,7 +96,7 @@ export default function Footer() {
                         <div className="col-lg-4">
                             <div className="footer-contact">
                                 <h4>{t('Footer.subTitle3')}</h4>
-                                <a href="https://maps.app.goo.gl/1N3gb5m4EPXZM3iBA" target="_blank" rel="noopener noreferrer">
+                                <a href="https://maps.app.goo.gl/1N3gb5m4EPXZM3iBA" target="_blank" rel="noopener noreferrer" aria-label={t('Contact.mapTitle')}>
                                     <div className="contact-item">
 
                                         <div className="contact-icon">
@@ -105,15 +105,15 @@ export default function Footer() {
                                             </i>
                                         </div>
                                         <div className="contact-info">
-                                            <p>{t('ContactPage.addressDescription1')}<br />{t('ContactPage.addressDescription2')}</p>
+                                            <p>{t('Contact.addressDescription1')}<br />{t('Contact.addressDescription2')}</p>
                                         </div>
                                     </div>
                                 </a>
-                                <a href="tel:+381641215566" rel="noopener noreferrer">
+                                <a href="tel:+381641215566" rel="noopener noreferrer" aria-label={t('Contact.IconAlt.call')}>
                                     <div className="contact-item">
                                         <div className="contact-icon">
                                             <i className="bi">
-                                                <FontAwesomeIcon icon={faPhone} className="mx-2" title="Phone" />
+                                                <FontAwesomeIcon icon={faPhone} className="mx-2" title={t('Contact.IconAlt.call')} />
                                             </i>
                                         </div>
                                         <div className="contact-info">
@@ -122,11 +122,13 @@ export default function Footer() {
                                     </div>
                                 </a>
                                 <div className="social-links">
-                                    <a href="https://www.facebook.com/profile.php?id=61565711781481" target="_blank" rel="noopener noreferrer">
-                                        <FontAwesomeIcon icon={faFacebookSquare} size="lg" className="mx-2" title="Facebook" />
+                                    <a href="https://www.facebook.com/profile.php?id=61565711781481" target="_blank" rel="noopener noreferrer"
+                                        aria-label={t('Contact.IconAlt.facebook')}>
+                                        <FontAwesomeIcon icon={faFacebookSquare} size="lg" className="mx-2" title={t('Contact.IconAlt.facebook')} />
                                     </a>
-                                    <a href="https://www.instagram.com/caffe_elada/" target="_blank" rel="noopener noreferrer">
-                                        <FontAwesomeIcon icon={faInstagramSquare} size="lg" className="mx-2" title="Instagram" />
+                                    <a href="https://www.instagram.com/caffe_elada/" target="_blank" rel="noopener noreferrer"
+                                        aria-label={t('Contact.IconAlt.instagram')}>
+                                        <FontAwesomeIcon icon={faInstagramSquare} size="lg" className="mx-2" title={t('Contact.IconAlt.instagram')} />
                                     </a>
                                 </div>
                             </div>

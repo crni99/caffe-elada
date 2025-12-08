@@ -1,20 +1,70 @@
 {
     "Header": {
-        "bookTable": "Rezervišite Sto"
+        "Home": "Početna",
+        "Gallery": "Galerija",
+        "Contact": "Kontakt",
+        "Drinks": "Karta pića",
+        "sr": "Srpski jezik",
+        "gr": "Grčki jezik",
+        "en": "Engleski jezik"
     },
-    "Home": "Početna",
-    "HomePage": {
-        "sectionTitle": "Dobrodošli u <strong>Caffe Elada</strong>",
-        "sectionText1": "Otvoreni 24. oktobra 2024. godine u srcu Ljiga, Caffe Elada je brzo postao omiljeni kutak za opuštanje i druženje. Naš cilj je da svaki posetilac uživa u vrhunskoj kafi, ukusnoj čokoladi i jedinstvenoj, prijatnoj atmosferi.",
-        "sectionText2": "Kreiramo nezaboravne trenutke kroz pažljivo pripremljenu ponudu pića i organizaciju specijalnih događaja. Pridružite nam se i otkrijte zašto smo brzo postali omiljeno mesto u Ljigu.",
+    "Hero": {
+        "sectionText1": "Eladu smo otvorili 24. oktobra 2024. godine.",
+        "sectionText2": "Ime nije slučajno. Elada je Grčka na grčkom. Iz ljubavi prema Grčkoj, rodila se ideja da u Šumadiju donesemo duh mora i onog jedinstvenog, samo Grcima svojstvenog, opuštenog načina života.",
+        "sectionText3": "U Eladi smo spojili dve ljubavi: grčku i onu našu, lokalnu. Volimo grčko more i naša brda. Tamo metaksa, ovde rakija i Valjevsko pivo. A u Eladi, sve to živi zajedno.",
+        "sectionText4": "Kod nas ćete pronaći veliki izbor grčkih piva, rakije, likera, uz nezaobilazni uzo i onu toplinu koja se ne služi u čaši.",
+        "sectionText5": "To je ono zbog čega je Elada više od kafića. Mesto smo za sve vas koji volite dobro društvo, dobru priču i pre svega domaću atmosferu.",
         "bookTable": "REZERVIŠITE STO",
         "viewDrinks": "KARTA PIĆA",
         "openDaily": "OTVORENO SVAKI DAN",
-        "location": "LOKACIJA"
+        "location": "LOKACIJA",
+        "ImageAlt": {
+            "mainImage": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
+            "floatingImage1": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
+            "floatingImage2": "Alfa pivo i najbolji Grčki mix."
+        }
+    },
+    "FeatureGallery": {
+        "title1": "Alfa pivo",
+        "subTitle1": "Alfa pivo i najbolji Grčki mix.",
+        "alt1": "Alfa pivo i najbolji Grčki mix.",
+        "title2": "Mamos i Alfa slano",
+        "subTitle2": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
+        "alt2": "Mamos, najstarije Grčko pivo i slano Alfa pivo."
     },
     "Gallery": {
         "title": "Galerija",
-        "subTitle": "Istražite jedinstveni ambijent našeg prostora, od jutarnjih latea do kasnonoćnog veselja."
+        "subTitle": "Ovde negujemo lokal patriotizam i ljubav prema Grčkoj.",
+        "Image1": {
+            "title": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
+            "subTitle": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
+            "alt": "Alfa pivo i najbolji Grčki mix."
+        },
+        "Image2": {
+            "title": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
+            "subTitle": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
+            "alt": "Alfa pivo i najbolji Grčki mix."
+        },
+        "Image3": {
+            "title": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
+            "subTitle": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
+            "alt": "Alfa pivo i najbolji Grčki mix."
+        },
+        "Image4": {
+            "title": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
+            "subTitle": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
+            "alt": "Alfa pivo i najbolji Grčki mix."
+        },
+        "Image5": {
+            "title": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
+            "subTitle": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
+            "alt": "Alfa pivo i najbolji Grčki mix."
+        },
+        "Image6": {
+            "title": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
+            "subTitle": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
+            "alt": "Alfa pivo i najbolji Grčki mix."
+        }
     },
     "Reviews": {
         "title": "Šta su gosti rekli o nama?",
@@ -24,8 +74,8 @@
         "review3": "Prelep ambijent, osoblje, atmosfera i naravno vlasnici. ❤",
         "review4": "Malo, izuzetno privatno mesto sa raznovrsnim pićem, ljubaznim osobljem, prijateljskom atmosferom."
     },
-    "Contact": "Kontakt",
-    "ContactPage": {
+    "Contact": {
+        "title": "Kontakt",
         "description": "Posetite nas na dole navedenoj adresi ili nas kontaktirajte.",
         "subTitle": "Kontakt Informacije",
         "subDescription": "Slobodno nam se obratite sa svim pitanjima o rezervacijama ili medijskim upitima.",
@@ -36,7 +86,13 @@
         "addressTitle": "Adresa:",
         "addressDescription1": "Kralja Petra 22",
         "addressDescription2": "Ljig 14240",
-        "googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5717.8362699355075!2d20.231763355382416!3d44.22934381497805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759e325a57f1005%3A0xcb8bd57d12fdb7b1!2sElada%20Ljig!5e0!3m2!1ssr!2srs!4v1743068402409!5m2!1ssr!2srs"
+        "googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5717.8362699355075!2d20.231763355382416!3d44.22934381497805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759e325a57f1005%3A0xcb8bd57d12fdb7b1!2sElada%20Ljig!5e0!3m2!1ssr!2srs!4v1743068402409!5m2!1ssr!2srs",
+        "mapTitle": "Lokacija Caffe Elade na Google mapi",
+        "IconAlt": {
+            "facebook": "Link ka Facebook stranici Caffe Elade",
+            "instagram": "Link ka Instagram profilu Caffe Elade",
+            "call": "Pozovi Caffe Eladu telefonom"
+        }
     },
     "Footer": {
         "description1": "Otkrijte naš jedinstveni ambijent i uživajte u najboljoj kafi i pićima. ",
@@ -47,11 +103,6 @@
         "subTitle3": "Kontaktirajte nas",
         "allRightsReserved": "Sva prava zadržava",
         "designedBy": "Dizajnirao"
-    },
-    "NotFoundPage": {
-        "title": "Stranica Nije Pronađena",
-        "subTitle": "Ups! Stranica koju tražite ne postoji.",
-        "returnToHomeButton": "Vratite se na početnu stranicu"
     },
     "Drinks": {
         "title": "Karta pića",
@@ -67,7 +118,12 @@
         "wines": "Vina",
         "likers": "Aperitivi i likeri",
         "rakijas": "Rakije",
-        "hardDrinks": "Žestoka pića",
+        "spirits": "Žestoka pića",
         "cocktails": "Kokteli"
+    },
+    "NotFoundPage": {
+        "title": "Stranica Nije Pronađena",
+        "subTitle": "Ups! Stranica koju tražite ne postoji.",
+        "returnToHomeButton": "Vratite se na početnu stranicu"
     }
 }

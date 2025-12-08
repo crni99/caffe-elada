@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import DrinksList from '../components/drinks/DrinksList';
 import {
-    COFFEE_DRINKS_DATA, HOT_DRINKS_DATA, WATER_DRINKS_DATA, JUICES_DRINKS_DATA, WINES_DRINKS_DATA, COCKTAILS_DRINKS_DATA,
-    BEERS_DRINKS_DATA, ENERGY_DRINKS_DATA, CIDERS_DRINKS_DATA, RAKIJAS_DRINKS_DATA, HARD_DRINKS_DATA,
-    LIKERS_DRINKS_DATA
+    COFFEE_DRINKS_DATA, HOT_DRINKS_DATA, WATER_DRINKS_DATA, JUICES_DRINKS_DATA,
+    ENERGY_DRINKS_DATA, BEERS_DRINKS_DATA, CIDERS_DRINKS_DATA, WINES_DRINKS_DATA,
+    LIKERS_DRINKS_DATA, RAKIJAS_DRINKS_DATA, SPIRITS_DATA, COCKTAILS_DRINKS_DATA
 } from '../components/drinks/drinksData';
 import Isotope from 'isotope-layout';
 
@@ -32,7 +32,7 @@ export default function DrinksPage() {
         { nameKey: 'Drinks.wines', data: WINES_DRINKS_DATA },
         { nameKey: 'Drinks.likers', data: LIKERS_DRINKS_DATA },
         { nameKey: 'Drinks.rakijas', data: RAKIJAS_DRINKS_DATA },
-        { nameKey: 'Drinks.hardDrinks', data: HARD_DRINKS_DATA },
+        { nameKey: 'Drinks.spirits', data: SPIRITS_DATA },
         { nameKey: 'Drinks.cocktails', data: COCKTAILS_DRINKS_DATA },
     ];
 

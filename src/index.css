@@ -159,7 +159,7 @@ footer a:active {
   }
 
   .hero {
-    padding: 50px 0 !important;
+    padding: 30px 0 !important;
   }
 
   .col-md-6 {
@@ -210,7 +210,7 @@ footer a:active {
   }
 
   .hero {
-    padding: 50px 0 !important;
+    padding: 30px 0 !important;
   }
 
   .col-md-6 {
@@ -261,7 +261,7 @@ footer a:active {
   }
 
   .hero {
-    padding: 50px 0 !important;
+    padding: 30px 0 !important;
   }
 
   .col-md-6 {
@@ -312,7 +312,7 @@ footer a:active {
   }
 
   .hero {
-    padding: 50px 0 !important;
+    padding: 30px 0 !important;
   }
 
   .col-md-6 {
@@ -354,10 +354,6 @@ footer a:active {
 
   .preloader-logo {
     width: 350px !important;
-  }
-
-  .hero-title {
-    margin-top: -6rem !important;
   }
 
   .col-md-6 {
@@ -996,7 +992,7 @@ section,
 }
 
 .hero .hero-content .hero-subtitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
@@ -1144,6 +1140,10 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.gslide-description {
+  border-top: 4px solid var(--accent-color);
+}
+
 .about {
   background-color: var(--surface-color);
   position: relative;
@@ -1823,23 +1823,23 @@ section,
 # Review 2 Flag Animation
 --------------------------------------------------------------*/
 @keyframes flag-cycle-pulse {
-    0% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
 
-    50% {
-        transform: scale(0.6);
-    }
+  50% {
+    transform: scale(0.6);
+  }
 
-    100% {
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .flag-pulse-anim {
-    animation: flag-cycle-pulse 3s ease-in-out infinite;
-    transform-origin: center center;
-    vertical-align: middle;
-    border: 1px solid var(--accent-color);
-    border-radius: 3px;
+  animation: flag-cycle-pulse 3s ease-in-out infinite;
+  transform-origin: center center;
+  vertical-align: middle;
+  border: 1px solid var(--accent-color);
+  border-radius: 3px;
 }

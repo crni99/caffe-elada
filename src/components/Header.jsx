@@ -43,7 +43,7 @@ export default function Header() {
         <header id="header" className="custom-header sticky-top">
             <div className="container d-flex align-items-center justify-content-between">
                 <Link to="/" className="logo">
-                    <img src="/assets/images/EladaLogo.svg" alt="Elada Logo" />
+                    <img src="/assets/images/EladaLogo.svg" alt="Caffe Elada Logo" />
                 </Link>
                 <FontAwesomeIcon
                     icon={mobileMenuOpen ? faXmark : faBars}
@@ -54,22 +54,22 @@ export default function Header() {
                     <ul className="main-links">
                         <li>
                             <Link to="/" className={getLinkClass("/")} onClick={() => setMobileMenuOpen(false)}>
-                                {t("Home")}
+                                {t("Header.Home")}
                             </Link>
                         </li>
                         <li>
                             <Link to="/#galerija" className={getLinkClass("/#galerija")} onClick={() => setMobileMenuOpen(false)}>
-                                {t("Gallery.title")}
+                                {t("Header.Gallery")}
                             </Link>
                         </li>
                         <li>
                             <Link to="/#kontakt" className={getLinkClass("/#kontakt")} onClick={() => setMobileMenuOpen(false)}>
-                                {t("Contact")}
+                                {t("Header.Contact")}
                             </Link>
                         </li>
                         <li>
                             <Link to="/karta-pica" className={getLinkClass("/karta-pica")} onClick={() => setMobileMenuOpen(false)}>
-                                {t("Drinks.title")}
+                                {t("Header.Drinks")}
                             </Link>
                         </li>
                     </ul>
@@ -80,7 +80,7 @@ export default function Header() {
                                     src={language === "sr" ? flagSr : language === "gr" ? flagGr : flagEn}
                                     width="20"
                                     height="14"
-                                    alt="Language"
+                                    alt={t(`Header.${language}`)}
                                 />
                             }
                             id="language-dropdown"
@@ -88,13 +88,13 @@ export default function Header() {
                             className="language-dropdown"
                         >
                             <NavDropdown.Item onClick={() => changeLanguage("sr")}>
-                                <img src={flagSr} width="20" height="14" alt="SR" />
+                                <img src={flagSr} width="20" height="14" alt={t("Header.sr")} />
                             </NavDropdown.Item>
                             <NavDropdown.Item onClick={() => changeLanguage("gr")}>
-                                <img src={flagGr} width="20" height="14" alt="GR" />
+                                <img src={flagGr} width="20" height="14" alt={t("Header.gr")} />
                             </NavDropdown.Item>
                             <NavDropdown.Item onClick={() => changeLanguage("en")}>
-                                <img src={flagEn} width="20" height="14" alt="EN" />
+                                <img src={flagEn} width="20" height="14" alt={t("Header.en")} />
                             </NavDropdown.Item>
                         </NavDropdown>
                     </div>

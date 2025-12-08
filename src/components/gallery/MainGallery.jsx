@@ -4,59 +4,50 @@ import { useTranslation } from 'react-i18next';
 import GLightbox from 'glightbox';
 
 const galleryData = [
-    {
-        id: 1,
-        title: 'Title 1',
-        subTitle: 'Subtitle 1',
-        image: '/assets/images/elada-5.webp',
-    },
-    {
-        id: 2,
-        title: 'Title 2',
-        subTitle: 'Subtitle 2',
-        image: '/assets/images/elada-6.webp',
-    },
-    {
-        id: 3,
-        title: 'Title 3',
-        subTitle: 'Subtitle 3',
-        image: '/assets/images/elada-7.webp',
-    },
-    {
-        id: 4,
-        title: 'Title 4',
-        subTitle: 'Subtitle 4',
-        image: '/assets/images/elada-8.webp',
-    },
-    {
-        id: 5,
-        title: 'Title 5',
-        subTitle: 'Subtitle 5',
-        image: '/assets/images/elada-9.webp',
-    },
-    {
-        id: 6,
-        title: 'Title 6',
-        subTitle: 'Subtitle 6',
-        image: '/assets/images/elada-2.jpg',
-    },
+    { id: 1, image: '/assets/images/elada-12.webp' },
+    { id: 2, image: '/assets/images/elada-6.webp' },
+    { id: 3, image: '/assets/images/elada-13.webp' },
+    { id: 4, image: '/assets/images/elada-11.webp' },
+    { id: 5, image: '/assets/images/elada-10.webp' },
+    { id: 6, image: '/assets/images/elada-2.jpg' },
 ];
 
 const MainGallery = () => {
-
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     useEffect(() => {
-        const lightbox = GLightbox({
+        let lightbox = null;
+
+        if (typeof window !== 'undefined' && window.GLightboxInstance && window.GLightboxInstance.destroy) {
+            window.GLightboxInstance.destroy();
+        }
+
+        lightbox = GLightbox({
             selector: '.glightbox',
         });
+
+        window.GLightboxInstance = lightbox;
 
         return () => {
             if (lightbox && lightbox.destroy) {
                 lightbox.destroy();
+                window.GLightboxInstance = null;
             }
         };
-    }, []);
+    }, [i18n.language]);
+
+
+    const getTranslatedItem = (id) => {
+        const i18nKey = `Gallery.Image${id}`;
+
+        return {
+            ...galleryData.find(item => item.id === id),
+            title: t(`${i18nKey}.title`),
+            subTitle: t(`${i18nKey}.subTitle`),
+            alt: t(`${i18nKey}.alt`),
+            i18nKey: i18nKey
+        };
+    };
 
     return (
         <section id="galerija" className="gallery section">
@@ -67,7 +58,7 @@ const MainGallery = () => {
             <div className="container" data-aos="fade-up" data-aos-delay="100">
                 <div className="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
                     {galleryData.map(item => (
-                        <GalleryItem key={item.id} item={item} />
+                        <GalleryItem key={item.id} item={getTranslatedItem(item.id)} />
                     ))}
                 </div>
             </div>

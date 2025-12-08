@@ -46,7 +46,7 @@ const ReviewItem = ({ review, t }) => {
                         &nbsp;
                         {review.featured &&
                             <img src={flagGr} width="30" height="24" alt="Flag of Greece"
-                                class="flag-pulse-anim"></img>
+                                className="flag-pulse-anim"></img>
                         }
                     </p>
                 </div>

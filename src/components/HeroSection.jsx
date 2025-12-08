@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faLocationDot } from '@fortawesome/free-solid-svg-icons';
@@ -17,15 +17,18 @@ const HeroSection = () => {
                             <div className="content">
                                 <h1 className="hero-title mb-4">Caffe Elada</h1>
                                 <p className="hero-subtitle mb-4">
-                                    <Trans i18nKey="HomePage.sectionText1"></Trans> <br /><br />
-                                    <Trans i18nKey="HomePage.sectionText2"></Trans>
+                                    {t('Hero.sectionText1')} <br />
+                                    {t('Hero.sectionText2')} <br />
+                                    {t('Hero.sectionText3')} <br />
+                                    {t('Hero.sectionText4')} <br />
+                                    {t('Hero.sectionText5')} <br />
                                 </p>
                                 <div className="hero-actions d-flex flex-wrap gap-3 mb-4">
                                     <a href="tel:+381641215566" rel="noopener noreferrer" className="btn btn-primary">
-                                        {t('HomePage.bookTable')}
+                                        {t('Hero.bookTable')}
                                     </a>
                                     <Link to="/karta-pica" className="btn btn-outline">
-                                        {t('HomePage.viewDrinks')}
+                                        {t('Hero.viewDrinks')}
                                     </Link>
                                 </div>
                                 <div className="hero-info d-flex flex-wrap align-items-center gap-4">
@@ -34,7 +37,7 @@ const HeroSection = () => {
                                             <FontAwesomeIcon icon={faClock} className="mx-2" title="Clock" />
                                         </i>
                                         <div>
-                                            <small className="text-muted">{t('HomePage.openDaily')}</small>
+                                            <small className="text-muted">{t('Hero.openDaily')}</small>
                                             <div className="fw-medium">08:00 - 00:00</div>
                                         </div>
                                     </div>
@@ -44,10 +47,10 @@ const HeroSection = () => {
                                                 <FontAwesomeIcon icon={faLocationDot} className="mx-2" title="Location Dot" />
                                             </i>
                                             <div>
-                                                <small className="text-muted">{t('HomePage.location')}</small>
+                                                <small className="text-muted">{t('Hero.location')}</small>
                                                 <div className="fw-medium">
-                                                    {t('ContactPage.addressDescription1')},&nbsp;
-                                                    {t('ContactPage.addressDescription2')}
+                                                    {t('Contact.addressDescription1')},&nbsp;
+                                                    {t('Contact.addressDescription2')}
                                                 </div>
                                             </div>
                                         </div>
@@ -58,14 +61,14 @@ const HeroSection = () => {
                         <div className="col-lg-6" data-aos="fade-left" data-aos-delay="300">
                             <div className="hero-images">
                                 <div className="main-image">
-                                    <img src="/assets/images/elada-3.jpg" alt="Signature Mediterranean Dish" className="img-fluid" />
+                                    <img src="/assets/images/elada-3.jpg" alt={t('Hero.ImageAlt.mainImage')} className="img-fluid" />
                                 </div>
                                 <div className="floating-images">
                                     <div className="floating-image floating-image-1">
-                                        <img src="/assets/images/elada-1.jpg" alt="Grilled Seafood" className="img-fluid" />
+                                        <img src="/assets/images/elada-1.jpg" alt={t('Hero.ImageAlt.floatingImage1')} className="img-fluid" />
                                     </div>
                                     <div className="floating-image floating-image-2">
-                                        <img src="/assets/images/elada-4.jpg" alt="Mediterranean Dessert" className="img-fluid" />
+                                        <img src="/assets/images/elada-4.jpg" alt={t('Hero.ImageAlt.floatingImage2')} className="img-fluid" />
                                     </div>
                                 </div>
                             </div>
