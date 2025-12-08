@@ -1140,10 +1140,6 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.gslide-description {
-  border-top: 4px solid var(--accent-color);
-}
-
 .about {
   background-color: var(--surface-color);
   position: relative;
