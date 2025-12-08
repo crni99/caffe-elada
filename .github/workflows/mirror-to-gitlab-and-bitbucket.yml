@@ -3,7 +3,7 @@ name: Mirror to GitLab and Bitbucket
 on:
   push:
     branches:
-      - 'vanilla'
+      - vanilla
   workflow_dispatch:
 
 jobs:
