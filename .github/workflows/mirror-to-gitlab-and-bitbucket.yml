@@ -14,14 +14,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 0 
 
       - name: Push to GitLab
         run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          # Use crni99 as the committer identity
+          git config --global user.name "crni99" 
+          git config --global user.email "crni99@users.noreply.github.com"
+          # Add the GitLab remote using the token
           git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/${{ secrets.GITLAB_USERNAME }}/caffe-elada.git
-          git push --force --prune gitlab refs/heads/*:refs/heads/* refs/tags/*:refs/tags/*
+          # PUSH: Removed --prune to prevent deleting the default branch on GitLab
+          git push --force gitlab refs/heads/*:refs/heads/* refs/tags/*:refs/tags/*
 
   mirror-to-bitbucket:
     runs-on: ubuntu-latest
@@ -34,7 +37,10 @@ jobs:
 
       - name: Push to Bitbucket
         run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          # Use crni99 as the committer identity
+          git config --global user.name "crni99"
+          git config --global user.email "crni99@users.noreply.github.com"
+          # Add the Bitbucket remote using the token
           git remote add bitbucket https://x-token-auth:${{ secrets.BITBUCKET_TOKEN }}@bitbucket.org/${{ secrets.BITBUCKET_USERNAME }}/caffe-elada.git
-          git push --force --prune bitbucket refs/heads/*:refs/heads/* refs/tags/*:refs/tags/*
+          # PUSH: Removed --prune for consistency and to avoid similar potential issues
+          git push --force bitbucket refs/heads/*:refs/heads/* refs/tags/*:refs/tags/*
