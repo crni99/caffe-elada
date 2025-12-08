@@ -33,6 +33,7 @@ ___
 ### ⚙️ Compatibility / Continuous Integration (CI) Checks
 [![Build & Test App](https://github.com/crni99/caffe-elada/actions/workflows/node.js.yml/badge.svg)](https://github.com/crni99/caffe-elada/actions/workflows/node.js.yml)
 ---
-### ☁️ Deployment (CD)
+### ☁️ Deployment (CD) and Mirroring
 [![Deploy to Vercel](https://github.com/crni99/caffe-elada/actions/workflows/vercel-deployment.yml/badge.svg)](https://github.com/crni99/caffe-elada/actions/workflows/vercel-deployment.yml)
 [![Deploy to GitHub Pages](https://github.com/crni99/caffe-elada/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/crni99/caffe-elada/actions/workflows/pages/pages-build-deployment)
+[![Mirror to GitLab and Bitbucket](https://github.com/crni99/caffe-elada/actions/workflows/mirror-to-gitlab-and-bitbucket.yml/badge.svg)](https://github.com/crni99/caffe-elada/actions/workflows/mirror-to-gitlab-and-bitbucket.yml)
