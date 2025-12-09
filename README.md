@@ -1,6 +1,8 @@
 # Caffe Elada
 
-The Caffe Elada project is a unique demonstration of dual-implementation web development, maintaining two versions: a robust, component-based Single Page Application (SPA) using React on the main branch, and a clean, traditional Multi-Page Static Site using Vanilla JavaScript on the vanilla branch. Both implementations are designed for a multi-lingual café website, featuring modern design libraries, PWA capabilities, and support for English, Serbian, and Greek. This setup allows for direct comparison and strategic choice between a lightweight static build and a dynamic, scalable component-based architecture.
+The Caffe Elada project is a unique demonstration of dual-implementation web development, maintaining two versions: a robust, component-based Single Page Application (SPA) using React on the main branch, and a clean, traditional Multi-Page Static Site using Vanilla JavaScript on the vanilla branch. 
+<br><br>
+Both implementations are designed for a multi-lingual café website, featuring modern design libraries, PWA capabilities, and support for English, Serbian, and Greek. This setup allows for direct comparison and strategic choice between a lightweight static build and a dynamic, scalable component-based architecture.
 
 <br />
 
