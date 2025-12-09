@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import flagGr from "../assets/lang-flags/gr.svg";
 
 const HeroSection = () => {
 
@@ -21,7 +22,9 @@ const HeroSection = () => {
                                     {t('Hero.sectionText2')} <br />
                                     {t('Hero.sectionText3')} <br />
                                     {t('Hero.sectionText4')} <br />
-                                    {t('Hero.sectionText5')} <br />
+                                    {t('Hero.sectionText5')} &nbsp;
+                                    <img src={flagGr} width="30" height="24" alt="Flag of Greece"
+                                        className="hero-gr-flag"></img>
                                 </p>
                                 <div className="hero-actions d-flex flex-wrap gap-3 mb-4">
                                     <a href="tel:+381641215566" rel="noopener noreferrer" className="btn btn-primary">
