@@ -784,19 +784,7 @@ h5 {
   }
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
 
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /*--------------------------------------------------------------
 # Scroll Top Button
@@ -1778,6 +1766,15 @@ section,
 /*--------------------------------------------------------------
 # Preloader Overlay
 --------------------------------------------------------------*/
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .preloader-overlay {
   position: fixed;

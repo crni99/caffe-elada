@@ -10,38 +10,49 @@ import HomePage from './pages/Home';
 import DrinksPage from './pages/Drinks';
 import NotFoundPage from './components/NotFoundPage';
 import logo from './assets/logo.svg';
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const FADE_TIME = 500;
-const MIN_LOAD_TIME = 2000;
+const MIN_FLICKER_TIME = 300;
+const HAS_LOADED_KEY = 'site-loaded';
 
 function App() {
 
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(true);
+  const hasVisited = localStorage.getItem(HAS_LOADED_KEY);
+  const [isLoading, setIsLoading] = useState(!hasVisited);
   const [isFadingOut, setIsFadingOut] = useState(false);
-  const [isContentVisible, setIsContentVisible] = useState(false);
+  const [isContentVisible, setIsContentVisible] = useState(hasVisited); 
+  const [isDOMReady, setIsDOMReady] = useState(false);
 
   useEffect(() => {
-    const loadTimer = setTimeout(() => {
-      setIsFadingOut(true);
+    if (hasVisited) {
+      setIsDOMReady(true);
+      return; 
+    }
+    const flickerTimer = setTimeout(() => {
+        setIsDOMReady(true);
+    }, MIN_FLICKER_TIME);
 
-      const fadeTimer = setTimeout(() => {
-        setIsLoading(false);
-        setIsContentVisible(true);
-      }, FADE_TIME);
-
-      return () => clearTimeout(fadeTimer);
-
-    }, MIN_LOAD_TIME);
-
-    return () => clearTimeout(loadTimer);
-  }, []);
+    return () => clearTimeout(flickerTimer);
+  }, [hasVisited]);
 
   useEffect(() => {
+    if (isLoading && isDOMReady) {
+        setIsFadingOut(true);
 
+        const fadeTimer = setTimeout(() => {
+            setIsLoading(false);
+            setIsContentVisible(true);
+            localStorage.setItem(HAS_LOADED_KEY, 'true'); 
+        }, FADE_TIME);
+
+        return () => clearTimeout(fadeTimer);
+    }
+  }, [isDOMReady, isLoading]);
+
+  useEffect(() => {
     AOS.init({ once: true });
 
     window.scrollTo(0, 0);
@@ -65,7 +76,7 @@ function App() {
           className={isFadingOut ? 'hidden' : ''}
         />
       )}
-      {isContentVisible && (
+      {(isContentVisible || hasVisited) && (
         <I18nextProvider i18n={i18n}>
           <LanguageProvider>
             <Header />
