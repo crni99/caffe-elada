@@ -24,3 +24,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     toggleScrollTopVisibility();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const preloader = document.getElementById('preloader-overlay');
+    if (!preloader) {
+        return;
+    }
+
+    const HAS_LOADED_KEY = 'site-loaded';
+    const hasVisited = localStorage.getItem(HAS_LOADED_KEY);
+    const FADE_TIME = 500;
+    
+    if (hasVisited) {
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+        preloader.remove();
+        return;
+    }
+
+    function hidePreloader() {
+        if (preloader.classList.contains('hidden')) {
+            return;
+        }
+        preloader.classList.add('hidden');
+        localStorage.setItem(HAS_LOADED_KEY, 'true');
+
+        setTimeout(() => {
+            preloader.remove();
+        }, FADE_TIME);
+    }
+
+    window.addEventListener('load', hidePreloader);
+
+    const MAX_LOAD_TIME = 5000; 
+    setTimeout(() => {
+        if (!preloader.classList.contains('hidden')) {
+            hidePreloader();
+        }
+    }, MAX_LOAD_TIME);
+});
