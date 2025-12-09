@@ -1,16 +1,11 @@
-// --- Core Translation Functions (Kept as is) ---
+let lightboxInstance;
 
 function getNestedTranslation(key, obj) {
-    if (!key || typeof key !== 'string') {
-        return undefined;
-    }
+    if (!key || typeof key !== 'string') return undefined;
     const parts = key.split('.');
     let current = obj;
-
     for (const part of parts) {
-        if (current === undefined || current === null || current[part] === undefined) {
-            return undefined;
-        }
+        if (current === undefined || current === null || current[part] === undefined) return undefined;
         current = current[part];
     }
     return current;
@@ -24,13 +19,11 @@ const LOCALE_NAMES = {
 const DEFAULT_LOCALE = 'sr';
 let translations = {};
 
-// Use let instead of const here as it's modified later, but fine as is.
 const flagImage = document.querySelector('.language-dropdown img');
 
 function setupDropdownToggle() {
     const dropdownToggle = document.getElementById('language-dropdown');
     if (!dropdownToggle) return;
-
     const dropdownContainer = dropdownToggle.closest('.dropdown');
 
     dropdownToggle.addEventListener('click', (event) => {
@@ -56,109 +49,100 @@ async function fetchTranslations(locale) {
 
 function translatePage() {
     document.querySelectorAll('[data-i18n-key]').forEach(element => {
-        const key = element.getAttribute('data-i18n-key');
-        const translationValue = getNestedTranslation(key, translations);
+        const key1 = element.getAttribute('data-i18n-key');
+        const attr1 = element.getAttribute('data-i18n-attr');
+        const translation1 = getNestedTranslation(key1, translations);
 
-        if (translationValue !== undefined && translationValue !== null) {
-
-            const targetAttribute = element.getAttribute('data-i18n-attr');
-
-            if (targetAttribute) {
-                element.setAttribute(targetAttribute, translationValue);
+        if (translation1 !== undefined && translation1 !== null) {
+            if (attr1) {
+                element.setAttribute(attr1, translation1);
             } else {
-                element.textContent = translationValue;
+                element.textContent = translation1;
             }
+        }
 
-        } else {
-            console.warn(`Translation key missing or path invalid: ${key}`);
+        const key2 = element.getAttribute('data-i18n-key-2');
+        const attr2 = element.getAttribute('data-i18n-attr-2');
+
+        if (key2 && attr2) {
+            const translation2 = getNestedTranslation(key2, translations);
+            if (translation2 !== undefined && translation2 !== null) {
+                element.setAttribute(attr2, translation2);
+            }
         }
     });
 }
 
 function updateFlagIcon(locale) {
     if (flagImage) {
-        const flagSrc = `images/icons/${locale}.svg`;
-        flagImage.src = flagSrc;
-        flagImage.alt = `Flag of ${LOCALE_NAMES[locale] || locale}`;
+        flagImage.src = `images/icons/${locale}.svg`;
+        flagImage.alt = `Jezik: ${LOCALE_NAMES[locale] || locale}`;
     }
 }
 
 async function setLanguage(locale) {
     await fetchTranslations(locale);
-
     if (Object.keys(translations).length === 0) {
         await fetchTranslations(DEFAULT_LOCALE);
     }
 
     translatePage();
     updateFlagIcon(locale);
+
+    if (lightboxInstance) {
+        lightboxInstance.reload();
+    }
+
     document.documentElement.lang = locale;
     localStorage.setItem('locale', locale);
 }
 
-// ------------------------------------------------------------------
-// --- MERGED DOMContentLoaded BLOCK (The only one you should have) ---
-// ------------------------------------------------------------------
-
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. MOBILE MENU/TOGGLE SETUP
+    if (typeof GLightbox !== 'undefined') {
+        lightboxInstance = GLightbox();
+    }
+
     const mobileToggle = document.querySelector('.custom-mobile-toggle');
     const navMenu = document.querySelector('.custom-navmenu');
 
     if (mobileToggle && navMenu) {
-        // Toggle menu open/close and icon swap
         mobileToggle.addEventListener('click', () => {
             navMenu.classList.toggle('open');
             mobileToggle.classList.toggle('icon-active');
             document.body.classList.toggle('mobile-menu-open');
         });
-
-        // Close menu when a navigation link is clicked
         document.querySelectorAll('.custom-navmenu .main-links a').forEach(link => {
-            // -------------------------------------------------------------------
             link.addEventListener('click', () => {
-                // We use setTimeout to allow the browser to process the link's
-                // navigation logic (e.g., anchor smooth scroll) before closing.
                 setTimeout(() => {
                     if (navMenu.classList.contains('open')) {
                         navMenu.classList.remove('open');
                         mobileToggle.classList.remove('icon-active');
                         document.body.classList.remove('mobile-menu-open');
                     }
-                }, 100); // 100ms delay to ensure link click processes
+                }, 100);
             });
         });
     }
 
-    // ----------------------------------------------------
-
-    // 2. LANGUAGE/LOCALIZATION SETUP
-
-    // Initialize language setup
     const preferredLocale = localStorage.getItem('locale') || DEFAULT_LOCALE;
     setLanguage(preferredLocale);
-    setupDropdownToggle(); // Setup dropdown show/hide logic
+    setupDropdownToggle();
 
     const languageContainer = document.querySelector('.language-container');
-    languageContainer.addEventListener('click', (event) => {
-
-        const target = event.target.closest('[data-locale]');
-
-        if (target) {
-            event.preventDefault(); // Stop page jump
-
-            const newLocale = target.getAttribute('data-locale');
-
-            // Optimization: Only run setLanguage if the locale actually changes
-            if (newLocale !== document.documentElement.lang) {
-                setLanguage(newLocale);
+    if (languageContainer) {
+        languageContainer.addEventListener('click', (event) => {
+            const target = event.target.closest('[data-locale]');
+            if (target) {
+                event.preventDefault();
+                const newLocale = target.getAttribute('data-locale');
+                if (newLocale !== document.documentElement.lang) {
+                    setLanguage(newLocale);
+                }
+                const dropdownElement = target.closest('.dropdown');
+                if (dropdownElement) {
+                    dropdownElement.classList.remove('show');
+                }
             }
-
-            const dropdownElement = target.closest('.dropdown');
-
-            if (dropdownElement) {
-                dropdownElement.classList.remove('show'); // Close the dropdown
-            }
-        }
-    });
+        });
+    }
 });

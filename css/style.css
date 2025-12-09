@@ -159,7 +159,7 @@ footer a:active {
     }
 
     .hero {
-        padding: 50px 0 !important;
+        padding: 30px 0 !important;
     }
 
     .col-md-6 {
@@ -204,7 +204,6 @@ footer a:active {
         margin-top: 0 !important;
     }
 
-
 }
 
 /* Extra Small (Mobile) */
@@ -215,7 +214,7 @@ footer a:active {
     }
 
     .hero {
-        padding: 50px 0 !important;
+        padding: 30px 0 !important;
     }
 
     .col-md-6 {
@@ -260,7 +259,6 @@ footer a:active {
         margin-top: 0 !important;
     }
 
-
 }
 
 /* Small Screens (≥576px) */
@@ -271,7 +269,7 @@ footer a:active {
     }
 
     .hero {
-        padding: 50px 0 !important;
+        padding: 30px 0 !important;
     }
 
     .col-md-6 {
@@ -326,7 +324,7 @@ footer a:active {
     }
 
     .hero {
-        padding: 50px 0 !important;
+        padding: 30px 0 !important;
     }
 
     .col-md-6 {
@@ -368,10 +366,6 @@ footer a:active {
 
     .preloader-logo {
         width: 350px !important;
-    }
-
-    .hero-title {
-        margin-top: -6rem !important;
     }
 
     .col-md-6 {
@@ -1010,9 +1004,9 @@ section,
 }
 
 .hero .hero-content .hero-subtitle {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    color: color-mix(in srgb, var(--default-color), transparent 20%) !important;
 }
 
 .hero .hero-content .hero-actions .btn {
@@ -1292,7 +1286,7 @@ section,
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .testimonials .testimonial-meta {
@@ -1853,7 +1847,6 @@ section,
     visibility: hidden;
     transition: opacity 0.5s, visibility 0.5s;
 }
-
 
 /*--------------------------------------------------------------
 # Review 2 Flag Animation

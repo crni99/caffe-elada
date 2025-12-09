@@ -1,73 +1,129 @@
 {
     "Header": {
-        "bookTable": "Book a Table"
+        "Home": "Home",
+        "Gallery": "Gallery",
+        "Contact": "Contact",
+        "Drinks": "Drinks Menu",
+        "sr": "Serbian language",
+        "gr": "Greek language",
+        "en": "English language"
     },
-    "Home": "Home",
-    "HomePage": {
-        "sectionTitle": "Welcome to <strong>Caffe Elada</strong>",
-        "sectionText1": "Opened on October 24, 2024, Caffe Elada was created with the desire to provide a cozy corner for all coffee lovers, relaxation, and social moments.",
-        "sectionText2": "We are located in the heart of Ljig, and our goal is for every visitor to find something special in our atmosphere – whether you enjoy a peaceful cup of coffee, delicious chocolate, or the pleasant atmosphere we create every day.",
+    "Hero": {
+        "sectionText1": "We opened Elada on October 24, 2024.",
+        "sectionText2": "The name is no accident. Elada is Greece in Greek. Out of love for Greece, the idea was born to bring the spirit of the sea and that unique, relaxed way of life, specific only to the Greeks, to Šumadija.",
+        "sectionText3": "In Elada, we combined two loves: Greek and our own local one. We love the Greek sea and our hills. Over there, Metaxa; here, Rakija and Valjevsko beer. And in Elada, it all lives together.",
+        "sectionText4": "Here you will find a large selection of Greek beers, Rakija, liqueurs, alongside the inevitable ouzo and that warmth that is not served in a glass.",
+        "sectionText5": "That is why Elada is more than a cafe. We are a place for all of you who love good company, good conversation, and above all, a homely atmosphere.",
         "bookTable": "BOOK A TABLE",
-        "viewDrinks": "VIEW DRINKS",
-        "openDaily": "OPEN DAILY",
-        "location": "LOCATION"
+        "viewDrinks": "DRINKS MENU",
+        "openDaily": "OPEN EVERY DAY",
+        "location": "LOCATION",
+        "ImageAlt": {
+            "mainImage": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
+            "floatingImage1": "Mamos, the oldest Greek beer, and salty Alfa beer.",
+            "floatingImage2": "Alfa beer and the best Greek mix."
+        }
+    },
+    "FeatureGallery": {
+        "title1": "Alfa Beer",
+        "subTitle1": "Alfa beer and the best Greek mix.",
+        "alt1": "Alfa beer and the best Greek mix.",
+        "title2": "Mamos and Alfa Salty",
+        "subTitle2": "Mamos, the oldest Greek beer, and salty Alfa beer.",
+        "alt2": "Mamos, the oldest Greek beer, and salty Alfa beer."
     },
     "Gallery": {
         "title": "Gallery",
-        "subTitle": "Explore the unique ambiance of our space, from morning lattes to late-night revelry."
+        "subTitle": "Here we foster local patriotism and love for Greece.",
+        "Image1": {
+            "title": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
+            "subTitle": "Mamos, the oldest Greek beer, and salty Alfa beer.",
+            "alt": "Alfa beer and the best Greek mix."
+        },
+        "Image2": {
+            "title": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
+            "subTitle": "Mamos, the oldest Greek beer, and salty Alfa beer.",
+            "alt": "Alfa beer and the best Greek mix."
+        },
+        "Image3": {
+            "title": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
+            "subTitle": "Mamos, the oldest Greek beer, and salty Alfa beer.",
+            "alt": "Alfa beer and the best Greek mix."
+        },
+        "Image4": {
+            "title": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
+            "subTitle": "Mamos, the oldest Greek beer, and salty Alfa beer.",
+            "alt": "Alfa beer and the best Greek mix."
+        },
+        "Image5": {
+            "title": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
+            "subTitle": "Mamos, the oldest Greek beer, and salty Alfa beer.",
+            "alt": "Alfa beer and the best Greek mix."
+        },
+        "Image6": {
+            "title": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
+            "subTitle": "Mamos, the oldest Greek beer, and salty Alfa beer.",
+            "alt": "Alfa beer and the best Greek mix."
+        }
     },
     "Reviews": {
-        "title": "What Have Our Guests Said About Us?",
+        "title": "What Guests Said About Us?",
         "description": "Read the impressions and experiences of our guests and find out why they always gladly return to us.",
-        "review1": "A cafe with a soul ❤❤❤ Everything is exceptional: the setting, atmosphere, people, owners..",
-        "review2": "A charming cafe, excellent service, the fastest ticket to Greece!",
+        "review1": "A cafe with soul ❤❤❤ Everything is exceptional: the ambiance, the atmosphere, the people, the owners..",
+        "review2": "Cute cafe, excellent service, the fastest ticket to Greece!",
         "review3": "Beautiful ambiance, staff, atmosphere, and of course, the owners. ❤",
-        "review4": "A small, exceptionally private place with a diverse menu, kind staff, and a friendly atmosphere."
+        "review4": "A small, extremely private place with a variety of drinks, friendly staff, and a welcoming atmosphere."
     },
-    "Contact": "Contact",
-    "ContactPage": {
+    "Contact": {
+        "title": "Contact",
         "description": "Visit us at the address below or contact us.",
         "subTitle": "Contact Information",
-        "subDescription": "Feel free to reach out with any questions about the book, speaking engagements, or media inquiries.",
-        "openingHoursTitle": "Opening Hours:",
-        "openingHoursDescription1": "Mon - Fri: 11:00 AM - 11:00 PM",
-        "openingHoursDescription2": "Sat - Sun: 10:00 AM - 12:00 AM",
-        "phoneTitle": "Phone",
+        "subDescription": "Feel free to reach out to us with any questions regarding reservations or media inquiries.",
+        "openingHoursTitle": "Working Hours:",
+        "openingHoursDescription1": "Mon - Thu & Sun: 08 AM - 12 AM",
+        "openingHoursDescription2": "Fri - Sat: 08 AM - 01 AM",
+        "phoneTitle": "Phone:",
         "addressTitle": "Address:",
         "addressDescription1": "Kralja Petra 22",
         "addressDescription2": "Ljig 14240",
-        "googleMap": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5717.836271390565!2d20.2317634!3d44.2293438!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759e325a57f1005%3A0xcb8bd57d12fdb7b1!2sElada%20Ljig!5e0!3m2!1sen!2srs!4v1743068510445!5m2!1sen!2srs"
+        "googleMap": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5717.836271390565!2d20.2317634!3d44.2293438!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759e325a57f1005%3A0xcb8bd57d12fdb7b1!2sElada%20Ljig!5e0!3m2!1sen!2srs!4v1743068510445!5m2!1sen!2srs",
+        "mapTitle": "Caffe Elada location on Google Maps",
+        "IconAlt": {
+            "facebook": "Link to Caffe Elada Facebook page",
+            "instagram": "Link to Caffe Elada Instagram profile",
+            "call": "Call Caffe Elada by phone"
+        }
     },
     "Footer": {
-        "description1": "Discover our unique atmosphere and enjoy the best coffee and drinks.",
+        "description1": "Discover our unique atmosphere and enjoy the best coffee and drinks. ",
         "description2": "Your favorite place in Ljig!",
         "subTitle1": "Share Your Experience",
-        "placeholder1": "Review us on Google",
-        "subTitle2": "Useful links",
-        "subTitle3": "Get in Touch",
-        "allRightsReserved": "All Rights Reserved",
+        "placeholder1": "Rate us on Google",
+        "subTitle2": "Useful Links",
+        "subTitle3": "Contact Us",
+        "allRightsReserved": "All rights reserved",
         "designedBy": "Designed by"
     },
-    "NotFoundPage": {
-        "title": "Page Not Found",
-        "subTitle": "Oops! The page you are looking for does not exist.",
-        "returnToHomeButton": "Return to the homepage"
-    },
     "Drinks": {
-        "title": "Drinks",
-        "subTitle": "*Prices may differ from cafe prices!",
+        "title": "Drinks Menu",
+        "subTitle": "*Prices may differ from the prices in the cafe!",
         "all": "All",
         "coffee": "Coffees",
-        "hotDrinks": "Hot drinks",
+        "hotDrinks": "Hot Beverages",
         "water": "Water",
         "juices": "Juices",
-        "energy": "Energy drinks",
+        "energy": "Energy Drinks",
         "beers": "Beers",
         "ciders": "Ciders",
         "wines": "Wines",
-        "likers": "Aperitifs and liqueurs",
+        "likers": "Aperitifs and Liqueurs",
         "rakijas": "Rakijas",
-        "hardDrinks": "Spirits",
+        "spirits": "Hard Spirits",
         "cocktails": "Cocktails"
+    },
+    "NotFoundPage": {
+        "title": "Page Not Found",
+        "subTitle": "Oops! The page you're looking for does not exist.",
+        "returnToHomeButton": "Return to Home Page"
     }
 }
