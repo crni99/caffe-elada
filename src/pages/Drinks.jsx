@@ -98,7 +98,7 @@ export default function DrinksPage() {
     };
 
     return (
-        <>
+        <main>
             <section id="hero" className="hero section light-background">
                 <div className="container" data-aos="fade-up" data-aos-delay="100">
                     <div className="hero-content">
@@ -154,6 +154,6 @@ export default function DrinksPage() {
                     </div>
                 </div>
             </section>
-        </>
+        </main>
     );
 }

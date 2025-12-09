@@ -8,7 +8,7 @@ import ContactSection from '../components/ContactSection';
 export default function HomePage() {
 
     return (
-        <>
+        <main>
             <HeroSection />
 
             {/* 
@@ -20,6 +20,6 @@ export default function HomePage() {
             <ReviewsSection />
 
             <ContactSection />
-        </>
+        </main>
     );
 }
