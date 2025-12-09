@@ -1771,12 +1771,11 @@ section,
 
 .dropdown-menu {
     --bs-dropdown-min-width: auto !important;
-}
-
-.dropdown-menu {
     border: 2px solid var(--accent-color);
     padding-bottom: 0;
     padding-top: 0;
+    right: 0px;
+    top: 30px;
 }
 
 .dropdown-item {
