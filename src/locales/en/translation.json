@@ -19,51 +19,51 @@
         "openDaily": "OPEN EVERY DAY",
         "location": "LOCATION",
         "ImageAlt": {
-            "mainImage": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
-            "floatingImage1": "Mamos, the oldest Greek beer, and salty Alfa beer.",
-            "floatingImage2": "Alfa beer and the best Greek mix."
+            "mainImage": "Morning coffee at the bar in Caffe Elada Ljig. Ambient interior decorated for the holidays.",
+            "floatingImage1": "Caffe Elada's Greek offer: Cold Mamos beer (the oldest Greek beer) and Alfa beer on a table in Ljig.",
+            "floatingImage2": "Refreshing Alfa beer with the best Greek meze (mix of snacks) at Caffe Elada Ljig."
         }
     },
     "FeatureGallery": {
-        "title1": "Alfa Beer",
-        "subTitle1": "Alfa beer and the best Greek mix.",
-        "alt1": "Alfa beer and the best Greek mix.",
-        "title2": "Mamos and Alfa Salty",
-        "subTitle2": "Mamos, the oldest Greek beer, and salty Alfa beer.",
-        "alt2": "Mamos, the oldest Greek beer, and salty Alfa beer."
+        "title1": "Alfa Beer and Greek Meze at Caffe Elada Ljig",
+        "subTitle1": "Refreshing Alfa beer with the best Greek mix of snacks (Meze) in Ljig.",
+        "alt1": "A bottle of Alfa beer and snacks (Greek mix/meze) on a table at Caffe Elada Ljig.",
+        "title2": "Mamos and Alfa: The Best Greek Beers at Caffe Elada Ljig",
+        "subTitle2": "Try Mamos, the oldest Greek beer, together with a cold Alfa beer at Elada.",
+        "alt2": "Mamos beer (the oldest Greek beer) and Alfa beer, together on a table at Caffe Elada Ljig."
     },
     "Gallery": {
         "title": "Gallery",
         "subTitle": "Here we foster local patriotism and love for Greece.",
         "Image1": {
-            "title": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
-            "subTitle": "Mamos, the oldest Greek beer, and salty Alfa beer.",
-            "alt": "Alfa beer and the best Greek mix."
+            "title": "Caffe Elada Ljig: Modern interior, illuminated bar, and warm atmosphere for coffee and going out.",
+            "subTitle": "The best cafe and bar in Ljig. Pleasant atmosphere, an ideal spot for morning coffee, cocktails, and relaxed evening socializing.",
+            "alt": "Interior view of Caffe Elada Ljig. Modern wooden bar with ambient lighting and a row of comfortable bar stools."
         },
         "Image2": {
-            "title": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
-            "subTitle": "Mamos, the oldest Greek beer, and salty Alfa beer.",
-            "alt": "Alfa beer and the best Greek mix."
+            "title": "Greek offer at Caffe Elada Ljig: Cold Mythos, 'rakija' (brandy), and traditional Greek snacks with a drink.",
+            "subTitle": "Enjoy Mythos beer at Caffe Elada! Two bottles of Greek beer, local brandy, and authentic Greek snacks, ideal for relaxed socializing and meze.",
+            "alt": "Caffe Elada table: Two bottles of Greek Mythos beer, a shot glass of local rakija, and a plate of Greek snacks (meze) with sunlight illumination."
         },
         "Image3": {
-            "title": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
-            "subTitle": "Mamos, the oldest Greek beer, and salty Alfa beer.",
-            "alt": "Alfa beer and the best Greek mix."
+            "title": "Local Patriotism at Caffe Elada Ljig: Large Valjevsko draft beer and salted peanuts with a drink.",
+            "subTitle": "Refreshment with a local touch! Enjoy a perfectly poured Valjevsko draft beer with crunchy salted peanuts, ideal for afternoon socializing in the heart of Ljig.",
+            "alt": "Table at Caffe Elada: A large Valjevsko draft beer with rich foam in a mug and a bowl of salted peanuts for snacking."
         },
         "Image4": {
-            "title": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
-            "subTitle": "Mamos, the oldest Greek beer, and salty Alfa beer.",
-            "alt": "Alfa beer and the best Greek mix."
+            "title": "Tasos Cocktail at Caffe Elada Ljig: Vodka, Coffee Anise Liqueur, and Espresso.",
+            "subTitle": "Try Tasos, Caffe Elada's signature cocktail! A perfect blend of Vodka, Coffee Anise Liqueur with Espresso, served near the modernly illuminated bar.",
+            "alt": "Tasos Cocktail on the Caffe Elada bar. A glass of the cocktail, ingredients (Vodka, Coffee Anise Liqueur, Espresso), and modern lighting in the background."
         },
         "Image5": {
-            "title": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
-            "subTitle": "Mamos, the oldest Greek beer, and salty Alfa beer.",
-            "alt": "Alfa beer and the best Greek mix."
+            "title": "Vibrant atmosphere of Caffe Elada Ljig: View from the first floor of a group of 10 friends near the bar.",
+            "subTitle": "Caffe Elada Ljig, an ideal place for socializing. Ten friends are enjoying drinks and socializing on the ground floor, viewed from the cafe's gallery.",
+            "alt": "Group photo from Caffe Elada Ljig: View of the ground floor and illuminated bar, shot from the first floor. A group of 10 people is socializing and having drinks."
         },
         "Image6": {
-            "title": "Coffee on the bar counter, surrounded by New Year decorations and a cocktail glass at Caffe Elada.",
-            "subTitle": "Mamos, the oldest Greek beer, and salty Alfa beer.",
-            "alt": "Alfa beer and the best Greek mix."
+            "title": "Alfa Beer and snacks on the first floor of Caffe Elada Ljig: Enjoying the Greek offer.",
+            "subTitle": "Cold Alfa beer at Caffe Elada Ljig. Two bottles and glasses with Greek snacks on a table on the first floor (gallery). An ideal place for quiet socializing.",
+            "alt": "Two bottles of Alfa beer and two glass mugs full of beer, with Greek snacks, placed on a table on the first floor of Caffe Elada."
         }
     },
     "Reviews": {
