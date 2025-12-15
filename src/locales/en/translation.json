@@ -119,7 +119,8 @@
         "likers": "Aperitifs and Liqueurs",
         "rakijas": "Rakijas",
         "spirits": "Hard Spirits",
-        "cocktails": "Cocktails"
+        "cocktails": "Cocktails",
+        "createdBy": "Created by:"
     },
     "NotFoundPage": {
         "title": "Page Not Found",

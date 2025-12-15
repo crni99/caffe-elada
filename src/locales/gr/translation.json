@@ -119,7 +119,8 @@
         "likers": "Απεριτίφ και Λικέρ",
         "rakijas": "Rakijas",
         "spirits": "Δυνατά Ποτά",
-        "cocktails": "Κοκτέιλ"
+        "cocktails": "Κοκτέιλ",
+        "createdBy": "Δημιουργήθηκε από:"
     },
     "NotFoundPage": {
         "title": "Η Σελίδα Δεν Βρέθηκε",

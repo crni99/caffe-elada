@@ -119,7 +119,8 @@
         "likers": "Aperitivi i likeri",
         "rakijas": "Rakije",
         "spirits": "Žestoka pića",
-        "cocktails": "Kokteli"
+        "cocktails": "Kokteli",
+        "createdBy": "Kreirao:"
     },
     "NotFoundPage": {
         "title": "Stranica Nije Pronađena",
