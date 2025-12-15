@@ -19,51 +19,51 @@
         "openDaily": "OTVORENO SVAKI DAN",
         "location": "LOKACIJA",
         "ImageAlt": {
-            "mainImage": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
-            "floatingImage1": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
-            "floatingImage2": "Alfa pivo i najbolji Grčki mix."
+            "mainImage": "Jutarnja kafa na šanku u Caffe Elada Ljig. Ambiijentalni enterijer ukrašen za praznike.",
+            "floatingImage1": "Grčka ponuda Caffe Elada: Hladno Mamos pivo (najstarije grčko) i Alfa pivo na stolu u Ljigu.",
+            "floatingImage2": "Osvežavajuće Alfa pivo uz najbolji Grčki meze (mix grickalica) u Caffe Elada Ljig."
         }
     },
     "FeatureGallery": {
-        "title1": "Alfa pivo",
-        "subTitle1": "Alfa pivo i najbolji Grčki mix.",
-        "alt1": "Alfa pivo i najbolji Grčki mix.",
-        "title2": "Mamos i Alfa slano",
-        "subTitle2": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
-        "alt2": "Mamos, najstarije Grčko pivo i slano Alfa pivo."
+        "title1": "Alfa pivo i Grčki Meze u Caffe Elada Ljig",
+        "subTitle1": "Osvežavajuće Alfa pivo uz najbolji Grčki mix grickalica (Meze) u Ljigu.",
+        "alt1": "Flaša Alfa piva i grickalice (Grčki mix/meze) na stolu u Caffe Elada Ljig.",
+        "title2": "Mamos i Alfa: Najbolja Grčka piva u Caffe Elada Ljig",
+        "subTitle2": "Probajte Mamos, najstarije Grčko pivo, zajedno sa hladnim Alfa pivom u Eladi.",
+        "alt2": "Mamos pivo (najstarije grčko) i Alfa pivo, zajedno na stolu u Caffe Elada Ljig."
     },
     "Gallery": {
         "title": "Galerija",
         "subTitle": "Ovde negujemo lokal patriotizam i ljubav prema Grčkoj.",
         "Image1": {
-            "title": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
-            "subTitle": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
-            "alt": "Alfa pivo i najbolji Grčki mix."
+            "title": "Caffe Elada Ljig: Moderan enterijer, osvetljeni šank i topla atmosfera za kafu i izlazak.",
+            "subTitle": "Najbolji kafić i bar u Ljigu. Prijatna atmosfera, idealno mesto za jutarnju kafu, koktele i opušteno večernje druženje.",
+            "alt": "Unutrašnji pogled na Caffe Elada Ljig. Moderan drveni šank sa ambijentalnim osvetljenjem i redom udobnih barskih stolica."
         },
         "Image2": {
-            "title": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
-            "subTitle": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
-            "alt": "Alfa pivo i najbolji Grčki mix."
+            "title": "Grčka ponuda u Caffe Elada Ljig: Hladni Mythos, rakija i tradicionalne gricke uz piće.",
+            "subTitle": "Uživajte u Mythos pivu u Caffe Elada! Dve boce grčkog piva, domaća rakija i autentične grčke grickalice, idealno za opušteno druženje i meze.",
+            "alt": "Stol Caffe Elada: Dve boce grčkog Mythos piva, čašica domaće rakije i tanjir grčkih grickalica (meze) sa sunčanim osvetljenjem."
         },
         "Image3": {
-            "title": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
-            "subTitle": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
-            "alt": "Alfa pivo i najbolji Grčki mix."
+            "title": "Lokalni patriotizam u Caffe Elada Ljig: Veliko Valjevsko točeno pivo i slani kikiriki uz piće.",
+            "subTitle": "Osveženje uz domaće! Uživajte u savršeno točenom Valjevskom pivu uz hrskavi slani kikiriki, idealno za popodnevno druženje u srcu Ljiga.",
+            "alt": "Sto u Caffe Elada: Veliko točeno Valjevsko pivo sa bogatom penom u krigli i posudica slanog kikirikija za grickanje."
         },
         "Image4": {
-            "title": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
-            "subTitle": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
-            "alt": "Alfa pivo i najbolji Grčki mix."
+            "title": "Koktel Tasos u Caffe Elada Ljig: Vodka, Liker Kafa Anis i Espreso.",
+            "subTitle": "Probajte Tasos, potpisni koktel Caffe Elada! Savršena mešavina Votke, Likera Kafe Anisa sa Espresom, serviran kod moderno osvetljenog šanka.",
+            "alt": "Koktel Tasos na šanku Caffe Elada. Staklena čaša koktela, sastojci (Vodka, Liker Kafa Anis, Espreso) i moderno osvetljenje u pozadini."
         },
         "Image5": {
-            "title": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
-            "subTitle": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
-            "alt": "Alfa pivo i najbolji Grčki mix."
+            "title": "Živahna atmosfera Caffe Elada Ljig: Pogled sa sprata na grupu od 10 prijatelja kod šanka.",
+            "subTitle": "Caffe Elada Ljig, idealno mesto za druženje. Deset prijatelja uživa u piću i druženju u prizemlju, posmatrano sa galerije kafića.",
+            "alt": "Grupna fotografija iz Caffe Elada Ljig: Prikaz prizemlja i osvetljenog šanka, snimljeno sa sprata. Grupa od 10 ljudi se druži i pije piće."
         },
         "Image6": {
-            "title": "Kafa na šanku, okružena novogodišnjim ukrasima i čašicom za koktele u Caffe Eladi.",
-            "subTitle": "Mamos, najstarije Grčko pivo i slano Alfa pivo.",
-            "alt": "Alfa pivo i najbolji Grčki mix."
+            "title": "Alfa pivo i grickalice na spratu Caffe Elada Ljig: Uživanje u grčkoj ponudi.",
+            "subTitle": "Hladno Alfa pivo u Caffe Elada Ljig. Dve boce i čaše sa grčkim grickalicama na stolu na spratu (galeriji). Idealno mesto za mirno druženje.",
+            "alt": "Dve flaše Alfa piva i dve staklene čaše pune piva, uz grčke grickalice, postavljene na stolu na spratu Caffe Elada."
         }
     },
     "Reviews": {

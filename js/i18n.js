@@ -51,23 +51,38 @@ function translatePage() {
     document.querySelectorAll('[data-i18n-key]').forEach(element => {
         const key1 = element.getAttribute('data-i18n-key');
         const attr1 = element.getAttribute('data-i18n-attr');
+        const key2 = element.getAttribute('data-i18n-key-2');
+        const attr2 = element.getAttribute('data-i18n-attr-2');
+
+        const combineAttr = element.getAttribute('data-i18n-combine');
+
         const translation1 = getNestedTranslation(key1, translations);
 
         if (translation1 !== undefined && translation1 !== null) {
-            if (attr1) {
+            if (combineAttr && key2) {
+            } else if (attr1) {
                 element.setAttribute(attr1, translation1);
             } else {
                 element.textContent = translation1;
             }
         }
 
-        const key2 = element.getAttribute('data-i18n-key-2');
-        const attr2 = element.getAttribute('data-i18n-attr-2');
-
+        let translation2 = null;
         if (key2 && attr2) {
-            const translation2 = getNestedTranslation(key2, translations);
+            translation2 = getNestedTranslation(key2, translations);
             if (translation2 !== undefined && translation2 !== null) {
                 element.setAttribute(attr2, translation2);
+            }
+        }
+
+        if (combineAttr && key1 && key2) {
+            if (translation2 === null) {
+                translation2 = getNestedTranslation(key2, translations);
+            }
+
+            if (translation1 !== undefined && translation2 !== undefined) {
+                const combinedTranslation = `${translation1} - ${translation2}`;
+                element.setAttribute(combineAttr, combinedTranslation);
             }
         }
     });
