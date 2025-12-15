@@ -33,7 +33,7 @@ export default function DrinksPage() {
         { nameKey: 'Drinks.likers', data: LIKERS_DRINKS_DATA },
         { nameKey: 'Drinks.rakijas', data: RAKIJAS_DRINKS_DATA },
         { nameKey: 'Drinks.spirits', data: SPIRITS_DATA },
-        { nameKey: 'Drinks.cocktails', data: COCKTAILS_DRINKS_DATA },
+        { nameKey: 'Drinks.cocktails', data: COCKTAILS_DRINKS_DATA, creator: 'Aleksandar Grabovčić' },
     ];
 
     const allFilterItem = { nameKey: 'Drinks.all', dataFilter: '*', filterLabel: t('Drinks.all') || 'All' };
@@ -147,6 +147,7 @@ export default function DrinksPage() {
                                     <DrinksList
                                         name={t(category.nameKey)}
                                         items={category.data}
+                                        creator={category.creator}
                                     />
                                 </div>
                             );

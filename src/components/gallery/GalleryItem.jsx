@@ -4,7 +4,7 @@ import { faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons';
 
 const GalleryItem = ({ item }) => {
     return (
-        <div className="col-lg-4 col-md-6 gallery-item" data-aos="fade-up">
+        <div className="col-lg-4 col-sm-6 gallery-item" data-aos="fade-up">
             <div className="gallery-wrap">
                 <img
                     src={item.image}
@@ -14,11 +14,12 @@ const GalleryItem = ({ item }) => {
                 />
                 <div className="gallery-info">
                     <h4>{item.title}</h4>
-                    <p>{item.subTitle}</p>
+                    {/* <p>{item.subTitle}</p> */}
                     <div className="gallery-links">
                         <a
                             href={item.image}
                             className="glightbox"
+                            //title={item.title}
                             title={`${item.title} - ${item.subTitle}`}
                         >
                             <i className="bi">
