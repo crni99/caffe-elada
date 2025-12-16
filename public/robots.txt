@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://caffe-elada.vercel.app/sitemap.xml
+Sitemap: http://caffeelada.rs/sitemap.xml
