@@ -16,6 +16,9 @@ const LOCALE_NAMES = {
     'sr': 'Srpski',
     'gr': 'Ελληνικά'
 };
+
+const SUPPORTED_LOCALES = ['en', 'sr', 'gr'];
+
 const DEFAULT_LOCALE = 'sr';
 let translations = {};
 
@@ -41,9 +44,13 @@ function setupDropdownToggle() {
 async function fetchTranslations(locale) {
     try {
         const response = await fetch(`lang/${locale}.json`);
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
         translations = await response.json();
     } catch (error) {
         console.error(`Error fetching translations for ${locale}.`, error);
+        translations = {};
     }
 }
 
@@ -59,10 +66,9 @@ function translatePage() {
         const translation1 = getNestedTranslation(key1, translations);
 
         if (translation1 !== undefined && translation1 !== null) {
-            if (combineAttr && key2) {
-            } else if (attr1) {
+            if (attr1 && !combineAttr) {
                 element.setAttribute(attr1, translation1);
-            } else {
+            } else if (!attr1 && !combineAttr) {
                 element.textContent = translation1;
             }
         }
@@ -96,6 +102,9 @@ function updateFlagIcon(locale) {
 }
 
 async function setLanguage(locale) {
+    if (!SUPPORTED_LOCALES.includes(locale)) {
+        locale = DEFAULT_LOCALE;
+    }
     await fetchTranslations(locale);
     if (Object.keys(translations).length === 0) {
         await fetchTranslations(DEFAULT_LOCALE);
@@ -110,6 +119,22 @@ async function setLanguage(locale) {
 
     document.documentElement.lang = locale;
     localStorage.setItem('locale', locale);
+}
+
+function getBrowserLocale() {
+    const browserLanguages = navigator.languages || [navigator.language];
+
+    for (const lang of browserLanguages) {
+        const fullCode = lang.toLowerCase();
+        if (SUPPORTED_LOCALES.includes(fullCode)) {
+            return fullCode;
+        }
+        const baseCode = lang.split('-')[0].toLowerCase();
+        if (SUPPORTED_LOCALES.includes(baseCode)) {
+            return baseCode;
+        }
+    }
+    return DEFAULT_LOCALE;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -139,7 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const preferredLocale = localStorage.getItem('locale') || DEFAULT_LOCALE;
+    let preferredLocale = localStorage.getItem('locale');
+
+    if (!preferredLocale) {
+        preferredLocale = getBrowserLocale();
+    }
+
     setLanguage(preferredLocale);
     setupDropdownToggle();
 
