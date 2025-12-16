@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://caffeelada.rs/sitemap.xml
+Sitemap: https://www.caffeelada.rs/sitemap.xml
