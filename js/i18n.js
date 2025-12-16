@@ -11,16 +11,28 @@ function getNestedTranslation(key, obj) {
     return current;
 }
 
-const LOCALE_NAMES = {
-    'en': 'English',
-    'sr': 'Srpski',
-    'gr': 'Ελληνικά'
+const LOCALE_MAPPER = {
+    'en': 'en', 'en-US': 'en', 'en-GB': 'en', 'en-CA': 'en', 'en-AU': 'en',
+    'en-IE': 'en', 'en-NZ': 'en', 'en-ZA': 'en', 'en-PH': 'en', 'en-SG': 'en', 'en-IN': 'en', 'en-MY': 'en',
+    'sr': 'sr', 'sr-RS': 'sr', 'sr-Latn': 'sr', 'sr-Cyrl': 'sr', 'sr-ME': 'sr',
+    'hr': 'sr', 'bs': 'sr', 'me': 'sr', 'mk': 'sr',
+    'hr-HR': 'sr', 'bs-BA': 'sr', 'mk-MK': 'sr',
+    'gr': 'gr', 'el': 'gr', 'el-GR': 'gr',
+    'el-CY': 'gr'
 };
 
 const SUPPORTED_LOCALES = ['en', 'sr', 'gr'];
 
-const DEFAULT_LOCALE = 'sr';
-let translations = {};
+const RECOGNIZED_LOCALES = Object.keys(LOCALE_MAPPER);
+
+const DEFAULT_LOCALE = 'en';
+
+const LOCALE_NAMES = {
+    'en': 'English',
+    'sr': 'Srpski',
+    'gr': 'Ελληνικά',
+    'el': 'Ελληνικά'
+};
 
 const flagImage = document.querySelector('.language-dropdown img');
 
@@ -40,6 +52,23 @@ function setupDropdownToggle() {
         }
     });
 }
+
+function getBaseLocale(detectedLocale) {
+    if (!detectedLocale) return DEFAULT_LOCALE;
+    const code = detectedLocale.toLowerCase();
+
+    if (LOCALE_MAPPER[code]) {
+        return LOCALE_MAPPER[code];
+    }
+
+    const baseCode = code.split('-')[0];
+    if (LOCALE_MAPPER[baseCode]) {
+        return LOCALE_MAPPER[baseCode];
+    }
+
+    return DEFAULT_LOCALE;
+}
+
 
 async function fetchTranslations(locale) {
     try {
@@ -95,30 +124,32 @@ function translatePage() {
 }
 
 function updateFlagIcon(locale) {
+    const baseLocale = getBaseLocale(locale);
+
     if (flagImage) {
-        flagImage.src = `images/icons/${locale}.svg`;
-        flagImage.alt = `Jezik: ${LOCALE_NAMES[locale] || locale}`;
+        flagImage.src = `images/icons/${baseLocale}.svg`;
+        flagImage.alt = `Jezik: ${LOCALE_NAMES[baseLocale] || baseLocale}`;
     }
 }
 
-async function setLanguage(locale) {
-    if (!SUPPORTED_LOCALES.includes(locale)) {
-        locale = DEFAULT_LOCALE;
-    }
-    await fetchTranslations(locale);
-    if (Object.keys(translations).length === 0) {
-        await fetchTranslations(DEFAULT_LOCALE);
+async function setLanguage(rawLocale) {
+    const localeToUse = getBaseLocale(rawLocale);
+
+    if (!SUPPORTED_LOCALES.includes(localeToUse)) {
+        setLanguage(DEFAULT_LOCALE);
+        return;
     }
 
+    await fetchTranslations(localeToUse);
+
     translatePage();
-    updateFlagIcon(locale);
+    updateFlagIcon(localeToUse);
 
     if (lightboxInstance) {
         lightboxInstance.reload();
     }
-
-    document.documentElement.lang = locale;
-    localStorage.setItem('locale', locale);
+    document.documentElement.lang = localeToUse;
+    localStorage.setItem('locale', localeToUse);
 }
 
 function getBrowserLocale() {
@@ -126,11 +157,13 @@ function getBrowserLocale() {
 
     for (const lang of browserLanguages) {
         const fullCode = lang.toLowerCase();
-        if (SUPPORTED_LOCALES.includes(fullCode)) {
+
+        if (RECOGNIZED_LOCALES.includes(fullCode)) {
             return fullCode;
         }
+
         const baseCode = lang.split('-')[0].toLowerCase();
-        if (SUPPORTED_LOCALES.includes(baseCode)) {
+        if (RECOGNIZED_LOCALES.includes(baseCode)) {
             return baseCode;
         }
     }
@@ -168,6 +201,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!preferredLocale) {
         preferredLocale = getBrowserLocale();
+    } else {
+        const baseLocale = getBaseLocale(preferredLocale);
+        if (!SUPPORTED_LOCALES.includes(baseLocale)) {
+            preferredLocale = DEFAULT_LOCALE;
+        }
     }
 
     setLanguage(preferredLocale);
@@ -180,7 +218,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (target) {
                 event.preventDefault();
                 const newLocale = target.getAttribute('data-locale');
-                if (newLocale !== document.documentElement.lang) {
+                const newBaseLocale = getBaseLocale(newLocale);
+                const currentBaseLocale = document.documentElement.lang;
+
+                if (newBaseLocale !== currentBaseLocale) {
                     setLanguage(newLocale);
                 }
                 const dropdownElement = target.closest('.dropdown');
