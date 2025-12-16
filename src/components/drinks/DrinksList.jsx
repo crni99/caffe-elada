@@ -12,7 +12,7 @@ const DrinksList = ({ name, items = [], creator }) => {
                 <div className="col-12 text-center mb-3">
                     <h2 className="display-6 pt-2 menu-title">{name}</h2>
                     {creator && (
-                        <h3 className="h5 text-muted fst-italic mt-1 creator-title">
+                        <h3 className="h6 text-muted fst-italic mt-1 creator-title">
                             {t('Drinks.createdBy')}&nbsp;{creator}
                         </h3>
                     )}
