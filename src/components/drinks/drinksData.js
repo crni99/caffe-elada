@@ -106,8 +106,8 @@ export const SPIRITS_DATA = [
 
 export const COCKTAILS_DRINKS_DATA = [
     { id: 1, name: 'Tasos', price: '500,00 RSD', description: 'Vodka, Liker Kafa Anis, Espreso' },
-    { id: 2, name: 'Mikonos', price: '500,00 RSD', description: 'Metaxa, Biter' },
-    { id: 3, name: 'Lefkada', price: '600,00 RSD', description: 'Tekila, Blue Curacao, Sok' },
-    { id: 4, name: 'Zakintos', price: '650,00 RSD', description: 'Rakija, Rakomelo, Limun' },
-    { id: 5, name: 'Lezbos', price: '650,00 RSD', description: 'Dzin, Ouzo, Limun, Tonik' },
+    { id: 2, name: 'Mikonos', price: '500,00 RSD', description: 'Metaxa, Angostura Biter' },
+    { id: 3, name: 'Lefkada', price: '600,00 RSD', description: 'Tekila, Blue Curacao, Limun Sok' },
+    { id: 4, name: 'Zakintos', price: '650,00 RSD', description: 'Rakija, Rakomelo, Limun Sok' },
+    { id: 5, name: 'Lezbos', price: '650,00 RSD', description: 'Dzin, Ouzo, Limun Sok, Tonik' },
 ];
