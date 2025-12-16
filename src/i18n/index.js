@@ -19,15 +19,27 @@ import LanguageDetector from "i18next-browser-languagedetector";
         .init({
             resources,
             debug: false,
-            fallbackLng: "sr",
+            fallbackLng: {
+                'hr': ['sr', 'en'],
+                'bs': ['sr', 'en'],
+                'me': ['sr', 'en'],
+                'mk': ['sr', 'en'],
+                'hr-HR': ['sr', 'en'],
+                'bs-BA': ['sr', 'en'],
+                'mk-MK': ['sr', 'en'],
+                'el-GR': ['gr', 'en'],
+                'el-CY': ['gr', 'en'],
+                'default': ['en']
+            },
             supportedLngs: [
                 "en", "sr", "gr",
-                "en-US", "en-GB", "en-CA", "en-AU", 
-                "sr-RS", "sr-Latn", "sr-Cyrl", "sr-ME", 
-                "el", "el-GR" 
+                "en-US", "en-GB", "en-CA", "en-AU",
+                "en-IE", "en-NZ", "en-ZA", "en-PH", "en-SG", "en-IN", "en-MY",
+                "sr-RS", "sr-Latn", "sr-Cyrl", "sr-ME",
+                "el", "el-GR", "el-CY"
             ],
-            nonExplicitSupportedLngs: true, 
-            load: 'currentOnly', 
+            nonExplicitSupportedLngs: true,
+            load: 'currentOnly',
             interpolation: { escapeValue: false },
             ns: "translation",
             defaultNS: "translation",
