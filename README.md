@@ -16,9 +16,14 @@ Both implementations are designed for a multi-lingual café website, featuring m
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>React SPA (Main)</td>
+      <td>Primary Domain</td>
+      <td><a href="https://www.caffeelada.rs/"><b>Launch Site 🡥</b></a></td>
+    </tr>
     <tr>
-      <td>React App</td>
-      <td>Vercel</td>
+      <td>React SPA (Mirror)</td>
+      <td>Vercel (Subdomain)</td>
       <td><a href="https://caffe-elada.vercel.app/"><b>Launch Site 🡥</b></a></td>
     </tr>
     <tr>
