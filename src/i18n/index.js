@@ -19,7 +19,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
         .init({
             resources,
             debug: false,
-            fallbackLng: "en",
+            fallbackLng: "sr",
             supportedLngs: [
                 "en", "sr", "gr",
                 "en-US", "en-GB", "en-CA", "en-AU", 
