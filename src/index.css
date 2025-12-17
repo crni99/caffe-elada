@@ -1843,3 +1843,13 @@ section,
 .hero-gr-flag {
   border-radius: 5px;
 }
+
+.creator-title a {
+    color: var(--accent-color);
+    border-bottom: 2px solid transparent;
+}
+
+.creator-title a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}

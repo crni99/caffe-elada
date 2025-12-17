@@ -13,7 +13,11 @@ const DrinksList = ({ name, items = [], creator }) => {
                     <h2 className="display-6 pt-2 menu-title">{name}</h2>
                     {creator && (
                         <h3 className="h6 text-muted fst-italic mt-1 creator-title">
-                            {t('Drinks.createdBy')}&nbsp;{creator}
+                            {t('Drinks.createdBy')}&nbsp;
+                            <a href="https://www.instagram.com/zorz_papadubi2/" data-discover="true"
+                                target="_blank" rel="noopener noreferrer">
+                                {creator}
+                            </a>
                         </h3>
                     )}
                 </div>
