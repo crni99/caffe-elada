@@ -11,5 +11,5 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-Content-Type-Options "nosniff"
   Header set Cross-Origin-Opener-Policy "same-origin"
-  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://www.google.com https://www.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'self' https://www.google.com https://www.google.com/maps/ https://googleusercontent.com;"
+  Header set Content-Security-Policy "default-src 'self' https://caffeelada.rs https://www.caffeelada.rs; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://caffeelada.rs; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://caffeelada.rs; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: https://www.google.com https://www.gstatic.com https://caffeelada.rs; connect-src 'self' https://www.google-analytics.com https://caffeelada.rs; frame-src 'self' https://www.google.com https://googleusercontent.com; manifest-src 'self' https://caffeelada.rs;"
 </IfModule>
