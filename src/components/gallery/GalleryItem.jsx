@@ -11,9 +11,11 @@ const GalleryItem = ({ item }) => {
                     className="img-fluid"
                     alt={item.alt}
                     loading="lazy"
+                    width="400"
+                    height="300"
                 />
                 <div className="gallery-info">
-                    <h4>{item.title}</h4>
+                    <h3 className='h4'>{item.title}</h3>
                     {/* <p>{item.subTitle}</p> */}
                     <div className="gallery-links">
                         <a

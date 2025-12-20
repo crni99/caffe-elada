@@ -43,7 +43,8 @@ export default function Header() {
         <header id="header" className="custom-header sticky-top">
             <div className="container d-flex align-items-center justify-content-between">
                 <Link to="/" className="logo">
-                    <img src="/assets/images/EladaLogo.svg" alt="Caffe Elada Logo" />
+                    <img src="/assets/images/EladaLogo.svg" alt="Caffe Elada Logo"
+                    />
                 </Link>
                 <FontAwesomeIcon
                     icon={mobileMenuOpen ? faXmark : faBars}

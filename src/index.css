@@ -134,20 +134,22 @@ footer a:active {
 }
 
 .icon-animate {
-  animation: colorSwap 5s infinite;
+  color: gold;
+  animation: colorSwap 3s infinite;
+  will-change: filter;
 }
 
 @keyframes colorSwap {
   0% {
-    color: gold;
+    filter: grayscale(0%) brightness(1);
   }
 
   50% {
-    color: white;
+    filter: grayscale(100%) brightness(2.5);
   }
 
   100% {
-    color: gold;
+    filter: grayscale(0%) brightness(1);
   }
 }
 
@@ -1174,7 +1176,7 @@ section,
   transition: all 0.3s ease;
 }
 
-.about .restaurant-gallery .gallery-item .gallery-caption h4 {
+.about .restaurant-gallery .gallery-item .gallery-caption h3 {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 5px;
@@ -1431,11 +1433,12 @@ section,
   border-radius: 0 0 8px 8px;
 }
 
-.gallery .gallery-item .gallery-wrap .gallery-info h4 {
+.gallery .gallery-item .gallery-wrap .gallery-info h3 {
   color: var(--contrast-color);
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 10px; /*Change to 5px if 2nd heading is present*/
+  margin-bottom: 10px;
+  /*Change to 5px if 2nd heading is present*/
 }
 
 
@@ -1845,11 +1848,11 @@ section,
 }
 
 .creator-title a {
-    color: var(--accent-color);
-    border-bottom: 2px solid transparent;
+  color: var(--accent-color);
+  border-bottom: 2px solid transparent;
 }
 
 .creator-title a:hover {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
