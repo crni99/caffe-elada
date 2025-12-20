@@ -4,12 +4,12 @@ import { useTranslation } from 'react-i18next';
 import GLightbox from 'glightbox';
 
 const galleryData = [
-    { id: 1, image: '/assets/images/elada-12.webp' },
-    { id: 2, image: '/assets/images/elada-6.webp' },
-    { id: 3, image: '/assets/images/elada-13.webp' },
-    { id: 4, image: '/assets/images/elada-11.webp' },
-    { id: 5, image: '/assets/images/elada-10.webp' },
-    { id: 6, image: '/assets/images/elada-2.jpg' },
+    { id: 1, image: '/assets/images/caffe-elada-ljig-enterijer-sank.webp' },
+    { id: 2, image: '/assets/images/mythos-pivo-grcka-ponuda-elada.webp' },
+    { id: 3, image: '/assets/images/valjevsko-pivo-tocene-kikiriki-elada.webp' },
+    { id: 4, image: '/assets/images/koktel-tasos-vodka-espreso-elada.webp' },
+    { id: 5, image: '/assets/images/atmosfera-ljudi-izlazak-elada-ljig.webp' },
+    { id: 6, image: '/assets/images/alfa-pivo-galerija-sprat-elada.webp' },
 ];
 
 const MainGallery = () => {

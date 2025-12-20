@@ -12,7 +12,7 @@ const FeatureGallery = () => {
                     <div className="row g-4">
                         <div className="col-lg-6 col-md-6">
                             <div className="gallery-item">
-                                <img src="/assets/images/elada-1.jpg" width="192" height="192"
+                                <img src="/assets/images/alfa-pivo-najbolji-grcki-mix.webp" width="192" height="192"
                                     alt={t('FeatureGallery.alt1')} className="img-fluid rounded" />
                                 <div className="gallery-caption">
                                     <h4>{t('FeatureGallery.title1')}</h4>
@@ -22,7 +22,7 @@ const FeatureGallery = () => {
                         </div>
                         <div className="col-lg-6 col-md-6">
                             <div className="gallery-item">
-                                <img src="/assets/images/elada-4.jpg" width="192" height="192"
+                                <img src="/assets/images/najstarije-grcko-pivo-mamos-elada.webp" width="192" height="192"
                                     alt={t('FeatureGallery.alt2')} className="img-fluid rounded" />
                                 <div className="gallery-caption">
                                     <h4>{t('FeatureGallery.title2')}</h4>

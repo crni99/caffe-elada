@@ -1,8 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons';
 
 const GalleryItem = ({ item }) => {
+
+    const { t } = useTranslation();
+
     return (
         <div className="col-lg-4 col-sm-6 gallery-item" data-aos="fade-up">
             <div className="gallery-wrap">
@@ -12,7 +16,7 @@ const GalleryItem = ({ item }) => {
                     alt={item.alt}
                     loading="lazy"
                     width="400"
-                    height="300"
+                    height="400"
                 />
                 <div className="gallery-info">
                     <h3 className='h4'>{item.title}</h3>
@@ -21,6 +25,7 @@ const GalleryItem = ({ item }) => {
                         <a
                             href={item.image}
                             className="glightbox"
+                            aria-label={`${item.title} - ${t('Gallery.view_enlarged')}`}
                             //title={item.title}
                             title={`${item.title} - ${item.subTitle}`}
                         >

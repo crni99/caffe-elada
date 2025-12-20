@@ -64,16 +64,16 @@ const HeroSection = () => {
                         <div className="col-lg-6" data-aos="fade-left" data-aos-delay="300">
                             <div className="hero-images">
                                 <div className="main-image">
-                                    <img src="/assets/images/elada-3.jpg" alt={t('Hero.ImageAlt.mainImage')} className="img-fluid"
+                                    <img src="/assets/images/caffe-elada-ljig-praznici-sank.webp" alt={t('Hero.ImageAlt.mainImage')} className="img-fluid"
                                         width="192" height="192" />
                                 </div>
                                 <div className="floating-images">
                                     <div className="floating-image floating-image-1">
-                                        <img src="/assets/images/elada-1.jpg" alt={t('Hero.ImageAlt.floatingImage1')} className="img-fluid"
+                                        <img src="/assets/images/alfa-pivo-najbolji-grcki-mix.webp" alt={t('Hero.ImageAlt.floatingImage1')} className="img-fluid"
                                             width="192" height="192" />
                                     </div>
                                     <div className="floating-image floating-image-2">
-                                        <img src="/assets/images/elada-4.jpg" alt={t('Hero.ImageAlt.floatingImage2')} className="img-fluid"
+                                        <img src="/assets/images/najstarije-grcko-pivo-mamos-elada.webp" alt={t('Hero.ImageAlt.floatingImage2')} className="img-fluid"
                                             width="192" height="192" />
                                     </div>
                                 </div>
