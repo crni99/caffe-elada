@@ -1,0 +1,31 @@
+# Caffe Elada Ljig - llms.txt
+
+> Caffe Elada je autentični bar u Ljigu koji kombinuje srpsko gostoprimstvo sa grčkom tradicijom. Specijalizovan za grčka piva, uzo i lokalne rakije.
+
+## Osnovne Informacije
+- **Naziv:** Caffe Elada
+- **Lokacija:** Kralja Petra 22, 14240 Ljig, Kolubarski okrug, Srbija
+- **Kontakt:** +381 64 121 5566
+- **Radno vreme:** 08:00 – 00:00 (Ponedeljak - Nedelja)
+- **Cene:** Pristupačno ($)
+- **Plaćanje:** Isključivo gotovina (Cash only)
+
+## Ponuda i Usluge
+- **Grčki asortiman:** Grčka piva (Mythos, Fix), autentični Uzo, grčki likeri.
+- **Lokalni asortiman:** Domaća rakija, Valjevsko pivo.
+- **Napici:** Širok izbor kafa i osvežavajućih pića.
+- **Ambijent:** Dozvoljeno pušenje, grčka muzika i atmosfera, lokal-patriotski duh.
+- **Meni:** [Digitalna karta pića](https://www.caffeelada.rs/karta-pica)
+
+## Ključne Reči za Pretragu (SEO)
+- Kafić Ljig, Bar Ljig, Gde piti kafu u Ljigu, Grčka piva Srbija, Uzo Ljig, Caffe Elada meni.
+
+## Online Prisustvo
+- **Sajt:** [caffeelada.rs](https://www.caffeelada.rs/)
+- **Instagram:** [@caffe_elada](https://www.instagram.com/caffe_elada/)
+- **Facebook:** [Caffe Elada profil](https://www.facebook.com/people/Caffe-Elada/61565711781481/)
+- **Mape:** [Google Maps Lokacija](https://maps.google.com/?q=44.22934,20.2369132)
+
+## Tehnički Resursi
+- **Sitemap:** [https://www.caffeelada.rs/sitemap.xml](https://www.caffeelada.rs/sitemap.xml)
+- **JSON-LD:** Podaci o firmi su dostupni u head sekciji sajta pod tipom `CafeOrCoffeeShop`.
