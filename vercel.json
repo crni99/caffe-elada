@@ -1,4 +1,17 @@
 {
+    "redirects": [
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "www.caffeelada.rs"
+                }
+            ],
+            "destination": "https://caffeelada.rs/:path*",
+            "permanent": true
+        }
+    ],
     "headers": [
         {
             "source": "/(.*)",
