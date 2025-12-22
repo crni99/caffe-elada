@@ -4,12 +4,12 @@ import { useTranslation } from 'react-i18next';
 import GLightbox from 'glightbox';
 
 const galleryData = [
-    { id: 1, image: '/assets/images/caffe-elada-ljig-enterijer-sank.webp' },
-    { id: 2, image: '/assets/images/mythos-pivo-grcka-ponuda-elada.webp' },
-    { id: 3, image: '/assets/images/valjevsko-pivo-tocene-kikiriki-elada.webp' },
-    { id: 4, image: '/assets/images/koktel-tasos-vodka-espreso-elada.webp' },
-    { id: 5, image: '/assets/images/atmosfera-ljudi-izlazak-elada-ljig.webp' },
-    { id: 6, image: '/assets/images/alfa-pivo-galerija-sprat-elada.webp' },
+    { id: 1, image: '/assets/images/caffe-elada-ljig-enterijer-sank-v2.webp' },
+    { id: 2, image: '/assets/images/mythos-pivo-grcka-ponuda-elada-v2.webp' },
+    { id: 3, image: '/assets/images/valjevsko-pivo-tocene-kikiriki-elada-v2.webp' },
+    { id: 4, image: '/assets/images/koktel-tasos-vodka-espreso-elada-v2.webp' },
+    { id: 5, image: '/assets/images/atmosfera-ljudi-izlazak-elada-ljig-v2.webp' },
+    { id: 6, image: '/assets/images/alfa-pivo-galerija-sprat-elada-v2.webp' },
 ];
 
 const MainGallery = () => {

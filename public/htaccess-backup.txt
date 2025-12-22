@@ -20,7 +20,7 @@ RewriteRule . /index.html [L]
     Header set Cross-Origin-Opener-Policy "same-origin"
     Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
     <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|webp|js|css|swf|woff|woff2)$">
-        Header set Cache-Control "public, max-age=31536000, immutable"
+        Header set Cache-Control "public, max-age=31536000"
     </FilesMatch>
 </IfModule>
 

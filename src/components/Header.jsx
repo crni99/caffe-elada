@@ -44,7 +44,7 @@ export default function Header() {
             <div className="container d-flex align-items-center justify-content-between">
                 <Link to="/" className="logo">
                     <img src="/assets/images/EladaLogo.svg" alt="Caffe Elada Logo"
-                    />
+                        height="64px" width="144px" />
                 </Link>
                 <FontAwesomeIcon
                     icon={mobileMenuOpen ? faXmark : faBars}
