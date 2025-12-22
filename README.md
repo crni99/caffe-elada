@@ -19,7 +19,7 @@ Both implementations are designed for a multi-lingual café website, featuring m
     <tr>
       <td>React SPA (Main)</td>
       <td>Primary Domain</td>
-      <td><a href="https://www.caffeelada.rs/"><b>Launch Site 🡥</b></a></td>
+      <td><a href="https://caffeelada.rs/"><b>Launch Site 🡥</b></a></td>
     </tr>
     <tr>
       <td>React SPA (Mirror)</td>
