@@ -135,7 +135,7 @@ footer a:active {
 
 .icon-animate {
   color: gold;
-  animation: colorSwap 3s infinite;
+  animation: colorSwap 5s infinite;
   will-change: filter;
 }
 
