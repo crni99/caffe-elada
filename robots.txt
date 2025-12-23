@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Link: https://www.caffeelada.rs/llms.txt
 Sitemap: https://www.caffeelada.rs/sitemap.xml

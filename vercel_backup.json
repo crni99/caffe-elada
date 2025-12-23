@@ -1,0 +1,61 @@
+{
+    "redirects": [
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "www.caffeelada.rs"
+                }
+            ],
+            "destination": "https://caffeelada.rs/:path*",
+            "permanent": true
+        }
+    ],
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Content-Security-Policy",
+                    "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https: https://www.google.com https://www.gstatic.com https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https: https://www.google-analytics.com https://*.analytics.google.com https://*.google-analytics.com; frame-src 'self' https://www.google.com; manifest-src 'self';"
+                },
+                {
+                    "key": "Strict-Transport-Security",
+                    "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                    "key": "X-Frame-Options",
+                    "value": "SAMEORIGIN"
+                },
+                {
+                    "key": "X-Content-Type-Options",
+                    "value": "nosniff"
+                },
+                {
+                    "key": "Cross-Origin-Opener-Policy",
+                    "value": "same-origin"
+                },
+                {
+                    "key": "Permissions-Policy",
+                    "value": "camera=(), microphone=(), geolocation=()"
+                }
+            ]
+        },
+        {
+            "source": "/(static|assets)/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000"
+                }
+            ]
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/((?!api|_next/static|_next/image|static|assets|favicon.ico|sw.js).*)",
+            "destination": "/index.html"
+        }
+    ]
+}
