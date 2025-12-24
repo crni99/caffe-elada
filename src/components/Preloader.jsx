@@ -1,9 +1,10 @@
 import React from 'react';
+import logo from '../assets/logo.svg';
 
-const Preloader = ({ logoSrc, className }) => {
+const Preloader = ({ className }) => {
     return (
         <div className={`preloader-overlay ${className}`}>
-            <img src={logoSrc} alt="Loading Logo" className="preloader-logo"
+            <img src={logo} alt="Loading Logo" className="preloader-logo"
                 width="192" height="192" />
         </div>
     );

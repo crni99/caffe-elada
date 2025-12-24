@@ -1,8 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagramSquare, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faClock, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import Icon from './Icons/Icon';
 
 const ContactSection = () => {
 
@@ -24,7 +22,7 @@ const ContactSection = () => {
                                 <div className="contact-details">
                                     <div className="contact-item">
                                         <i className="bi">
-                                            <FontAwesomeIcon icon={faClock} size="sm" className="mx-2" title="Clock" />
+                                            <Icon icon="clock" size="sm" className="mx-2" title="Clock" />
                                         </i>
                                         <div>
                                             <h4>{t('Contact.openingHoursTitle')}</h4>
@@ -35,7 +33,7 @@ const ContactSection = () => {
                                     <div className="contact-item">
                                         <i className="bi">
                                             <a href="tel:+381641215566" rel="noopener noreferrer">
-                                                <FontAwesomeIcon icon={faPhone} size="sm" className="mx-2" title="Phone" />
+                                                <Icon icon="phone" size="sm" className="mx-2" title="Phone" />
                                             </a>
                                         </i>
                                         <div>
@@ -50,7 +48,7 @@ const ContactSection = () => {
                                     <div className="contact-item">
                                         <i className="bi">
                                             <a href="https://maps.app.goo.gl/1N3gb5m4EPXZM3iBA" target="_blank" rel="noopener noreferrer">
-                                                <FontAwesomeIcon icon={faLocationDot} size="sm" className="mx-2" title="Location Dot" />
+                                                <Icon icon="location-dot" size="sm" className="mx-2" title="Location Dot" />
                                             </a>
                                         </i>
                                         <div>
@@ -65,15 +63,15 @@ const ContactSection = () => {
                                 <div className="social-links">
                                     <a href="https://www.facebook.com/profile.php?id=61565711781481" target="_blank" rel="noopener noreferrer"
                                         aria-label={t('Contact.IconAlt.facebook')}>
-                                        <FontAwesomeIcon icon={faFacebookSquare} className="mx-2" title={t('Contact.IconAlt.facebook')} />
+                                        <Icon icon={['fab', 'facebook-square']} className="mx-2" title={t('Contact.IconAlt.facebook')} />
                                     </a>
                                     <a href="https://www.instagram.com/caffe_elada/" target="_blank" rel="noopener noreferrer"
                                         aria-label={t('Contact.IconAlt.instagram')}>
-                                        <FontAwesomeIcon icon={faInstagramSquare} className="mx-2" title={t('Contact.IconAlt.instagram')} />
+                                        <Icon icon={['fab', 'instagram-square']} className="mx-2" title={t('Contact.IconAlt.instagram')} />
                                     </a>
                                     <a href="tel:+381641215566" rel="noopener noreferrer"
                                         aria-label={t('Contact.IconAlt.call')}>
-                                        <FontAwesomeIcon icon={faPhone} className="mx-2" title={t('Contact.IconAlt.call')} />
+                                        <Icon icon="phone" className="mx-2" title={t('Contact.IconAlt.call')} />
                                     </a>
                                 </div>
                             </div>

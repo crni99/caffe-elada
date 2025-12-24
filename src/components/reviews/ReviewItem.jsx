@@ -1,17 +1,14 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCommentDots, faStar } from '@fortawesome/free-solid-svg-icons';
+import React, { memo } from 'react';
+import Icon from '../Icons/Icon';
 import flagGr from "../../assets/lang-flags/gr.svg";
 
 const StarRating = () => {
-    const stars = Array(5).fill(faStar);
-
     return (
-        <h4 className='star-reviews'>
-            {stars.map((starIcon, index) => (
-                <FontAwesomeIcon
+        <h4 className="star-reviews">
+            {Array.from({ length: 5 }).map((_, index) => (
+                <Icon
                     key={index}
-                    icon={starIcon}
+                    icon="star"
                     className="mx-2"
                     style={{ color: 'gold' }}
                     title="Star Rating"
@@ -39,7 +36,7 @@ const ReviewItem = ({ review, t }) => {
                 </div>
                 <div className="testimonial-body">
                     <i className="bi bi-chat-quote-fill quote-icon">
-                        <FontAwesomeIcon icon={faCommentDots} size="sm" className="mx-2" title="Comment Dots" />
+                        <Icon icon="comment-dots" size="sm" className="mx-2" title="Comment Dots" />
                     </i>
                     <p>
                         <span>{t(review.reviewKey)}</span>
@@ -55,4 +52,4 @@ const ReviewItem = ({ review, t }) => {
     );
 };
 
-export default ReviewItem;
+export default memo(ReviewItem);

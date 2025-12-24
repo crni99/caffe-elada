@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const FeatureGallery = () => {
@@ -37,4 +37,4 @@ const FeatureGallery = () => {
     );
 }
 
-export default FeatureGallery;
+export default memo(FeatureGallery);

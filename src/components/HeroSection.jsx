@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import Icon from './Icons/Icon';
 import flagGr from "../assets/lang-flags/gr.svg";
 
 const HeroSection = () => {
@@ -37,7 +36,7 @@ const HeroSection = () => {
                                 <div className="hero-info d-flex flex-wrap align-items-center gap-4">
                                     <div className="info-item d-flex align-items-center">
                                         <i className="bi me-2">
-                                            <FontAwesomeIcon icon={faClock} className="mx-2" title="Clock" />
+                                            <Icon icon="clock" className="mx-2" title="Clock" />
                                         </i>
                                         <div>
                                             <small className="text-muted">{t('Hero.openDaily')}</small>
@@ -47,7 +46,7 @@ const HeroSection = () => {
                                     <a href="https://maps.app.goo.gl/1N3gb5m4EPXZM3iBA" target="_blank" rel="noopener noreferrer">
                                         <div className="info-item d-flex align-items-center">
                                             <i className="bi me-2">
-                                                <FontAwesomeIcon icon={faLocationDot} className="mx-2" title="Location Dot" />
+                                                <Icon icon="location-dot" className="mx-2" title="Location Dot" />
                                             </i>
                                             <div>
                                                 <small className="text-muted">{t('Hero.location')}</small>
@@ -65,7 +64,7 @@ const HeroSection = () => {
                             <div className="hero-images">
                                 <div className="main-image">
                                     <img src="/assets/images/caffe-elada-ljig-praznici-sank.webp" alt={t('Hero.ImageAlt.mainImage')}
-                                        className="img-fluid" width="636" height="420" fetchpriority="high" />
+                                        className="img-fluid" width="636" height="420" fetchPriority="high" decoding="async" />
                                 </div>
                                 <div className="floating-images">
                                     <div className="floating-image floating-image-1">
@@ -86,4 +85,4 @@ const HeroSection = () => {
     );
 };
 
-export default HeroSection;
+export default memo(HeroSection);

@@ -6,7 +6,6 @@ import i18n from './i18n';
 import Preloader from './components/Preloader';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import logo from './assets/logo.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -59,6 +58,7 @@ function App() {
         once: true,
         duration: 800,
         offset: 100,
+        disable: () => window.innerWidth < 768,
       });
       AOS.refresh();
     };
@@ -90,10 +90,7 @@ function App() {
   return (
     <>
       {isLoading && (
-        <Preloader
-          logoSrc={logo}
-          className={isFadingOut ? 'hidden' : ''}
-        />
+        <Preloader className={isFadingOut ? 'hidden' : ''} />
       )}
       {(isContentVisible || hasVisited) && (
         <I18nextProvider i18n={i18n}>

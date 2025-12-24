@@ -1,25 +1,24 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import HeroSection from '../components/HeroSection';
-//import FeatureGallery from '../components/FeatureGallery';
-import MainGallery from '../components/gallery/MainGallery';
-import ReviewsSection from '../components/reviews/ReviewsSection';
-import ContactSection from '../components/ContactSection';
+import Preloader from '../components/Preloader';
+//const FeatureGallery = lazy(() => import('../components/FeatureGallery'));
+const MainGallery = lazy(() => import('../components/gallery/MainGallery'));
+const ReviewsSection = lazy(() => import('../components/reviews/ReviewsSection'));
+const ContactSection = lazy(() => import('../components/ContactSection'));
 
 export default function HomePage() {
 
     return (
         <main>
             <HeroSection />
-
-            {/* 
-            <FeatureGallery />
-            */}
-
-            <MainGallery />
-
-            <ReviewsSection />
-
-            <ContactSection />
+            <Suspense fallback={<Preloader />}>
+                {/* 
+                <FeatureGallery />
+                */}
+                <MainGallery />
+                <ReviewsSection />
+                <ContactSection />
+            </Suspense>
         </main>
     );
 }

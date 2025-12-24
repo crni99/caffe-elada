@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import GalleryItem from './GalleryItem';
 import { useTranslation } from 'react-i18next';
-import GLightbox from 'glightbox';
 
 const galleryData = [
     { id: 1, image: '/assets/images/caffe-elada-ljig-enterijer-sank-v2.webp' },
@@ -14,40 +13,44 @@ const galleryData = [
 
 const MainGallery = () => {
     const { t, i18n } = useTranslation();
+    const lightboxRef = useRef(null);
+
+    const translatedGallery = useMemo(() => {
+        return galleryData.map(item => ({
+            ...item,
+            title: t(`Gallery.Image${item.id}.title`),
+            subTitle: t(`Gallery.Image${item.id}.subTitle`),
+            alt: t(`Gallery.Image${item.id}.alt`),
+        }));
+    }, [t]);
 
     useEffect(() => {
-        let lightbox = null;
+        let mounted = true;
 
-        if (typeof window !== 'undefined' && window.GLightboxInstance && window.GLightboxInstance.destroy) {
-            window.GLightboxInstance.destroy();
-        }
+        const initLightbox = async () => {
+            const { default: GLightbox } = await import('glightbox');
 
-        lightbox = GLightbox({
-            selector: '.glightbox',
-        });
+            if (!mounted) return;
 
-        window.GLightboxInstance = lightbox;
+            if (lightboxRef.current) {
+                lightboxRef.current.destroy();
+            }
+
+            lightboxRef.current = GLightbox({
+                selector: '.glightbox',
+                touchNavigation: true,
+                loop: true,
+            });
+        };
+
+        initLightbox();
 
         return () => {
-            if (lightbox && lightbox.destroy) {
-                lightbox.destroy();
-                window.GLightboxInstance = null;
-            }
+            mounted = false;
+            lightboxRef.current?.destroy();
+            lightboxRef.current = null;
         };
     }, [i18n.language]);
-
-
-    const getTranslatedItem = (id) => {
-        const i18nKey = `Gallery.Image${id}`;
-
-        return {
-            ...galleryData.find(item => item.id === id),
-            title: t(`${i18nKey}.title`),
-            subTitle: t(`${i18nKey}.subTitle`),
-            alt: t(`${i18nKey}.alt`),
-            i18nKey: i18nKey
-        };
-    };
 
     return (
         <section id="galerija" className="gallery section">
@@ -55,15 +58,16 @@ const MainGallery = () => {
                 <h2>{t('Gallery.title')}</h2>
                 <p>{t('Gallery.subTitle')}</p>
             </div>
+
             <div className="container" data-aos="fade-up" data-aos-delay="100">
-                <div className="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-                    {galleryData.map(item => (
-                        <GalleryItem key={item.id} item={getTranslatedItem(item.id)} />
+                <div className="row g-4 isotope-container">
+                    {translatedGallery.map(item => (
+                        <GalleryItem key={item.id} item={item} />
                     ))}
                 </div>
             </div>
         </section>
     );
-}
+};
 
 export default MainGallery;

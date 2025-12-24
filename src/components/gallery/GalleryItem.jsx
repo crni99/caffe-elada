@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons';
+import Icon from '../Icons/Icon';
 
 const GalleryItem = ({ item }) => {
 
@@ -15,6 +14,7 @@ const GalleryItem = ({ item }) => {
                     className="img-fluid"
                     alt={item.alt}
                     loading="lazy"
+                    decoding="async"
                     width="400"
                     height="400"
                 />
@@ -30,7 +30,7 @@ const GalleryItem = ({ item }) => {
                             title={`${item.title} - ${item.subTitle}`}
                         >
                             <i className="bi">
-                                <FontAwesomeIcon icon={faMagnifyingGlassPlus} className="mx-2" title="Prikaz Slike" />
+                                <Icon icon="magnifying-glass-plus" className="mx-2" title="Prikaz Slike" />
                             </i>
                         </a>
                     </div>
@@ -40,4 +40,4 @@ const GalleryItem = ({ item }) => {
     );
 };
 
-export default GalleryItem;
+export default memo(GalleryItem);

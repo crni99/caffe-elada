@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagramSquare, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faLocationDot, faStar, faChevronRight, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import Icon from './Icons/Icon';
 import { useTranslation } from 'react-i18next';
+
+const ChevronRightIcon = <Icon icon="chevron-right" className="mx-2 icon-blue" title="Chevron Right" />;
 
 export default function Footer() {
 
@@ -62,7 +62,7 @@ export default function Footer() {
                                             </strong>
                                         </span>
                                         <span className="btn-icon-part" data-aos="fade-up" data-aos-duration="2000">
-                                            <FontAwesomeIcon icon={faStar} className="icon-animate" size='lg' />
+                                            <Icon icon="star" className="icon-animate" size="lg" />
                                         </span>
                                     </a>
                                 </div>
@@ -74,19 +74,19 @@ export default function Footer() {
                                 <ul>
                                     <li>
                                         <Link to="/karta-pica" className=''>
-                                            <FontAwesomeIcon icon={faChevronRight} className="mx-2 icon-blue" title="Chevron Right" />
+                                            {ChevronRightIcon}
                                             {t("Header.Drinks")}
                                         </Link>
                                     </li>
                                     <li>
                                         <Link to="/#galerija">
-                                            <FontAwesomeIcon icon={faChevronRight} className="mx-2 icon-blue" title="Chevron Right" />
+                                            {ChevronRightIcon}
                                             {t("Header.Gallery")}
                                         </Link>
                                     </li>
                                     <li>
                                         <Link to="/#kontakt">
-                                            <FontAwesomeIcon icon={faChevronRight} className="mx-2 icon-blue" title="Chevron Right" />
+                                            {ChevronRightIcon}
                                             {t("Header.Contact")}
                                         </Link>
                                     </li>
@@ -101,7 +101,7 @@ export default function Footer() {
 
                                         <div className="contact-icon">
                                             <i className="bi">
-                                                <FontAwesomeIcon icon={faLocationDot} className="mx-2" title="Location Dot" />
+                                                <Icon icon="location-dot" className="mx-2" title="Location Dot" />
                                             </i>
                                         </div>
                                         <div className="contact-info">
@@ -113,7 +113,7 @@ export default function Footer() {
                                     <div className="contact-item">
                                         <div className="contact-icon">
                                             <i className="bi">
-                                                <FontAwesomeIcon icon={faPhone} className="mx-2" title={t('Contact.IconAlt.call')} />
+                                                <Icon icon="phone" className="mx-2" title={t('Contact.IconAlt.call')} />
                                             </i>
                                         </div>
                                         <div className="contact-info">
@@ -124,11 +124,11 @@ export default function Footer() {
                                 <div className="social-links">
                                     <a href="https://www.facebook.com/profile.php?id=61565711781481" target="_blank" rel="noopener noreferrer"
                                         aria-label={t('Contact.IconAlt.facebook')}>
-                                        <FontAwesomeIcon icon={faFacebookSquare} size="lg" className="mx-2" title={t('Contact.IconAlt.facebook')} />
+                                        <Icon icon={['fab', 'facebook-square']} size="lg" className="mx-2" title={t('Contact.IconAlt.facebook')} />
                                     </a>
                                     <a href="https://www.instagram.com/caffe_elada/" target="_blank" rel="noopener noreferrer"
                                         aria-label={t('Contact.IconAlt.instagram')}>
-                                        <FontAwesomeIcon icon={faInstagramSquare} size="lg" className="mx-2" title={t('Contact.IconAlt.instagram')} />
+                                        <Icon icon={['fab', 'instagram-square']} size="lg" className="mx-2" title={t('Contact.IconAlt.instagram')} />
                                     </a>
                                 </div>
                             </div>
@@ -167,7 +167,7 @@ export default function Footer() {
                 className={`scroll-top d-flex align-items-center justify-content-center ${isVisible ? 'active' : ''}`}
                 onClick={scrollToTop}>
                 <i className="bi">
-                    <FontAwesomeIcon icon={faChevronUp} className="mx-2 icon-white" title="Chevron Up" />
+                    <Icon icon="chevron-up" className="mx-2 icon-white" title="Chevron Up" />
                 </i>
             </a>
         </>
