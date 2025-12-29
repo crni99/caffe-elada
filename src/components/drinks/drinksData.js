@@ -80,6 +80,7 @@ export const LIKERS_DRINKS_DATA = [
     { id: 3, name: 'Liker Kafa Anis', volume: '0,03L', price: '210,00 RSD' },
     { id: 4, name: 'Curacao Blue', volume: '0,03L', price: '180,00 RSD', },
     { id: 5, name: 'Liker Malina', volume: '0,03L', price: '220,00 RSD', },
+    { id: 6, name: 'Liker Jagoda', volume: '0,03L', price: '350,00 RSD', },
 ];
 
 export const RAKIJAS_DRINKS_DATA = [
