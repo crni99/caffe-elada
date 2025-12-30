@@ -1786,6 +1786,10 @@ section,
     margin-top: 4px;
 }
 
+.dropdown.show .dropdown-menu {
+    display: block;
+}
+
 .dropdown-item:active,
 .dropdown-item:focus,
 .dropdown-item:hover {
