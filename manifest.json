@@ -1,25 +1,44 @@
 {
+  "id": "/",
   "short_name": "Elada",
   "name": "Caffe Elada",
+  "description": "Caffe Elada, Ljig: Udoban kafić/bar u srcu Šumadije. Uživajte u savršenoj kafi, uz veliki izbor grčkih piva, uzo, likera, Valjevskog piva i domaće rakije. Više od kafića!",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "64x64 48x48 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "images/logos/logo192.avif",
+      "src": "logo192.avif",
       "type": "image/avif",
       "sizes": "192x192"
     },
     {
-      "src": "images/logos/logo512.avif",
+      "src": "logo512.avif",
       "type": "image/avif",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "1170x2532",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Glavna stranica Caffe Elada Mobile"
+    },
+    {
+      "src": "screenshot-desktop.png",
+      "sizes": "1500x838",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Glavna stranica Caffe Elada Desktop"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#f0f0f0",
-  "background_color": "#2594cb"
+  "theme_color": "#2594cb",
+  "background_color": "#ffffff"
 }
