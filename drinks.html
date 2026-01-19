@@ -1834,6 +1834,20 @@
         AOS.init();
     </script>
     <script src="js/main.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            if (window.location.hash === '#kokteli') {
+                const cocktailFilter = document.querySelector('li[data-filter=".filter-cocktails"]');
+                if (cocktailFilter) {
+                    document.querySelectorAll('.gallery-filters li').forEach(li => {
+                        li.classList.remove('filter-active');
+                    });
+                    cocktailFilter.classList.add('filter-active');
+                    cocktailFilter.click();
+                }
+            }
+        });
+    </script>
 
 </body>
 
