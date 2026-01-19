@@ -37,7 +37,7 @@ const ReviewsSection = () => {
     const { t } = useTranslation();
 
     return (
-        <section id="reviews" className="testimonials section light-background">
+        <section id="recenzije" className="testimonials section light-background">
             <div className="container section-title" data-aos="fade-up">
                 <h2>{t('Reviews.title')}</h2>
                 <p>{t('Reviews.description')}</p>

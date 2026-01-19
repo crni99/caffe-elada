@@ -18,6 +18,7 @@ export default function DrinksPage() {
 
     const isotopeContainerRef = useRef(null);
     const isotopeInstance = useRef(null);
+    const cocktailsRef = useRef(null);
     const [activeFilter, setActiveFilter] = useState('*');
     const { t } = useTranslation();
 
@@ -97,6 +98,29 @@ export default function DrinksPage() {
         }
     };
 
+    useEffect(() => {
+        const handleInitialHash = () => {
+            const hash = decodeURI(window.location.hash.replace('#', ''));
+            if (hash === 'kokteli') {
+                setActiveFilter('.filter-cocktails');
+                setTimeout(() => {
+                    if (cocktailsRef.current) {
+                        const elementTop = cocktailsRef.current.getBoundingClientRect().top + window.pageYOffset;
+                        const offset = 350;
+                        window.scrollTo({
+                            top: elementTop - offset,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 500);
+            }
+        };
+
+        handleInitialHash();
+        window.addEventListener('hashchange', handleInitialHash);
+        return () => window.removeEventListener('hashchange', handleInitialHash);
+    }, []);
+
     return (
         <main>
             <section id="hero" className="hero section light-background">
@@ -138,10 +162,12 @@ export default function DrinksPage() {
                     </div>
                     <div className="row" ref={isotopeContainerRef}>
                         {drinkCategories.map((category) => {
+                            const isCocktails = category.nameKey === 'Drinks.cocktails';
                             const categoryClassName = getFilterDataAttribute(category.nameKey).substring(1);
                             return (
                                 <div
                                     key={category.nameKey}
+                                    ref={isCocktails ? cocktailsRef : null}
                                     className={`col-12 mb-4 isotope-item ${categoryClassName}`}
                                 >
                                     <DrinksList
