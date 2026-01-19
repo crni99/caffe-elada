@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import DrinksList from '../components/drinks/DrinksList';
 import {
@@ -22,7 +22,7 @@ export default function DrinksPage() {
     const [activeFilter, setActiveFilter] = useState('*');
     const { t } = useTranslation();
 
-    const drinkCategories = [
+    const drinkCategories = useMemo(() => [
         { nameKey: 'Drinks.coffee', data: COFFEE_DRINKS_DATA },
         { nameKey: 'Drinks.hotDrinks', data: HOT_DRINKS_DATA },
         { nameKey: 'Drinks.water', data: WATER_DRINKS_DATA },
@@ -35,7 +35,7 @@ export default function DrinksPage() {
         { nameKey: 'Drinks.rakijas', data: RAKIJAS_DRINKS_DATA },
         { nameKey: 'Drinks.spirits', data: SPIRITS_DATA },
         { nameKey: 'Drinks.cocktails', data: COCKTAILS_DRINKS_DATA, creator: 'Aleksandar Grabovčić' },
-    ];
+    ], []);
 
     const allFilterItem = { nameKey: 'Drinks.all', dataFilter: '*', filterLabel: t('Drinks.all') || 'All' };
 
@@ -101,25 +101,34 @@ export default function DrinksPage() {
     useEffect(() => {
         const handleInitialHash = () => {
             const hash = decodeURI(window.location.hash.replace('#', ''));
-            if (hash === 'kokteli') {
-                setActiveFilter('.filter-cocktails');
+            if (!hash) return;
+
+            const targetKey = hash === 'kokteli' ? 'Drinks.cocktails' : hash;
+            const targetCategory = drinkCategories.find(cat => cat.nameKey === targetKey);
+
+            if (targetCategory) {
+                const filterClass = getFilterDataAttribute(targetCategory.nameKey);
+                setActiveFilter(filterClass);
+
                 setTimeout(() => {
                     if (cocktailsRef.current) {
-                        const elementTop = cocktailsRef.current.getBoundingClientRect().top + window.pageYOffset;
-                        const offset = 350;
+                        const headerOffset = 180;
+                        const elementPosition = cocktailsRef.current.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
                         window.scrollTo({
-                            top: elementTop - offset,
+                            top: offsetPosition,
                             behavior: 'smooth'
                         });
                     }
-                }, 500);
+                }, 1000);
             }
         };
 
         handleInitialHash();
         window.addEventListener('hashchange', handleInitialHash);
         return () => window.removeEventListener('hashchange', handleInitialHash);
-    }, []);
+    }, [drinkCategories]);
 
     return (
         <main>
@@ -166,6 +175,7 @@ export default function DrinksPage() {
                             const categoryClassName = getFilterDataAttribute(category.nameKey).substring(1);
                             return (
                                 <div
+                                    id={category.nameKey}
                                     key={category.nameKey}
                                     ref={isCocktails ? cocktailsRef : null}
                                     className={`col-12 mb-4 isotope-item ${categoryClassName}`}
