@@ -11,7 +11,17 @@ export default function HomePage() {
     return (
         <main>
             <HeroSection />
-            <Suspense fallback={<Preloader />}>
+            <Suspense fallback={
+                <div style={{
+                    minHeight: '80vh',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative'
+                }}>
+                    <Preloader />
+                </div>
+            }>
                 {/* 
                 <FeatureGallery />
                 */}
