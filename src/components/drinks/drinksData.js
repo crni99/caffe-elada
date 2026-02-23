@@ -18,8 +18,8 @@ export const HOT_DRINKS_DATA = [
 export const WATER_DRINKS_DATA = [
     { id: 1, name: 'Aqua Viva', volume: '0,25L', price: '160,00 RSD' },
     { id: 2, name: 'Knjaz Miloš', volume: '0,25L', price: '170,00 RSD' },
-    { id: 3, name: 'Knjaz Miloš Čaša', volume: '0,2L', price: '100,00 RSD' },
-    { id: 4, name: 'Knjaz Miloš', volume: '1L', price: '210,00 RSD' },
+    { id: 3, name: 'Knjaz Miloš Čaša', volume: '0,1L', price: '50,00 RSD' },
+    { id: 4, name: 'Knjaz Miloš', volume: '1L', price: '290,00 RSD' },
     { id: 5, name: 'Knjaz Miloš Limun', volume: '0,33L', price: '170,00 RSD' },
 ];
 
@@ -69,7 +69,7 @@ export const CIDERS_DRINKS_DATA = [
 
 export const WINES_DRINKS_DATA = [
     { id: 1, name: 'Medveđa Krv', volume: '0,2L', price: '220,00 RSD' },
-    { id: 2, name: 'Smederevka', volume: '0,2L', price: '230,00 RSD' },
+    { id: 2, name: 'Smederevka', volume: '0,1L', price: '120,00 RSD' },
     { id: 3, name: 'Rose', volume: '0,2L', price: '190,00 RSD' },
     { id: 4, name: 'Vranac', volume: '0,187L', price: '350,00 RSD' },
     { id: 5, name: 'Rose', volume: '0,187L', price: '190,00 RSD' },
