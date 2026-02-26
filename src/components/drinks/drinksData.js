@@ -70,10 +70,10 @@ export const CIDERS_DRINKS_DATA = [
 export const WINES_DRINKS_DATA = [
     { id: 1, name: 'Medveđa Krv', volume: '0,2L', price: '220,00 RSD' },
     { id: 2, name: 'Smederevka', volume: '0,1L', price: '120,00 RSD' },
-    { id: 3, name: 'Rose', volume: '0,2L', price: '190,00 RSD' },
+    { id: 3, name: 'Rose', volume: '0,1L', price: '110,00 RSD' },
     { id: 4, name: 'Vranac', volume: '0,187L', price: '350,00 RSD' },
-    { id: 5, name: 'Rose', volume: '0,187L', price: '190,00 RSD' },
-    { id: 6, name: 'Chardonai', volume: '0,187L', price: '190,00 RSD' },
+    { id: 5, name: 'Rose', volume: '0,187L', price: '350,00 RSD' },
+    { id: 6, name: 'Chardonai', volume: '0,187L', price: '350,00 RSD' },
 ];
 
 export const LIKERS_DRINKS_DATA = [
@@ -109,7 +109,7 @@ export const SPIRITS_DATA = [
 
 export const COCKTAILS_DRINKS_DATA = [
     { id: 1, name: 'Tasos', price: '500,00 RSD', description: 'Vodka, Liker Kafa Anis, Espreso' },
-    { id: 2, name: 'Mikonos', price: '500,00 RSD', description: 'Metaxa, Angostura Biter' },
+    { id: 2, name: 'Mikonos', price: '500,00 RSD', description: 'Metaxa, Angostura Biter, Pomorandža (aroma)' },
     { id: 3, name: 'Lefkada', price: '600,00 RSD', description: 'Tekila, Blue Curacao, Limun Sok' },
     { id: 4, name: 'Zakintos', price: '650,00 RSD', description: 'Rakija, Rakomelo, Limun Sok' },
     { id: 5, name: 'Lezbos', price: '650,00 RSD', description: 'Dzin, Ouzo, Limun Sok, Tonik' },
