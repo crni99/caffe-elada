@@ -46,6 +46,9 @@ self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(request)
             .then(response => response || fetch(request).then(fetchResponse => {
+                if (request.method !== 'GET') return fetchResponse;
+                if (!request.url.startsWith('http')) return fetchResponse;
+
                 return caches.open(CACHE_NAME).then(cache => {
                     cache.put(request, fetchResponse.clone());
                     return fetchResponse;
