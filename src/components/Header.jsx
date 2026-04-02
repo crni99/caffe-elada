@@ -82,6 +82,7 @@ export default function Header() {
                                     width="20"
                                     height="14"
                                     alt={t(`Header.${language}`)}
+                                    aria-label={t('Header.selectLanguage')}
                                 />
                             }
                             id="language-dropdown"
