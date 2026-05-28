@@ -98,6 +98,29 @@ footer a:active {
   border-top: 3px solid var(--accent-color);
 }
 
+.drinks-filter-item {
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.drinks-filter-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  max-height: 9999px;
+  overflow: visible;
+  margin-bottom: 1.5rem !important;
+}
+
+.drinks-filter-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+  margin-bottom: 0 !important;
+  padding: 0;
+}
+
 .icon-blue {
   color: var(--accent-color);
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -6,19 +6,18 @@ import './index.css';
 import '@fontsource/playfair-display';
 import 'flag-icons/css/flag-icons.min.css';
 import 'glightbox/dist/css/glightbox.min.css';
-import './components/Icons/IconsLibrary';
-
+import './i18n';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
+  </StrictMode>
 );
 
 if ('serviceWorker' in navigator) {

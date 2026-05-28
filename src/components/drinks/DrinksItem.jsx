@@ -1,5 +1,3 @@
-import React from 'react';
-
 const DrinksItem = ({ name, volume, price, description }) => {
     const displayVolume = volume ? `(${volume})` : '';
 

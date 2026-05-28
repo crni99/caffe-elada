@@ -1,8 +1,6 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { LanguageProvider } from './context/LanguageContext';
-import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n';
+import { useState, useEffect, Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { useHashScroll } from './hooks/useHashScroll';
 import Preloader from './components/Preloader';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -19,7 +17,6 @@ const HAS_LOADED_KEY = 'site-loaded';
 
 function App() {
 
-  const location = useLocation();
   const hasVisited = localStorage.getItem(HAS_LOADED_KEY);
   const [isLoading, setIsLoading] = useState(!hasVisited);
   const [isFadingOut, setIsFadingOut] = useState(false);
@@ -70,26 +67,9 @@ function App() {
     } else {
       setTimeout(startAOS, 600);
     }
+  }, []);
 
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
-    }
-
-    window.scrollTo(0, 0);
-
-    const hashTimer = setTimeout(() => {
-      if (location.hash) {
-        const element = document.getElementById(location.hash.substring(1));
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    }, 500);
-
-    return () => {
-      clearTimeout(hashTimer);
-    };
-  }, [location]);
+  useHashScroll();
 
   return (
     <>
@@ -97,19 +77,17 @@ function App() {
         <Preloader className={isFadingOut ? 'hidden' : ''} />
       )}
       {(isContentVisible || hasVisited) && (
-        <I18nextProvider i18n={i18n}>
-          <LanguageProvider>
-            <Header />
-            <Suspense fallback={<div style={{ minHeight: '60vh', backgroundColor: '#f0f0f0' }} />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/karta-pica" element={<DrinksPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </Suspense>
-            <Footer />
-          </LanguageProvider>
-        </I18nextProvider>
+        <>
+          <Header />
+          <Suspense fallback={<div style={{ minHeight: '60vh', backgroundColor: 'var(--background-color)' }} />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/karta-pica" element={<DrinksPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </Suspense>
+          <Footer />
+        </>
       )}
     </>
   );

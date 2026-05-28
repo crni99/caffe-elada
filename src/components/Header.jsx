@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 import { NavDropdown } from "react-bootstrap";
@@ -17,17 +17,6 @@ export default function Header() {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
-
-    useEffect(() => {
-        if (location.hash) {
-            const el = document.querySelector(location.hash);
-            if (el) {
-                setTimeout(() => {
-                    el.scrollIntoView({ behavior: "smooth" });
-                }, 50);
-            }
-        }
-    }, [location]);
 
     const getLinkClass = (path) => {
         if (path.includes("#")) {
@@ -82,7 +71,7 @@ export default function Header() {
                                     width="20"
                                     height="14"
                                     alt={t(`Header.${language}`)}
-                                    aria-label={t('Header.selectLanguage')}
+                                    aria-label={t(`Header.${language}`)}
                                 />
                             }
                             id="language-dropdown"

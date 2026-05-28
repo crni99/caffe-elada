@@ -1,29 +1,29 @@
-import React, { memo } from 'react';
+import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import Icon from '../Icons/Icon';
 import flagGr from "../../assets/lang-flags/gr.svg";
 
-const StarRating = () => {
-    return (
-        <h4 className="star-reviews">
-            {Array.from({ length: 5 }).map((_, index) => (
-                <Icon
-                    key={index}
-                    icon="star"
-                    className="mx-2"
-                    style={{ color: 'gold' }}
-                    title="Star Rating"
-                />
-            ))}
-        </h4>
-    );
-};
+const StarRating = () => (
+    <h4 className="star-reviews">
+        {Array.from({ length: 5 }).map((_, index) => (
+            <Icon
+                key={index}
+                icon="star"
+                className="mx-2"
+                style={{ color: 'gold' }}
+                title="Star Rating"
+            />
+        ))}
+    </h4>
+);
 
-const ReviewItem = ({ review, t }) => {
-    const itemClassName = `testimonial-item${review.featured ? ' featured' : ''}`;
+const ReviewItem = ({ review }) => {
+    
+    const { t } = useTranslation();
 
     return (
         <div
-            className={itemClassName}
+            className={`testimonial-item${review.featured ? ' featured' : ''}`}
             data-aos="zoom-in"
             data-aos-delay={review.delay}
         >
@@ -43,7 +43,7 @@ const ReviewItem = ({ review, t }) => {
                         &nbsp;
                         {review.featured &&
                             <img src={flagGr} width="30" height="24" alt="Flag of Greece"
-                                className="flag-pulse-anim"></img>
+                                className="flag-pulse-anim" />
                         }
                     </p>
                 </div>
