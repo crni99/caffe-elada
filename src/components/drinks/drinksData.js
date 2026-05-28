@@ -49,7 +49,7 @@ export const BEERS_DRINKS_DATA = [
     { id: 5, name: 'Alfa Bezalkoholno', volume: '0,33L', price: '200,00 RSD' },
     { id: 6, name: 'Mamos Limenka', volume: '0,33L', price: '220,00 RSD' },
     { id: 7, name: 'Mamos Flaša', volume: '0,33L', price: '260,00 RSD' },
-    { id: 8, name: 'Mythos Limenka', volume: '0,5', price: '310,00 RSD' },
+    { id: 8, name: 'Mythos Limenka', volume: '0,5L', price: '310,00 RSD' },
     { id: 9, name: 'Mythos', volume: '0,33L', price: '290,00 RSD' },
     { id: 10, name: 'Nimfi Limenka', volume: '0,33L', price: '220,00 RSD' },
     { id: 11, name: 'Nisos', volume: '0,33L', price: '350,00 RSD' },

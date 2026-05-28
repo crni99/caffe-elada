@@ -15,9 +15,10 @@ const FADE_TIME = 300;
 const MIN_FLICKER_TIME = 100;
 const HAS_LOADED_KEY = 'site-loaded';
 
+const hasVisited = !!localStorage.getItem(HAS_LOADED_KEY);
+
 function App() {
 
-  const hasVisited = localStorage.getItem(HAS_LOADED_KEY);
   const [isLoading, setIsLoading] = useState(!hasVisited);
   const [isFadingOut, setIsFadingOut] = useState(false);
   const [isContentVisible, setIsContentVisible] = useState(hasVisited);
@@ -50,6 +51,8 @@ function App() {
   }, [isDOMReady, isLoading]);
 
   useEffect(() => {
+    let timeoutId;
+
     const startAOS = () => {
       AOS.init({
         once: true,
@@ -62,11 +65,16 @@ function App() {
 
     if (document.fonts) {
       document.fonts.ready.then(() => {
-        setTimeout(startAOS, 200);
+        timeoutId = setTimeout(startAOS, 200);
       });
     } else {
-      setTimeout(startAOS, 600);
+      timeoutId = setTimeout(startAOS, 600);
     }
+
+    return () => {
+      clearTimeout(timeoutId);
+      AOS.refresh();
+    };
   }, []);
 
   useHashScroll();
