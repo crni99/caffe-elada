@@ -15,13 +15,19 @@ const FADE_TIME = 300;
 const MIN_FLICKER_TIME = 100;
 const HAS_LOADED_KEY = 'site-loaded';
 
-const hasVisited = !!localStorage.getItem(HAS_LOADED_KEY);
-
 function App() {
 
-  const [isLoading, setIsLoading] = useState(!hasVisited);
+  const [hasVisited, setHasVisited] = useState(() => {
+    try {
+      return !!localStorage.getItem(HAS_LOADED_KEY);
+    } catch (e) {
+      return false;
+    }
+  });
+
+  const [isLoading, setIsLoading] = useState(() => !hasVisited);
   const [isFadingOut, setIsFadingOut] = useState(false);
-  const [isContentVisible, setIsContentVisible] = useState(hasVisited);
+  const [isContentVisible, setIsContentVisible] = useState(() => hasVisited);
   const [isDOMReady, setIsDOMReady] = useState(false);
 
   useEffect(() => {
@@ -43,7 +49,11 @@ function App() {
       const fadeTimer = setTimeout(() => {
         setIsLoading(false);
         setIsContentVisible(true);
-        localStorage.setItem(HAS_LOADED_KEY, 'true');
+        try {
+          localStorage.setItem(HAS_LOADED_KEY, 'true');
+        } catch (e) {
+        }
+        setHasVisited(true);
       }, FADE_TIME);
 
       return () => clearTimeout(fadeTimer);
@@ -73,7 +83,6 @@ function App() {
 
     return () => {
       clearTimeout(timeoutId);
-      AOS.refresh();
     };
   }, []);
 
