@@ -54,7 +54,7 @@ export const BEERS_DRINKS_DATA = [
     { id: 10, name: 'Nimfi Limenka', volume: '0,33L', price: '220,00 RSD' },
     { id: 11, name: 'Nisos', volume: '0,33L', price: '350,00 RSD' },
     { id: 12, name: 'Heineken', volume: '0,25L', price: '260,00 RSD' },
-    { id: 13, name: 'Tuborg', volume: '0,33L', price: '270,00 RSD' },
+    { id: 13, name: 'Tuborg', volume: '0,33L', price: '260,00 RSD' },
     { id: 14, name: 'Zaječarsko', volume: '0,5L', price: '200,00 RSD' },
     { id: 15, name: 'Zaječarsko', volume: '0,33L', price: '220,00 RSD' },
     { id: 16, name: 'Valjevsko', volume: '0,5L', price: '210,00 RSD' },
