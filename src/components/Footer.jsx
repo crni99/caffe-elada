@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from './Icons/Icon';
 import { useTranslation } from 'react-i18next';
 
 const ChevronRightIcon = <Icon icon="chevron-right" className="mx-2 icon-blue" title="Chevron Right" />;
+const CURRENT_YEAR = new Date().getFullYear();
 
 export default function Footer() {
 
     const { t } = useTranslation();
-    const currentYear = new Date().getFullYear();
 
     const [isVisible, setIsVisible] = useState(false);
 
@@ -141,7 +141,7 @@ export default function Footer() {
                         <div className="row align-items-center">
                             <div className="col-lg-6">
                                 <div className="copyright">
-                                    <p>{currentYear} &copy;<strong className="px-1 sitename">Caffe Elada</strong><span>{t('Footer.allRightsReserved')}</span></p>
+                                    <p>{CURRENT_YEAR} &copy;<strong className="px-1 sitename">Caffe Elada</strong><span>{t('Footer.allRightsReserved')}</span></p>
                                 </div>
                             </div>
                             <div className="col-lg-6">

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import GalleryItem from './GalleryItem';
 import { useTranslation } from 'react-i18next';
 
@@ -12,7 +12,7 @@ const galleryData = [
 ];
 
 const MainGallery = () => {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const lightboxRef = useRef(null);
 
     const translatedGallery = useMemo(() => {
@@ -50,7 +50,7 @@ const MainGallery = () => {
             lightboxRef.current?.destroy();
             lightboxRef.current = null;
         };
-    }, [i18n.language]);
+    }, [translatedGallery]);
 
     return (
         <section id="galerija" className="gallery section">

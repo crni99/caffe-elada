@@ -1,4 +1,3 @@
-import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import Icon from './Icons/Icon';
@@ -85,4 +84,4 @@ const HeroSection = () => {
     );
 };
 
-export default memo(HeroSection);
+export default HeroSection;

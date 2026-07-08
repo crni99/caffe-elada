@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { useEffect, useRef, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import DrinksList from '../components/drinks/DrinksList';
 import {
@@ -6,20 +7,19 @@ import {
     ENERGY_DRINKS_DATA, BEERS_DRINKS_DATA, CIDERS_DRINKS_DATA, WINES_DRINKS_DATA,
     LIKERS_DRINKS_DATA, RAKIJAS_DRINKS_DATA, SPIRITS_DATA, COCKTAILS_DRINKS_DATA
 } from '../components/drinks/drinksData';
-import Isotope from 'isotope-layout';
 
-const getFilterDataAttribute = (nameKey) => {
+const ROW_SIZES = [5, 4, 4];
+
+const getFilterKey = (nameKey) => {
     const categoryName = nameKey.split('.')[1];
-    const kebabCase = categoryName.replace(/([A-Z])/g, '-$1').toLowerCase();
-    return `.filter-${kebabCase}`;
+    return categoryName.replace(/([A-Z])/g, '-$1').toLowerCase();
 };
 
 export default function DrinksPage() {
 
-    const isotopeContainerRef = useRef(null);
-    const isotopeInstance = useRef(null);
     const cocktailsRef = useRef(null);
-    const [activeFilter, setActiveFilter] = useState('*');
+    const [searchParams, setSearchParams] = useSearchParams();
+    const activeFilter = searchParams.get('filter') || '*';
     const { t } = useTranslation();
 
     const drinkCategories = useMemo(() => [
@@ -37,98 +37,43 @@ export default function DrinksPage() {
         { nameKey: 'Drinks.cocktails', data: COCKTAILS_DRINKS_DATA, creator: 'Aleksandar Grabovčić' },
     ], []);
 
-    const allFilterItem = { nameKey: 'Drinks.all', dataFilter: '*', filterLabel: t('Drinks.all') || 'All' };
-
-    const allFilters = [allFilterItem, ...drinkCategories];
-
-    const groups = [
-        allFilters.slice(0, 5),
-        allFilters.slice(5, 9),
-        allFilters.slice(9, 13),
-    ];
-
-    const renderFilterItem = (category) => {
-        const dataFilterValue = category.dataFilter || getFilterDataAttribute(category.nameKey);
-        const className = activeFilter === dataFilterValue ? 'filter-active' : '';
-
-        return (
-            <li
-                key={category.dataFilter || category.nameKey}
-                data-filter={dataFilterValue}
-                className={className}
-                onClick={() => handleFilterClick(dataFilterValue)}
-            >
-                {category.filterLabel || t(category.nameKey)}
-            </li>
-        );
-    };
-
-    useEffect(() => {
-        const container = isotopeContainerRef.current;
-        if (!container || typeof Isotope === 'undefined') return;
-
-        isotopeInstance.current = new Isotope(container, {
-            itemSelector: '.isotope-item',
-            layoutMode: 'vertical',
-            percentPosition: true,
-            transitionDuration: '0.6s'
+    const filterGroups = useMemo(() => {
+        const allItem = { nameKey: 'Drinks.all', filterKey: '*' };
+        const allItems = [allItem, ...drinkCategories.map(c => ({ nameKey: c.nameKey, filterKey: getFilterKey(c.nameKey) }))];
+        let offset = 0;
+        return ROW_SIZES.map(size => {
+            const row = allItems.slice(offset, offset + size);
+            offset += size;
+            return row;
         });
-
-        const timeout = setTimeout(() => isotopeInstance.current.layout(), 300);
-
-        return () => {
-            if (isotopeInstance.current) {
-                isotopeInstance.current.destroy();
-                isotopeInstance.current = null;
-            }
-            clearTimeout(timeout);
-        };
-    }, []);
-
+    }, [drinkCategories]);
 
     useEffect(() => {
-        if (isotopeInstance.current) {
-            isotopeInstance.current.arrange({ filter: activeFilter });
-        }
-    }, [activeFilter]);
-
-    const handleFilterClick = (newFilter) => {
-        if (isotopeInstance.current) {
-            setActiveFilter(newFilter);
-        }
-    };
-
-    useEffect(() => {
-        const handleInitialHash = () => {
+        const handleHash = () => {
             const hash = decodeURI(window.location.hash.replace('#', ''));
             if (!hash) return;
 
             const targetKey = hash === 'kokteli' ? 'Drinks.cocktails' : hash;
-            const targetCategory = drinkCategories.find(cat => cat.nameKey === targetKey);
+            const target = drinkCategories.find(c => c.nameKey === targetKey);
+            if (!target) return;
 
-            if (targetCategory) {
-                const filterClass = getFilterDataAttribute(targetCategory.nameKey);
-                setActiveFilter(filterClass);
+            setSearchParams({ filter: getFilterKey(target.nameKey) }, { replace: true });
 
-                setTimeout(() => {
-                    if (cocktailsRef.current) {
-                        const headerOffset = 180;
-                        const elementPosition = cocktailsRef.current.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                }, 1000);
-            }
+            setTimeout(() => {
+                if (cocktailsRef.current) {
+                    const top = cocktailsRef.current.getBoundingClientRect().top + window.pageYOffset - 180;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            }, 400);
         };
 
-        handleInitialHash();
-        window.addEventListener('hashchange', handleInitialHash);
-        return () => window.removeEventListener('hashchange', handleInitialHash);
-    }, [drinkCategories]);
+        handleHash();
+        window.addEventListener('hashchange', handleHash);
+        return () => window.removeEventListener('hashchange', handleHash);
+    }, [drinkCategories, setSearchParams]);
+
+    const isVisible = (category) =>
+        activeFilter === '*' || getFilterKey(category.nameKey) === activeFilter;
 
     return (
         <main>
@@ -139,9 +84,7 @@ export default function DrinksPage() {
                             <div data-aos="fade-right" data-aos-delay="200">
                                 <div className="content">
                                     <div className="container section-title-h1 section light-background" data-aos="fade-up">
-                                        <h1>
-                                            {t('Drinks.title')}
-                                        </h1>
+                                        <h1>{t('Drinks.title')}</h1>
                                         <p className='text-muted'>{t('Drinks.subTitle')}</p>
                                     </div>
                                 </div>
@@ -150,44 +93,50 @@ export default function DrinksPage() {
                     </div>
                 </div>
             </section>
+
             <section id="drinks-menu" className="drinks-menu section">
                 <div className="container" data-aos="fade-up" data-aos-delay="100">
-                    <div className="gallery isotope-layout mt-3 mb-3" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-                        <div className='row'>
-                            <div className='col-12'>
-                                {groups.map((rowItems, index) => (
+                    <div className="gallery isotope-layout mt-3 mb-3">
+                        <div className="row">
+                            <div className="col-12">
+                                {filterGroups.map((rowItems, rowIndex) => (
                                     <ul
-                                        key={index}
-                                        className={`gallery-filters isotope-filters filter-row-${index}`}
+                                        key={rowIndex}
+                                        className={`gallery-filters filter-row-${rowIndex}`}
                                         data-aos="fade-up"
                                         data-aos-delay="100"
                                         style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', marginBottom: '16px' }}
                                     >
-                                        {rowItems.map(renderFilterItem)}
+                                        {rowItems.map((item) => (
+                                            <li
+                                                key={item.filterKey}
+                                                className={activeFilter === item.filterKey ? 'filter-active' : ''}
+                                                onClick={() => setSearchParams(item.filterKey === '*' ? {} : { filter: item.filterKey })}
+                                            >
+                                                {t(item.nameKey)}
+                                            </li>
+                                        ))}
                                     </ul>
                                 ))}
                             </div>
                         </div>
                     </div>
-                    <div className="row" ref={isotopeContainerRef}>
-                        {drinkCategories.map((category) => {
-                            const isCocktails = category.nameKey === 'Drinks.cocktails';
-                            const categoryClassName = getFilterDataAttribute(category.nameKey).substring(1);
-                            return (
-                                <div
-                                    id={category.nameKey}
-                                    key={category.nameKey}
-                                    ref={isCocktails ? cocktailsRef : null}
-                                    className={`col-12 mb-4 isotope-item ${categoryClassName}`}
-                                >
-                                    <DrinksList
-                                        name={t(category.nameKey)}
-                                        items={category.data}
-                                        creator={category.creator}
-                                    />
-                                </div>
-                            );
-                        })}
+
+                    <div className="row">
+                        {drinkCategories.map((category) => (
+                            <div
+                                id={category.nameKey}
+                                key={category.nameKey}
+                                ref={category.nameKey === 'Drinks.cocktails' ? cocktailsRef : null}
+                                className={`col-12 drinks-filter-item ${isVisible(category) ? 'drinks-filter-visible' : 'drinks-filter-hidden'}`}
+                            >
+                                <DrinksList
+                                    name={t(category.nameKey)}
+                                    items={category.data}
+                                    creator={category.creator}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
