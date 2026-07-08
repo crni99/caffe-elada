@@ -10,14 +10,39 @@ import {
 
 const ROW_SIZES = [5, 4, 4];
 
-const getFilterKey = (nameKey) => {
-    const categoryName = nameKey.split('.')[1];
-    return categoryName.replace(/([A-Z])/g, '-$1').toLowerCase();
+const FILTER_NAME_MAPPING = {
+    'coffee': 'kafe',
+    'hot-drinks': 'topli-napici',
+    'water': 'voda',
+    'juices': 'sokovi',
+    'energy': 'energetska-pica',
+    'beers': 'piva',
+    'ciders': 'cideri',
+    'wines': 'vina',
+    'likers': 'aperitivi-i-likeri',
+    'rakijas': 'rakije',
+    'spirits': 'zestoka-pica',
+    'cocktails': 'kokteli'
 };
 
+const REVERSE_FILTER_MAPPING = Object.fromEntries(
+    Object.entries(FILTER_NAME_MAPPING).map(([eng, srp]) => [srp, eng])
+);
+
+const getFilterKey = (nameKey) => {
+    const categoryName = nameKey.split('.')[1];
+    const kebabCase = categoryName.replace(/([A-Z])/g, '-$1').toLowerCase();
+    return FILTER_NAME_MAPPING[kebabCase] || kebabCase;
+};
+
+const getNameKeyFromFilter = (filterValue) => {
+    const englishKey = REVERSE_FILTER_MAPPING[filterValue] || filterValue;
+    const camelCase = englishKey.replace(/-([a-z])/g, (_, char) => char.toUpperCase());
+    return `Drinks.${camelCase}`;
+};
 export default function DrinksPage() {
 
-    const cocktailsRef = useRef(null);
+    const sectionRefs = useRef({});
     const [searchParams, setSearchParams] = useSearchParams();
     const activeFilter = searchParams.get('filter') || '*';
     const { t } = useTranslation();
@@ -53,18 +78,25 @@ export default function DrinksPage() {
             const hash = decodeURI(window.location.hash.replace('#', ''));
             if (!hash) return;
 
-            const targetKey = hash === 'kokteli' ? 'Drinks.cocktails' : hash;
+            const targetKey = getNameKeyFromFilter(hash);
             const target = drinkCategories.find(c => c.nameKey === targetKey);
             if (!target) return;
 
             setSearchParams({ filter: getFilterKey(target.nameKey) }, { replace: true });
 
             setTimeout(() => {
-                if (cocktailsRef.current) {
-                    const top = cocktailsRef.current.getBoundingClientRect().top + window.pageYOffset - 180;
-                    window.scrollTo({ top, behavior: 'smooth' });
+                const element = sectionRefs.current[target.nameKey];
+                if (element) {
+                    const headerOffset = 400;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
                 }
-            }, 400);
+            }, 200);
         };
 
         handleHash();
@@ -127,7 +159,7 @@ export default function DrinksPage() {
                             <div
                                 id={category.nameKey}
                                 key={category.nameKey}
-                                ref={category.nameKey === 'Drinks.cocktails' ? cocktailsRef : null}
+                                ref={(el) => sectionRefs.current[category.nameKey] = el}
                                 className={`col-12 drinks-filter-item ${isVisible(category) ? 'drinks-filter-visible' : 'drinks-filter-hidden'}`}
                             >
                                 <DrinksList
