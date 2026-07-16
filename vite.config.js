@@ -5,15 +5,7 @@ export default defineConfig({
     plugins: [react()],
     build: {
         outDir: 'build',
-        sourcemap: false,
-        rollupOptions: {
-            output: {
-                manualChunks: {
-                    'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-                    'i18n': ['i18next', 'react-i18next'],
-                }
-            }
-        }
+        sourcemap: false
     },
     server: {
         port: 3000,
