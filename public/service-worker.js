@@ -1,7 +1,13 @@
-const CACHE_NAME = 'elada-cache-v2';
+const CACHE_NAME = 'elada-cache-v3';
+
 const urlsToCache = [
-    '/logo192.avif',
+    '/',
+    '/index.html',
     '/manifest.json',
+    '/favicon.ico',
+    '/logo192.avif',
+    '/logo512.avif',
+    '/logo.png',
 ];
 
 self.addEventListener('install', event => {
@@ -31,28 +37,49 @@ self.addEventListener('fetch', event => {
     const { request } = event;
     const url = new URL(request.url);
 
-    if (request.mode === 'navigate' || url.pathname === '/' || url.pathname.endsWith('.html')) {
+    if (request.method !== 'GET' || url.origin !== self.location.origin) {
+        return;
+    }
+
+    if (request.mode === 'navigate' || url.pathname.endsWith('.html')) {
         event.respondWith(
-            fetch(request).catch(() => caches.match('/index.html'))
+            fetch(request).catch(() =>
+                caches.match('/index.html').then(cached =>
+                    cached || new Response('Offline', { status: 503, statusText: 'Offline' })
+                )
+            )
         );
         return;
     }
 
-    if (url.pathname.includes('/static/')) {
-        event.respondWith(fetch(request));
+    if (url.pathname.startsWith('/assets/')) {
+        event.respondWith(
+            caches.match(request).then(cached => {
+                if (cached) return cached;
+
+                return fetch(request).then(fetchResponse => {
+                    if (!fetchResponse.ok) return fetchResponse;
+
+                    return caches.open(CACHE_NAME).then(cache => {
+                        cache.put(request, fetchResponse.clone());
+                        return fetchResponse;
+                    });
+                }).catch(() => new Response('Offline', { status: 503, statusText: 'Offline' }));
+            })
+        );
         return;
     }
 
     event.respondWith(
         caches.match(request)
             .then(response => response || fetch(request).then(fetchResponse => {
-                if (request.method !== 'GET') return fetchResponse;
-                if (!request.url.startsWith('http')) return fetchResponse;
+                if (!fetchResponse.ok) return fetchResponse;
 
                 return caches.open(CACHE_NAME).then(cache => {
                     cache.put(request, fetchResponse.clone());
                     return fetchResponse;
                 });
             }))
+            .catch(() => new Response('Offline', { status: 503, statusText: 'Offline' }))
     );
 });
