@@ -88,17 +88,17 @@ Both implementations are designed for a real, multi-lingual café website (Caffe
 
 ```
 caffe-elada/
-├── public/                  # Static assets, images, manifest, service worker
+├── public/                    # Static assets, images, manifest, service worker
 ├── src/
-│   ├── assets/               # Logos, language flags
-│   ├── components/           # React components (Header, Footer, Drinks, Gallery, Reviews, Contact...)
+│   ├── assets/                # Logos, language flags
+│   ├── components/            # React components (Header, Footer, Drinks, Gallery, Reviews, Contact...)
 │   ├── context/               # LanguageContext
-│   ├── hooks/                  # Custom hooks (e.g. useHashScroll)
-│   ├── i18n/                    # i18next configuration
-│   ├── locales/                   # en / sr / gr translation files
-│   └── pages/                       # Home, Drinks, NotFoundPage
+│   ├── hooks/                 # Custom hooks (e.g. useHashScroll)
+│   ├── i18n/                  # i18next configuration
+│   ├── locales/               # en / sr / gr translation files
+│   └── pages/                 # Home, Drinks, NotFoundPage
 ├── vercel.json                # Vercel deployment & security headers config
-└── .github/workflows/          # CI (build/test) and CD (Vercel, Pages, mirroring) pipelines
+└── .github/workflows/         # CI (build/test) and CD (Vercel, Pages, mirroring) pipelines
 ```
 
 <br />
