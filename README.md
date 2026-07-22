@@ -70,19 +70,19 @@ Both versions share the exact same design, content, and multi-language support (
 
 ```
 caffe-elada (vanilla branch)/
-├── index.html              # Home page
-├── drinks.html              # Drinks menu page
-├── css/                       # Bootstrap, AOS, GLightbox styles + custom style.css
-├── js/                          # main.js, navigation.js, i18n.js, and vendored libraries
-├── lang/                          # en.json / sr.json / gr.json translation files
+├── index.html                        # Home page
+├── drinks.html                       # Drinks menu page
+├── css/                              # Bootstrap, AOS, GLightbox styles + custom style.css
+├── js/                               # main.js, navigation.js, i18n.js, and vendored libraries
+├── lang/                             # en.json / sr.json / gr.json translation files
 ├── images/
-│   ├── gallery/                    # Café photos used in the gallery
-│   ├── icons/                       # Favicon, language flags
+│   ├── gallery/                      # Café photos used in the gallery
+│   ├── icons/                        # Favicon, language flags
 │   └── logos/                        # Logo assets
-├── manifest.json                # Web app manifest (installable site)
-├── vercel_backup.json            # Backup Vercel config for this branch
-├── htaccess-backup.txt            # Apache config backup (headers, redirects)
-└── .github/workflows/              # Mirroring pipeline (GitLab / Bitbucket)
+├── manifest.json                     # Web app manifest (installable site)
+├── vercel_backup.json                # Backup Vercel config for this branch
+├── htaccess-backup.txt               # Apache config backup (headers, redirects)
+└── .github/workflows/                # Mirroring pipeline (GitLab / Bitbucket)
 ```
 
 <br />
