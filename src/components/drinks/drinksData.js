@@ -7,6 +7,7 @@ export const COFFEE_DRINKS_DATA = [
     { id: 6, name: 'Espreso sa Mlekom', volume: '0,06L', price: '170,00 RSD' },
     { id: 7, name: 'Kapućino', volume: '0,1L', price: '180,00 RSD' },
     { id: 8, name: 'Nes Kafa', volume: '0,25L', price: '180,00 RSD' },
+    { id: 9, name: 'Plazma Šejk', volume: '0,25L', price: '270,00 RSD' },
 ];
 
 export const HOT_DRINKS_DATA = [
@@ -61,6 +62,7 @@ export const BEERS_DRINKS_DATA = [
     { id: 17, name: 'Valjevsko', volume: '0,33L', price: '200,00 RSD' },
     { id: 18, name: 'Valjevsko Točeno', volume: '0,5L', price: '250,00 RSD' },
     { id: 19, name: 'Valjevsko Točeno', volume: '0,33L', price: '220,00 RSD' },
+    { id: 20, name: 'Valjevsko Nefiltrirano', volume: '0,33L', price: '230,00 RSD' },
 ];
 
 export const CIDERS_DRINKS_DATA = [
