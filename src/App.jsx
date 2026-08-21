@@ -68,7 +68,7 @@ function App() {
         once: true,
         duration: 800,
         offset: 100,
-        disable: () => window.innerWidth < 768,
+        //disable: () => window.innerWidth < 768,
       });
       AOS.refresh();
     };

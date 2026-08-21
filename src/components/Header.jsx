@@ -18,6 +18,8 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
 
+    const langCode = language.split("-")[0];
+
     const getLinkClass = (path) => {
         if (path.includes("#")) {
             const [base, hash] = path.split("#");
@@ -70,8 +72,8 @@ export default function Header() {
                                     src={language === "sr" ? flagSr : language === "gr" ? flagGr : flagEn}
                                     width="20"
                                     height="14"
-                                    alt={t(`Header.${language}`)}
-                                    aria-label={t(`Header.${language}`)}
+                                    alt={t(`Header.${langCode}`)}
+                                    aria-label={t(`Header.${langCode}`)}
                                 />
                             }
                             id="language-dropdown"
