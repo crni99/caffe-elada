@@ -5,7 +5,7 @@ import DrinksList from '../components/drinks/DrinksList';
 import {
     COFFEE_DRINKS_DATA, HOT_DRINKS_DATA, WATER_DRINKS_DATA, JUICES_DRINKS_DATA,
     ENERGY_DRINKS_DATA, BEERS_DRINKS_DATA, CIDERS_DRINKS_DATA, WINES_DRINKS_DATA,
-    LIKERS_DRINKS_DATA, RAKIJAS_DRINKS_DATA, SPIRITS_DATA, COCKTAILS_DRINKS_DATA
+    LIKERS_DRINKS_DATA, RAKIJAS_DRINKS_DATA, SPIRITS_DATA, //COCKTAILS_DRINKS_DATA
 } from '../components/drinks/drinksData';
 
 const ROW_SIZES = [5, 4, 4];
@@ -59,7 +59,7 @@ export default function DrinksPage() {
         { nameKey: 'Drinks.likers', data: LIKERS_DRINKS_DATA },
         { nameKey: 'Drinks.rakijas', data: RAKIJAS_DRINKS_DATA },
         { nameKey: 'Drinks.spirits', data: SPIRITS_DATA },
-        { nameKey: 'Drinks.cocktails', data: COCKTAILS_DRINKS_DATA, creator: 'Aleksandar Grabovčić' },
+       // { nameKey: 'Drinks.cocktails', data: COCKTAILS_DRINKS_DATA, creator: 'Aleksandar Grabovčić' },
     ], []);
 
     const filterGroups = useMemo(() => {
